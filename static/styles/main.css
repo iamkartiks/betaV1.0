@@ -117,7 +117,24 @@ p{  font-size: 24px;
     margin-right: auto;
     margin-top: 5px;
 }
-/* .Footer{
-    background-color: #122d88;
+#news{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    color:#68759c
 
-} */
+}
+#ads{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    color:#68759c
+
+}
+#blog{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    color:#68759c
+
+}
