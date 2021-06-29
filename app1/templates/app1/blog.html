@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
     </head>
     <body>
-        <!-- Nav_menu -->
+        <!-- Nav_menu -->       
     <div class="nav-container">
       <div class="container-1">
         {% comment %} <img src="./assets/logo.svg" alt="" /> {% endcomment %}
@@ -32,24 +32,59 @@
       </div>
     </div>
     <!-- Nav-End --> 
-    <div style="width:100%;">
-    <div id="side-container">
-    <h3>SIDE BLOG</h3>
-    </div>
-    <div id="b-container">
-    <div id="news">
-      <h3>Students & Institutes News</h3>
-    </div>
-    <div id="ads">
-      <h3>Institues and other advertisements</h3>
-    </div>
-    <div id="blog">
-      <h3>Blogs and Updates</h3>
-    </div>
-    </div>
-    </div>
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
-</html>
+
+    <!-- ROW - 1 -->
+  <div style="margin-left:20%;">
+  <h4 style="font-family:monospace; color:#68759c;"><strong>LEADING PERFORMERS</strong></h4>
+  <hr>
+  </div>
+  <div class="row" style="border:1px solid white; height:310px;">
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{% static 'images/levi.jpeg' %}">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>Levi Ackerman</strong></h6>
+        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#1 AIR</strong></h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Connect</button>
+				<a class="btn btn-outline-success" href="#">Profile</a>
+			</div>
+		</div>
+
+    	<div class="col-lg-4">
+			<img class="thumbnail" src="{% static 'images/IITR.jpeg' %}">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>IIT Roorkie</strong></h6>
+        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#1 State Ranking</strong></h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Slot Book</button>
+				<a class="btn btn-outline-success" href="#">View</a>
+			</div>
+		</div>
+
+    	<div class="col-lg-4">
+			<img class="thumbnail" src="{% static 'images/oikawa.jpeg' %}">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>Oikawa Toroo</strong></h6>
+        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#L69 Google Unlocked</strong></h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Connect</button>
+				<a class="btn btn-outline-success" href="#">Profile</a>
+			</div>
+		</div>
+	</div>
+<!-- ROW - 2 -->
+  <div style="margin-left:20%;">
+  <h4 style="font-family:monospace; color:#68759c;"><strong>NEWS</strong></h4>
+  <hr>
+  <div class="square" style="height:200px; width:250px; border:2px solid #76a7d6;">
+  <div class="rectangle" style="height:200px; width:550px; border:2px solid #76a7d6; margin-left:260px;">
+  <h5 style="font-family:monospace; color:#68759c;"> STUDENT I</h5>
+  <h6 style="font-family:monospace; color:#76a7d6;"><strong>Placed at "Tesla"</strong></h6>
+  <p style="color:#76a7d6; font-size:14px;">Congratulations to 'Student 1' for getting placed at Tesla by via our career play</p>
+  </div>
+ 
+  
+
+  
+
+
