@@ -19,6 +19,7 @@
       </div>
       <div class="container-2">
         <ul>
+          <li><a href="{% url 'blog'%}">Home</a></li>
           <li><a href="{% url 'blog'%}">Blog & News</a></li>
           <li><a href="{% url 'store' %}">Store</a></li>
           <li><a href="{% url 'managementsystem' %}">Management-System</a></li>
@@ -70,7 +71,50 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       </div>
       </div>
 {% comment %} END OF SECOND CONTAINER {% endcomment %}
+</div>
+<div id="footer">
+<div class="Subheading">
+      <h3>Trending</h3>
+    </div>
+<div class="row">
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{% static 'images/levi.jpeg' %}">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>Levi Ackerman</strong></h6>
+        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#1 AIR</strong></h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Connect</button>
+				<a class="btn btn-outline-success" href="#">Profile</a>
+			</div>
+		</div>
 
+    		<div class="col-lg-4">
+			<img class="thumbnail" src="{% static 'images/IITR.jpeg' %}">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>IIT Roorkie</strong></h6>
+        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#1 State Ranking</strong></h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Slot Book</button>
+				<a class="btn btn-outline-success" href="#">View</a>
+			</div>
+		</div>
+
+    		<div class="col-lg-4">
+			<img class="thumbnail" src="{% static 'images/oikawa.jpeg' %}">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>Oikawa Toroo</strong></h6>
+        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#L69 Google Unlocked</strong></h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Connect</button>
+				<a class="btn btn-outline-success" href="#">Profile</a>
+			</div>
+		</div>
+
+    
+		
+	</div>
+
+</div>
 
 
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
