@@ -1,13 +1,17 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'app1/home.html')
+    context = {}
+    return render(request, 'app1/home.html', context)
 
 def blog(request):
-    return render(request,'app1/blog.html')
+    context = {}
+    return render(request,'app1/blog.html', context)
 
 def login(request):
-    return render(request,'app1/login.html')
+    context ={}
+    return render(request,'app1/login.html', context)
 
 def register(request):
-    return render(request,'app1/register.html')
+    context = {}
+    return render(request,'app1/register.html', context)
