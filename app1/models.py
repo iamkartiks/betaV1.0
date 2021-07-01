@@ -62,3 +62,16 @@ class Application(models.Model):
 
     def __str__(self):
         return self.institute.name
+
+class Course(models.Model):
+    CAT = (('Engineering', 'Engineering'),
+            ('Entrepreneurship', 'Entrepreneurship'),
+            ('Writer', 'Writer'),
+            ('Mock Job Course', 'Mock Job Course'))
+    name = models.CharField(max_length=200,null=True)
+    category = models.CharField(max_length=100,null=True,choices=CAT)
+    price = models.FloatField(null=True)
+
+    def __str__(self):
+        return self.name
+    
