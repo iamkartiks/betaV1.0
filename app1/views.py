@@ -32,3 +32,6 @@ def course(request):
     course = Course.objects.all()
     context = {'course':course}
     return render(request,'app1/course.html',context)
+
+def complete(request):
+    return render(request,'app1/complete.html')

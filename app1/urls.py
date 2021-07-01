@@ -11,4 +11,5 @@ urlpatterns = [
     # path('collegeboard',views.collegeportal, name="portal"),
     path('institutes/',views.institutes, name="institutes"),
     path('course/',views.course, name="course"),
+    path('completeprofile/',views.complete, name="ccomplete"),
 ]
