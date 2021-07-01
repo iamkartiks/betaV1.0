@@ -1,3 +1,4 @@
+from typing import ContextManager
 from django.shortcuts import render
 
 def index(request):
@@ -15,3 +16,7 @@ def login(request):
 def register(request):
     context = {}
     return render(request,'app1/register.html', context)
+
+def dashboard(request):
+    context = {}
+    return render(request,'app1/dashboard.html')

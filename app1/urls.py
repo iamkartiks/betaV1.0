@@ -7,4 +7,6 @@ urlpatterns = [
     path('blog/',views.blog, name='blog'),
     path('login/',views.login, name='login'),
     path('register/',views.register, name='register'),
+    path('dashboard/', views.dashboard, name="dashboard"),
+    # path('collegeboard',views.collegeportal, name="portal"),
 ]
