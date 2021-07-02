@@ -14,7 +14,7 @@
 <div style="width:100%; height:100px; margin-top:10px;"><a class="btn btn-outline-success" href="{% url 'home' %}">HOME</a></div>
 
 <br>
-<div class="row">
+{% comment %} <div class="row">
 	<div class="col-md">
 		<div class="card card-body">
 			<h5 style="font-family:monospace; color:#68759c;"><strong>Institutes</strong></h5>
@@ -42,4 +42,19 @@
 			</table>
 		</div>
 	</div>
-</div>
+</div> {% endcomment %}
+
+{% for i in institutes %}
+  <div class="col-lg-4" style="margin-left:35px;">
+			{% comment %} <img class="thumbnail" src="{% static 'images/IITR.jpeg' %}"> {% endcomment %}
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>{{ i.name }}</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>{{ i.fees }} &#8377</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>{{ i.category }}</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">{{ i.location }}</h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div>
+		</div>
+{% endfor %}

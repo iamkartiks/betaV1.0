@@ -25,6 +25,13 @@ class Student(models.Model):
         return self.name
 
 
+class Label(models.Model):
+    name = models.CharField(max_length=100,null=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Institutes(models.Model):
     CATEGORY = (('playschool', 'playschool'),
                 ('highschool', 'highschool'),
@@ -35,6 +42,7 @@ class Institutes(models.Model):
     phone = models.CharField(max_length=100, null=True)
     fees = models.FloatField(null=True)
     category = models.CharField(max_length=200, null=True, choices=CATEGORY)
+    label = models.ManyToManyField(Label)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
