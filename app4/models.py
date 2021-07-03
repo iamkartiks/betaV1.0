@@ -11,7 +11,7 @@ class CareerOption(models.Model):
 class Level(models.Model):
     name = models.CharField(max_length=100,null=True)
     Topic = models.CharField(max_length=100,null=True)
-    career= models.ForeignKey(CareerOption,null=True, on_delete=models.CASCADE)
+    career= models.ForeignKey(CareerOption, null=True, on_delete= models.SET_NULL)
 
     def __str__(self):
         return self.name

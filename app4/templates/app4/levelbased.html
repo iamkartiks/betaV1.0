@@ -12,9 +12,9 @@
         <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
     </head>
 
-<div style="width:100%; height:100px; margin-top:10px;"><a class="btn btn-outline-success" href="{% url 'home' %}">HOME</a></div>
+<div style="width:100%; height:100px; margin-top:10px;"><a class="btn btn-outline-success" href="{% url 'home' %}">HOME</a><a class="btn btn-outline-primary" href="{% url 'career' %}">BACK</a></div>
 <div style="margin-left:20%;">
- <h4 style="font-family:monospace; color:#68759c;"><strong>Career Dashboard</strong></h4>
+ <h4 style="font-family:monospace; color:#68759c;"><strong>Career Level Dashboard</strong></h4>
   <hr style="color:white;">
   </div>
   {% for i in levels %}
