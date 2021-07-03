@@ -1,2 +1,2 @@
 # betaV1.0
-beta version of project 
+beta version of education platform
