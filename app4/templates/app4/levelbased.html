@@ -13,3 +13,19 @@
     </head>
 
 <div style="width:100%; height:100px; margin-top:10px;"><a class="btn btn-outline-success" href="{% url 'home' %}">HOME</a></div>
+<div style="margin-left:20%;">
+ <h4 style="font-family:monospace; color:#68759c;"><strong>Career Dashboard</strong></h4>
+  <hr style="color:white;">
+  </div>
+  {% for i in levels %}
+  <div class="col-lg-4" style="margin-left:35px;">
+			{% comment %} <img class="thumbnail" src="{% static 'images/IITR.jpeg' %}"> {% endcomment %}
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>{{ i.name }}</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>{{ i.Topic }}</strong></h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Start {{i.name}} </button>
+				<a class="btn btn-outline-success" href="#">Score</a>
+			</div>
+		</div>
+{% endfor %}
