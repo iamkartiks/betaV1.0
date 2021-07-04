@@ -75,46 +75,28 @@
           <div class="career-and-inbox-main">
             <div class="career-container">
               <h1>Career</h1>
-              <hr />
+              <hr/>
               <table>
-                <th>Name</th>
+                <th>Institute</th>
                 <th>Status</th>
-                <th>three</th>
-                <th>four</th>
-                <th>six</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                 {% for i in applications%}
                 <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
+                  <td>{{ i.institute}}</td>                  
+                  <td>{{i.status}}</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                 </tr>
-                <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
-                </tr>
-                <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
-                </tr>
-                <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
-                </tr>
+                {% endfor %}
               </table>
+              
             </div>
             <div class="inbox-container">
               <h1>Inbox</h1>
-              <hr />
+              <hr/>
             </div>
           </div>
           <!--! Career and Inbox section Tables ROW-1  ----END---- -->

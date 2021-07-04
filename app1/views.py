@@ -19,9 +19,11 @@ def register(request):
     context = {}
     return render(request,'app1/register.html', context)
 
-def dashboard(request):
-    context = {}
-    return render(request,'app1/dashboard.html')
+def dashboard(request,pk):
+    students = Student.objects.get(id=pk)
+    applications = students.application_set.all()
+    context = {'students':students, 'applications':applications}
+    return render(request,'app1/dashboard.html',context)
 
 def institutes(request):
     institutes = Institutes.objects.all()
