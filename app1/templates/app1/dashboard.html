@@ -1,147 +1,227 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>beta1.0.0</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <div class="header-main">
+      <header class="header-container">
+        <div class="header-child-1">
+          <img src="{% static 'images/logo.svg' %}" alt="" />
+        </div>
+        <div class="header-child-2">
+          <button class="nav-links">Home</button>
+          <button class="nav-links">Blog & News</button>
+          <button class="nav-links">Store</button>
+          <button class="nav-links">Live Groups</button>
+        </div>
+        <div class="header-child-3">
+          <h4>Username</h4>
+          <button>⬇️</button>
+        </div>
+      </header>
+    </div>
+    <!-- Header End -->
 
+    <!-- main body -->
 
-    <div class="nav-container" style="background-color:white; margin-left:-10%">
-      <div class="container-1">
-        {% comment %} <img src="./assets/logo.svg" alt="" /> {% endcomment %}
-      </div>
-      <div class="container-2">
-        <ul>
-          <li><a class="btn btn-outline-secondary" href="{% url 'home'%}">Home</a></li>
-          <li><a  class="btn btn-outline-secondary" href="#">Blog & News</a></li>
-          {% comment %} <li><a href="{% url 'store' %}">Store</a></li> {% endcomment %}
-          <li><a  class="btn btn-outline-secondary" href="#">Store</a></li>
-          <li><a class="btn btn-outline-secondary" href="#">Live Groups</a></li>
-        </ul>
-      </div>
-      <div class="container-3">
-        <p style="color:#6c757d; font-family:monospace; font-size:20px;">Username</p>
-        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    </button>
-   </div>
-   </div>
-   <hr style="color:#65c757d">
-<div class="card" style="width: 18rem; margin-left:10px; height:350px; float:left">
-  <img class="card-img-top" src="{% static 'images/kartik.jpg' %}" alt="Card image cap">
-  <div class="card-body">
-  <h5 style="font-family:monospace; color:#76a7d6;">Kartikey Sinha</h5>
-    <p class="card-text" style="color:#6c757d; font-size:16px">Student</p>
-  </div>
-</div>
+    <div class="main-body">
+      <div class="body-container">
 
-<div class="col-lg-4" style="margin-left:25px; ">
-			<div class="box-element product" style="height:215px; width:180%; margin-top:-18px;">
-				<h5 style="font-family:monospace; color:#76a7d6;">Personal Information </h5>
-				<hr>
-              <div style="float:left;">
-                <p class="card-text" style="color:#6c757d; font-size:16px">Achievements</p>
+        <!-- ! LEFT CONTAINER -->
+        <div class="body-left">
+          <!-- profile part -->
+          <div class="profile-container">
+            <div class="profile-pic-container">
+              <img
+                class="profile-photo"
+                src="{% static 'images/profile.jpeg'%}"
+                alt=""
+              />
+              <h1>Kartikey Sinha</h1>
+              <h5>Student</h5>
+            </div>
+            <!--! personal inforation -->
+            <div class="profile-info">
+              <div class="personal-info-card">
+                <h1>Personal Information</h1>
+                <hr />
+                <!-- Achievements population container -->
+                <div class="achievements-container">
+                  <h4>Achievements</h4>
+                  <div class="achievements-tags">#tag1</div>
+                  <div class="achievements-tags">#tag2 blah</div>
+                </div>
+                <!-- Achievements population container ENDS -->
+                <!-- buttons -->
+                <div class="btn-container">
+                  <button class="btn btn-1">Button 1</button>
+                  <button class="btn btn-2">Button 2</button>
+                  <button class="btn btn-3">Button 3</button>
+                </div>
               </div>
-              <div style="margin-left:160px;">  
-                <span class="badge badge-info" style="background-color:#76a7d6">#achievement_1</span>
-                <span class="badge badge-info" style="background-color:#76a7d6">#achievement_2</span>
-              </div>  
-              <hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
-				<a class="btn btn-outline-success" href="#">Edit Profile</a>
-			</div>
-		</div>
+            </div>
+            <!-- ! Personal inforation ENDS -->
+          </div>
+          <!-- Profile part end -->
 
- <div class="card" style="width: 20rem; margin-left:80%">
-  <img class="card-img-top" src="{% static 'images/calendar.jpeg' %}" alt="Card image cap">
-</div> 
+          <!--! Career and Inbox section Tables ROW-1 -->
+          <div class="career-and-inbox-main">
+            <div class="career-container">
+              <h1>Career</h1>
+              <hr />
+              <table>
+                <th>Name</th>
+                <th>Status</th>
+                <th>three</th>
+                <th>four</th>
+                <th>six</th>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+              </table>
+            </div>
+            <div class="inbox-container">
+              <h1>Inbox</h1>
+              <hr />
+            </div>
+          </div>
+          <!--! Career and Inbox section Tables ROW-1  ----END---- -->
+          <!--! Career and Inbox section Tables ROW-2 -->
+          <div class="career-and-inbox-main">
+            <div class="career-container">
+              <h1>Career</h1>
+              <hr />
+              <table>
+                <th>Name</th>
+                <th>Status</th>
+                <th>three</th>
+                <th>four</th>
+                <th>six</th>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+              </table>
+            </div>
+            <div class="inbox-container">
+              <h1>Inbox</h1>
+              <hr />
+            </div>
+          </div>
+          <!--! Career and Inbox section Tables ROW-2  ----END---- -->
+          <!--! Career and Inbox section Tables ROW-3 -->
+          <div class="career-and-inbox-main">
+            <div class="career-container">
+              <h1>Career</h1>
+              <hr />
+              <table>
+                <th>Name</th>
+                <th>Status</th>
+                <th>three</th>
+                <th>four</th>
+                <th>six</th>
+                <tr>
+                  <td>Ayan</td>
+                  <td>Online</td>
+                  <td>ONline</td>
+                  <td>Online</td>
+                  <td>Onliine</td>
+                </tr>
+                
+              </table>
+            </div>
+            <div class="inbox-container">
+              <h1>Inbox</h1>
+              <hr />
+            </div>
+          </div>
+          <!--! Career and Inbox section Tables ROW-3  ----END---- -->
+        </div>
+        <!-- ! LEFT CONTAINER ----end--- -->
 
-
-<div class="col-lg-4" style="margin-left:-560px; ">
-			<div class="box-element product" style="height:215px; width:180%; margin-top:-18px;">
-				<h5 style="font-family:monospace; color:#76a7d6;">Personal Information </h5>
-				<hr>
-              <div style="float:left;">
-                <p class="card-text" style="color:#6c757d; font-size:16px">Achievements</p>
-              </div>
-              <div style="margin-left:160px;">  
-                <span class="badge badge-info" style="background-color:#76a7d6">#achievement_1</span>
-                <span class="badge badge-info" style="background-color:#76a7d6">#achievement_2</span>
-              </div>  
-              <hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
-				<a class="btn btn-outline-success" href="#">Edit Profile</a>
-			</div>
-		</div>
-  <div class="col-lg-4" style="margin-left:-870px; margin-top:230px;">
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>Y</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
-				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
-				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
-				<a class="btn btn-outline-success" href="#">Apply</a>
-			</div>
-		</div>
-
-      <div class="col-lg-4" style="margin-left:-270px; margin-top:230px; width:700px;">
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>Y</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
-				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
-				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
-				<a class="btn btn-outline-success" href="#">Apply</a>
-			</div>
-		</div>
-
-      <div class="col-lg-4" style="margin-left:10px; margin-top:-2px;">
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>Y</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
-				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
-				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
-				<a class="btn btn-outline-success" href="#">Apply</a>
-			</div>
-		</div>
-
-          <div class="col-lg-4" style="margin-left:40px; margin-top:-2px; width:700px;">
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>Y</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
-				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
-				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
-				<a class="btn btn-outline-success" href="#">Apply</a>
-			</div>
-		</div>
-
-
-
- <div class="card" style="width: 20rem; height:600px; margin-left:80%; margin-top:10px; border:1px solid black;">
-</div> 
-
-<div class="card text-center" style="margin-left:0.5%; margin-top:30px; width:99%;">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
-</div>
+        <!-- ! RIGHT CONTAINER -->
+        <div class="body-right">
+          <div class="calender-container">
+            Calender
+          </div>
+          <div class="top-container right-containers">
+            <h4>TOP</h4>
+            <hr>
+          </div>
+          <div class="mid-container right-containers">
+            <h4>MID</h4>
+            <hr>
+          </div>
+          <div class="bottom-container right-containers">
+            <h4>BOTTOM</h4>
+            <hr>
+          </div>
+        </div>
+        <!-- ! RIGHT CONTAINER ---ends--- -->
+      </div>
+    </div>
+  </body>
+</html>
