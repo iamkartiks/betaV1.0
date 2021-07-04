@@ -1,0 +1,318 @@
+
+                                        SIDEBAR HERE 
+<!-- SIDE BAR -->
+ <div class="card" style="width: 20rem; height:600px; margin-left:80%; margin-top:20px;">
+     <!-- TOP CARD -->     
+          <div class="col-lg-4" style="width:18rem; margin-top:5px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>TOP</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div>
+		</div>
+<!-- MID CARD -->
+              <div class="col-lg-4" style="width:18rem; margin-top:-10px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>MID</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div>
+		</div>
+<!-- LOWEST CARD I-->
+              <div class="col-lg-4" style="width:18rem; margin-top:-10px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>LOW</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div>
+		</div>
+
+</div> 
+<!-- FOOTER -->
+<div class="card text-center" style="margin-left:0.5%; margin-top:30px; width:99%;">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+                                                CARD HERE 
+
+
+
+                {% comment %} <h6 style="font-family:monospace; color:#76a7d6;"><strong>Name</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div> {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="cards-container">
+  <!-- RIGHT SMALL CARD I-->  
+  <div class="col-lg-4" style="margin-left:-870px; margin-top:260px; width:650px; postition:relative;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>CAREER</strong></h6>
+        <hr>
+
+
+      <div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>NAME</th>
+					<th>CURRENT LEVEL</th>
+					<th>JOBS UNLOCKED</th>
+					<th></th>
+
+				</tr>
+				<th></th>
+				<td>Software Developement</td>
+				<td>#7</td>
+				<td>0</td>
+				<td><a class = "btn btn-sm btn-outline-info" href="#">Continue</a></td>
+				<td></td>
+				<tr>
+				
+				</tr>
+			</table>
+		</div>
+		</div>
+    </div>
+<!-- LEFT SMALL CARD I-->
+
+  <div class="col-lg-4" style="margin-left:-200px; margin-top:260px; width:650px;position:relative;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>INBOX</strong></h6>
+        <hr>
+
+
+      <div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Products</th>
+					<th>Date Ordered</th>
+					<th>Status</th>
+					<th>Update</th>
+					<th>Remove</th>
+                {% for order in orders %}
+				</tr>
+				<th></th>
+				<td>{{order.product}}</td>
+				<td>{{order.date_created}}</td>
+				<td>{{order.status}}</td>
+				<td><a class = "btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+				<td><a class = "btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
+				<tr>
+				{% endfor %}
+				</tr>
+			</table>
+		</div>
+		</div>
+    </div>
+
+<!-- RIGHt SMALL CARD II-->
+
+
+  <div class="col-lg-4" style="margin-left:10px; margin-top:-5px; width:650px; position:relative;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>APPLICATIONS</strong></h6>
+        <hr>
+
+
+      <div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Products</th>
+					<th>Date Ordered</th>
+					<th>Status</th>
+					<th>Update</th>
+					<th>Remove</th>
+                {% for order in orders %}
+				</tr>
+				<th></th>
+				<td>{{order.product}}</td>
+				<td>{{order.date_created}}</td>
+				<td>{{order.status}}</td>
+				<td><a class = "btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+				<td><a class = "btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
+				<tr>
+				{% endfor %}
+				</tr>
+			</table>
+		</div>
+		</div>
+    </div>
+
+    <!-- LEFT CARD II -->
+
+    <div class="col-lg-4" style="margin-left:25px; margin-top:-5px; width:650px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>TASKS & GIGS</strong></h6>
+        <hr>
+
+
+      <div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Products</th>
+					<th>Date Ordered</th>
+					<th>Status</th>
+					<th>Update</th>
+					<th>Remove</th>
+                {% for order in orders %}
+				</tr>
+				<th></th>
+				<td>{{order.product}}</td>
+				<td>{{order.date_created}}</td>
+				<td>{{order.status}}</td>
+				<td><a class = "btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+				<td><a class = "btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
+				<tr>
+				{% endfor %}
+				</tr>
+			</table>
+		</div>
+		</div>
+    </div>
+
+<!-- RIGHT CARD III -->
+    <div class="col-lg-4" style="margin-left:10px; margin-top:-5px; width:650px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>Tasks</strong></h6>
+        <hr>
+
+
+      <div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Products</th>
+					<th>Date Ordered</th>
+					<th>Status</th>
+					<th>Update</th>
+					<th>Remove</th>
+                {% for order in orders %}
+				</tr>
+				<th></th>
+				<td>{{order.product}}</td>
+				<td>{{order.date_created}}</td>
+				<td>{{order.status}}</td>
+				<td><a class = "btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+				<td><a class = "btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
+				<tr>
+				{% endfor %}
+				</tr>
+			</table>
+		</div>
+		</div>
+    </div>
+
+<!-- LEFT CARD III -->
+    <div class="col-lg-4" style="margin-left:25px; margin-top:-5px; width:650px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>Tasks</strong></h6>
+        <hr>
+
+
+      <div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Products</th>
+					<th>Date Ordered</th>
+					<th>Status</th>
+					<th>Update</th>
+					<th>Remove</th>
+                {% for order in orders %}
+				</tr>
+				<th></th>
+				<td>{{order.product}}</td>
+				<td>{{order.date_created}}</td>
+				<td>{{order.status}}</td>
+				<td><a class = "btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+				<td><a class = "btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
+				<tr>
+				{% endfor %}
+				</tr>
+			</table>
+		</div>
+		</div>
+    </div>
+</div>
+
+
+<!-- SIDE BAR -->
+ <div class="card" style="width: 20rem; height:600px; margin-left:80%; margin-top:20px;">
+     <!-- TOP CARD -->     
+          <div class="col-lg-4" style="width:18rem; margin-top:5px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>TOP</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div>
+		</div>
+<!-- MID CARD -->
+              <div class="col-lg-4" style="width:18rem; margin-top:-10px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>MID</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div>
+		</div>
+<!-- LOWEST CARD I-->
+              <div class="col-lg-4" style="width:18rem; margin-top:-10px;">
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>LOW</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>N</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>Y</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">N</h6>
+				<hr>
+				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div>
+		</div>
+ </div> 
+</div>
