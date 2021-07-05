@@ -42,7 +42,7 @@
             <div class="profile-pic-container">
               <img
                 class="profile-photo"
-                src="{% static 'images/kartik.jpg'%}"
+                src="{{students.profileURL}}"
                 alt=""
               />
               <h1>{{ students.name}}</h1>
@@ -75,7 +75,7 @@
           <!--! Career and Inbox section Tables ROW-1 -->
           <div class="career-and-inbox-main">
             <div class="career-container">
-              <h1>Career</h1>
+              <h1>Institute Applications</h1>
               <hr/>
               <table>
                 <th>Institute</th>
@@ -98,87 +98,112 @@
             <div class="inbox-container">
               <h1>Inbox</h1>
               <hr/>
+              <table>
+                <th>Name</th>
+                <th>Content</th>
+                <th>Status</th>
+                <th></th>
+                <tr>
+                  <td>Sender's Name</td>
+                  <td>Sample text ...</td>
+                  <td>Offline</td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Expand</button></td>
+                </tr>
+                
+              </table>
             </div>
           </div>
           <!--! Career and Inbox section Tables ROW-1  ----END---- -->
           <!--! Career and Inbox section Tables ROW-2 -->
           <div class="career-and-inbox-main">
             <div class="career-container">
-              <h1>Career</h1>
+              <h1>Career Portal</h1>
               <hr />
               <table>
                 <th>Name</th>
+                <th>Current Level</th>
                 <th>Status</th>
-                <th>three</th>
-                <th>four</th>
-                <th>six</th>
+                <th>Jobs Unlocked</th>
+                <th></th>
+                <th>Score and Data</th>
                 <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
-                </tr>
-                <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
-                </tr>
-                <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
-                </tr>
-                <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
-                </tr>
-                <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
+                  <td>Software Development</td>
+                  <td>#69</td>
+                  <td>Not Completed</td>
+                  <td>2</td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Continue</button></td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Show Data</button></td>
                 </tr>
               </table>
             </div>
             <div class="inbox-container">
-              <h1>Inbox</h1>
+              <h1>Job Applications</h1>
               <hr />
+              <table>
+                <th>Job No.</th>
+                <th>Company Name</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Expand</th>
+                <tr>
+                  <td>#12546921</td>
+                  <td>JP Morgan</td>
+                  <td>Insternship</td>
+                  <td>Under Review</td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Open</button></td>
+                </tr>
+                
+              </table>
             </div>
           </div>
           <!--! Career and Inbox section Tables ROW-2  ----END---- -->
           <!--! Career and Inbox section Tables ROW-3 -->
           <div class="career-and-inbox-main">
             <div class="career-container">
-              <h1>Career</h1>
+              <h1>Task</h1>
               <hr />
               <table>
                 <th>Name</th>
+                <th>Type</th>
                 <th>Status</th>
-                <th>three</th>
-                <th>four</th>
-                <th>six</th>
+                <th>Open</th>
+                <th>Submit</th>
                 <tr>
-                  <td>Ayan</td>
-                  <td>Online</td>
-                  <td>ONline</td>
-                  <td>Online</td>
-                  <td>Onliine</td>
+                  <td>Landing Pages</td>
+                  <td>Gig</td>
+                  <td>Incomplete</td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Open</button></td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Submit</button></td>
                 </tr>
                 
               </table>
             </div>
             <div class="inbox-container">
-              <h1>Inbox</h1>
+              <h1>Academics</h1>
               <hr />
+              <table>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Expand</th>
+                
+                <tr>
+                  <td>DSA</td>
+                  <td>Course</td>
+                  <td>75% Complete</td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Submit</button></td>
+                  
+                </tr>
+
+                <tr>
+                  <td>SE2022</td>
+                  <td>Scholarship Examination</td>
+                  <td>Not Active</td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Start</button></td>
+                  
+                </tr>
+                
+              </table>
             </div>
           </div>
           <!--! Career and Inbox section Tables ROW-3  ----END---- -->

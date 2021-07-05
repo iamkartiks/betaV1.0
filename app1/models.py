@@ -17,12 +17,20 @@ class Student(models.Model):
     email = models.CharField(max_length=100, null=True,)
     career_status = models.CharField(max_length=200, null=True, choices=STATUS)
     interest = models.CharField(max_length=200,null=True)
-    # profile = models.ImageField(upload_to='accounts/',default="dp.jpeg", null=True, blank=True)
+    profile = models.ImageField(null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True,null=True)
 
 
     def __str__(self):
         return self.name
+
+    @property
+    def profileURL(self):
+        try:
+            url = self.profile.url
+        except:
+            url = ''
+        return url
 
 
 class Label(models.Model):
