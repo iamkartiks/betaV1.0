@@ -1,4 +1,4 @@
-from app4.models import CareerOption, Level
+from app4.models import *
 from app1.models import Institutes
 from typing import ContextManager
 from django.shortcuts import render
@@ -22,8 +22,11 @@ def register(request):
 
 def dashboard(request,pk):
     students = Student.objects.get(id=pk)
+    careers = students.careeroption_set.all()
     applications = students.application_set.all()
-    context = {'students':students, 'applications':applications}
+    
+    
+    context = {'students':students, 'applications':applications,'careers':careers, 'students':students}
     return render(request,'app1/dashboard.html',context)
 
 def institutes(request):

@@ -124,16 +124,20 @@
                 <th>Current Level</th>
                 <th>Status</th>
                 <th>Jobs Unlocked</th>
-                <th></th>
+                <th></th>`
                 <th>Score and Data</th>
-                <tr>
-                  <td>Software Development</td>
-                  <td>#69</td>
-                  <td>Not Completed</td>
+                {% for career in careers %}
+                <tr> 
+                  <td>{{career.name}}</td>
+                  
+                  <td></td>
+                  
+                  <td></td>
                   <td>2</td>
                   <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Continue</button></td>
                   <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Show Data</button></td>
                 </tr>
+                {% endfor %}
               </table>
             </div>
             <div class="inbox-container">

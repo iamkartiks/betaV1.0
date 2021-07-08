@@ -4,7 +4,6 @@ from django.shortcuts import render
 def levelplay(request,pk):
     career = CareerOption.objects.get(id=pk)
     levels = career.level_set.all()
-    # orders = customer.order_set.all()
     context = {'levels':levels,'career':career}
     return render(request,'app4/levelbased.html',context)
 
