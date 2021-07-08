@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Deferrable, UniqueConstraint
 from app1.models import *
 
 class CareerOption(models.Model):
@@ -16,7 +17,10 @@ class Level(models.Model):
     Topic = models.CharField(max_length=100,null=True)
     career= models.ForeignKey(CareerOption, null=True, on_delete= models.SET_NULL)
     
-    
+    def __repr__(self):
+        return self.name
+
+
     def __str__(self):
         return self.name
 
@@ -26,8 +30,13 @@ class StudentLevel(models.Model):
     career = models.ForeignKey(CareerOption,null=True, on_delete= models.SET_NULL)
     student = models.ForeignKey(Student,null=True, on_delete= models.SET_NULL)
     level = models.ForeignKey(Level,null=True, on_delete= models.SET_NULL)
+
+    # UniqueConstraint(fields = ['level', 'key2'], name = 'constraint_name')
     
-    
+    def __repr__(self):
+        return self.level.name
+
+
     def __str__(self):
         return self.level.name
 

@@ -42,11 +42,11 @@
             <div class="profile-pic-container">
               <img
                 class="profile-photo"
-                src="{{students.profileURL}}"
+                src="{{student.profileURL}}"
                 alt=""
               />
-              <h1>{{ students.name}}</h1>
-              <h5>{{ students.career_status }}</h5>
+              <h1>{{ student.name}}</h1>
+              <h5>{{ student.career_status }}</h5>
             </div>
             <!--! personal inforation -->
             <div class="profile-info">
@@ -124,14 +124,12 @@
                 <th>Current Level</th>
                 <th>Status</th>
                 <th>Jobs Unlocked</th>
-                <th></th>`
+                <th></th>
                 <th>Score and Data</th>
                 {% for career in careers %}
                 <tr> 
-                  <td>{{career.name}}</td>
-                  
-                  <td></td>
-                  
+                  <td>{{career.0}}</td>
+                  <td>{{career.1}}</td>
                   <td></td>
                   <td>2</td>
                   <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Continue</button></td>

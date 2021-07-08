@@ -21,12 +21,13 @@ def register(request):
     return render(request,'app1/register.html', context)
 
 def dashboard(request,pk):
-    students = Student.objects.get(id=pk)
-    careers = students.careeroption_set.all()
-    applications = students.application_set.all()
-    
-    
-    context = {'students':students, 'applications':applications,'careers':careers, 'students':students}
+    student = Student.objects.get(id=pk)
+    career = [c.name for c in student.careeroption_set.all()]
+    applications = student.application_set.all()
+    current_level =  StudentLevel.objects.filter(student=student)
+    levelList = [level.level for level in current_level]
+    careers = zip(career, levelList)
+    context = {'student':student, 'applications':applications,'careers':careers}
     return render(request,'app1/dashboard.html',context)
 
 def institutes(request):
@@ -34,7 +35,7 @@ def institutes(request):
     context = {'institutes':institutes}
     return render(request,'app1/institutes.html',context)
 
-def course(request):
+def course(request):    
     course = Course.objects.all()
     context = {'course':course}
     return render(request,'app1/course.html',context)
