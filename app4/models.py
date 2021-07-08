@@ -49,5 +49,9 @@ class CareerStatus(models.Model):
     student = models.ForeignKey(Student,null=True, on_delete=models.SET_NULL)
     status = models.CharField(max_length=100, null=True, choices=STATUS)
 
+
+    def __repr__(self):
+        return self.status
+
     def __str__(self):
         return self.status

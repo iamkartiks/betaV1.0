@@ -25,9 +25,10 @@ def dashboard(request,pk):
     career = [c.name for c in student.careeroption_set.all()]
     applications = student.application_set.all()
     current_level =  StudentLevel.objects.filter(student=student)
+    career_status = [ c.status for c in CareerStatus.objects.filter(student=student)]
     levelList = [level.level for level in current_level]
-    careers = zip(career, levelList)
-    context = {'student':student, 'applications':applications,'careers':careers}
+    careers = zip(career, levelList, career_status)
+    context = {'student':student, 'applications':applications,'careers':careers, 'careerstatus':career_status}
     return render(request,'app1/dashboard.html',context)
 
 def institutes(request):
