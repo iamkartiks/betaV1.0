@@ -170,14 +170,15 @@
                 <th>Status</th>
                 <th>Open</th>
                 <th>Submit</th>
+                {% for task in tasks %}
                 <tr>
-                  <td>Landing Pages</td>
-                  <td>Gig</td>
-                  <td>Incomplete</td>
+                  <td>{{task.name}}</td>
+                  <td>{{task.task_type}}</td>
+                  <td>{{task.status}}</td>
                   <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Open</button></td>
                   <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Submit</button></td>
                 </tr>
-                
+                {% endfor %}
               </table>
             </div>
             <div class="inbox-container">

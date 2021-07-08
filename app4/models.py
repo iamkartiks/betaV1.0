@@ -55,3 +55,20 @@ class CareerStatus(models.Model):
 
     def __str__(self):
         return self.status
+
+
+class Task(models.Model):
+
+    STATUS = (('Incomplete', 'Incomplete'),
+              ('Complete', 'Complete')
+              )
+    name = models.CharField(max_length=200,null=True)
+    task_type = models.CharField(max_length=100, null=True)
+    student = models.ForeignKey(Student,null=True, on_delete=models.SET_NULL)
+    status = models.CharField(max_length=50, null=True, choices=STATUS)
+
+    def __repr__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name
