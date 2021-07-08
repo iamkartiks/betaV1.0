@@ -147,14 +147,15 @@
                 <th>Type</th>
                 <th>Status</th>
                 <th>Expand</th>
+                {% for application in jobapplications%}
                 <tr>
-                  <td>#12546921</td>
-                  <td>JP Morgan</td>
-                  <td>Insternship</td>
-                  <td>Under Review</td>
+                  <td>#{{application.jobno}}</td>
+                  <td>{{application.name}}</td>
+                  <td>{{application.category}}</td>
+                  <td>{{application.status}}</td>
                   <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Open</button></td>
                 </tr>
-                
+                {% endfor %}
               </table>
             </div>
           </div>

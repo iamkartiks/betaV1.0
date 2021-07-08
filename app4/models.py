@@ -1,5 +1,8 @@
 from django.db import models
 from django.db.models import Deferrable, UniqueConstraint
+import uuid
+
+from django.db.models.aggregates import Max
 from app1.models import *
 
 class CareerOption(models.Model):
@@ -66,6 +69,24 @@ class Task(models.Model):
     task_type = models.CharField(max_length=100, null=True)
     student = models.ForeignKey(Student,null=True, on_delete=models.SET_NULL)
     status = models.CharField(max_length=50, null=True, choices=STATUS)
+
+    def __repr__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name
+
+
+class JobApplication(models.Model):
+    STATUS  = (('Accepted', 'Accepted'),
+                ('In Progress', 'In Progress'),
+                ('Rejected', 'Rejected')
+                )
+    jobno = models.CharField(max_length=100, blank=True, unique=True)
+    name = models.CharField(max_length=200, null=True)
+    category = models.CharField(max_length=200, null=True)
+    student = models.ForeignKey(Student,null=True, on_delete=models.SET_NULL)
+    status = models.CharField(max_length=200,null=True,choices=STATUS)
 
     def __repr__(self):
         return self.name
