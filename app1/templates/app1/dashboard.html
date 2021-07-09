@@ -190,23 +190,14 @@
                 <th>Type</th>
                 <th>Status</th>
                 <th>Expand</th>
-                
+                {% for academic in academics %}
                 <tr>
-                  <td>DSA</td>
-                  <td>Course</td>
-                  <td>75% Complete</td>
-                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Submit</button></td>
-                  
+                  <td>{{academic.name}}</td>
+                  <td>{{academic.type}}</td>
+                  <td>{{academic.status}}</td>
+                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Exapand</button></td>
                 </tr>
-
-                <tr>
-                  <td>SE2022</td>
-                  <td>Scholarship Examination</td>
-                  <td>Not Active</td>
-                  <td><button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Start</button></td>
-                  
-                </tr>
-                
+                {% endfor %}
               </table>
             </div>
           </div>

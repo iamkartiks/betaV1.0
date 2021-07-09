@@ -93,3 +93,17 @@ class JobApplication(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Academics(models.Model):
+    name =  models.CharField(max_length=100, null=True)
+    type = models.CharField(max_length=200,null=True)
+    status = models.CharField(max_length=200,null=True)
+    student = models.ForeignKey(Student,null=True,on_delete=models.SET_NULL)
+
+    def __repr__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name
+        
