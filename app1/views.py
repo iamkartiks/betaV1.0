@@ -40,8 +40,10 @@ def dashboard(request,pk):
     job_applications = student.jobapplication_set.all()
 
     academics = student.academics_set.all()
+    
+    enroll = Enrolled.objects.get(student=student)
 
-    context = {'student':student, 'applications':applications,'careers':careers, 'careerstatus':career_status, 'tasks':tasks, 'jobapplications':job_applications, 'academics':academics}
+    context = {'student':student, 'applications':applications,'careers':careers, 'careerstatus':career_status, 'tasks':tasks, 'jobapplications':job_applications, 'academics':academics, 'enroll':enroll}
     return render(request,'app1/dashboard.html',context)
 
     

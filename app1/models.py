@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.deletion import SET_NULL
 
 
 
@@ -91,3 +92,10 @@ class Course(models.Model):
     def __str__(self):
         return self.name
     
+
+class Enrolled(models.Model):
+    institute = models.ForeignKey(Institutes,null=True, on_delete=SET_NULL)
+    student = models.OneToOneField(Student, null=True, on_delete=SET_NULL)
+
+    def __str__(self):
+        return self.institute.name
