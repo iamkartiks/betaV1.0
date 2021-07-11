@@ -99,3 +99,14 @@ class Enrolled(models.Model):
 
     def __str__(self):
         return self.institute.name
+
+
+class PostImage(models.Model):
+    image = models.ImageField(null=True)
+    institute = models.ForeignKey(Institutes,null=True, on_delete=SET_NULL)
+
+    def __repr__(self):
+        return self.institute.name
+
+    def __str__(self):
+        return self.institute.name

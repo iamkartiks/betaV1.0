@@ -56,7 +56,7 @@
                 <h6 style="font-family:monospace; color:#76a7d6;"><strong>{{ i.category }}</strong></h6>
 				<h6 style="font-family:monospace; color:#76a7d6;">{{ i.location }}</h6>
 				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">View</button>
+				<a href="{% url 'privins' i.id %}" class="btn btn-secondary">View</a>
 				<a class="btn btn-outline-success" href="#">Apply</a>
 			</div>
 		</div>

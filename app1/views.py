@@ -62,3 +62,10 @@ def course(request):
 
 def complete(request):
     return render(request,'app1/complete.html')
+
+
+def privinstitute(request,pk):
+    institute = Institutes.objects.get(id=pk)
+    photos = PostImage.objects.filter(institute=institute)
+    context = {'institute':institute, 'photos':photos}
+    return render(request,'app1/privateins.html',context)

@@ -12,4 +12,5 @@ urlpatterns = [
     path('institutes/',views.institutes, name="institutes"),
     path('course/',views.course, name="course"),
     path('completeprofile/',views.complete, name="ccomplete"),
+    path('institute/<str:pk>', views.privinstitute, name="privins"),
 ]
