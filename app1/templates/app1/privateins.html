@@ -35,17 +35,15 @@
 </ol>
 
 <!-- Wrapper for slides -->
-<div class="carousel-inner" role="listbox">
+<div class="carousel-inner" role="listbox" style="height:45%;">
     {% for photo in photos %}
     {% if forloop.counter == 1 %}
     <div class="item active">
     {% else %}
     <div class="item">
     {% endif %}
-        <img src="{{ photo.image.url }}" alt="Image" width="460" height="345">
-  <div class="carousel-caption">
+        <img src="{{ photo.image.url }}" alt="Image" width="40%" height="345">
 
-  </div>
     </div>
     {% endfor %}
     </div>
