@@ -3,6 +3,7 @@ from app1.models import Institutes
 from typing import ContextManager
 from django.shortcuts import render
 from .models import *
+from django.db.models import Count
 
 
 def index(request):
@@ -67,5 +68,10 @@ def complete(request):
 def privinstitute(request,pk):
     institute = Institutes.objects.get(id=pk)
     photos = PostImage.objects.filter(institute=institute)
-    context = {'institute':institute, 'photos':photos}
+
+    labels = Label.objects.filter(institutes=institute)
+
+    total_students = Enrolled.objects.filter(institute=institute).count()
+
+    context = {'institute':institute, 'photos':photos, 'enrolled_students':total_students, 'labels':labels}
     return render(request,'app1/privateins.html',context)

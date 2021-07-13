@@ -1,5 +1,6 @@
 
 {% load static %}
+
 <html>
 <head>
 
@@ -13,12 +14,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 <div id='container'>
-<div id='button-div'>
+ <div id='button-div'>
 <a class="btn btn-primary" href="{% url 'home' %}">HOME</a>
-</div>
+</div> 
+
+<div id='button-div' style="margin-left:5px;">
+<a class="btn btn-secondary" href="{{request.META.HTTP_REFERER}}">BACK</a>
+</div> 
+
 <div id="header">
-<h3>{{institute.name}}</h3>
+<h3 style="font-family:monospace; color:#68759c;">{{institute.name}}</h3>
 </div>
 </div>
 
@@ -35,14 +42,14 @@
 </ol>
 
 <!-- Wrapper for slides -->
-<div class="carousel-inner" role="listbox" style="height:45%;">
+<div class="carousel-inner" role="listbox" style="width:55%">
     {% for photo in photos %}
     {% if forloop.counter == 1 %}
     <div class="item active">
     {% else %}
     <div class="item">
     {% endif %}
-        <img src="{{ photo.image.url }}" alt="Image" width="40%" height="345">
+        <img src="{{ photo.image.url }}" alt="Image" width="40%" height="345" margin-left="30%">
 
     </div>
     {% endfor %}
@@ -59,62 +66,85 @@
     </a>
 </div>
 
-
 <div class="row">
 	<div class="col-md-5">
-		<h5>CUSTOMERS:</h5>
 		<hr>
 		<div class="card card-body">
-			<a class="btn btn-primary  btn-sm btn-block" href="">Create Customer</a>
-			<table class="table table-sm">
-				<tr>
-					<th></th>
-					<th>Customer</th>
-					<th>Phone</th>
-				</tr>
-
-				
-					<tr>
-						<td><a class="btn btn-sm btn-info" href="">View</a></td>
-						<td><td>
-						<td></td>
-					</tr>
-				
-
-			</table>
-		</div>
-	</div>
-
-	<div class="col-md-7">
-		<h5>LAST 5 ORDERS</h5>
-		<hr>
-		<div class="card card-body">
-			<a class="btn btn-primary  btn-sm btn-block" href="{">Create Order</a>
-			<table class="table table-sm">
-				<tr>
-					<th>Product</th>
-					<th>Date Orderd</th>
-					<th>Status</th>
-					<th>Update</th>
-					<th>Remove</th>
-				</tr>
-
-				
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><a class="btn btn-sm btn-info" href="">Update</a></td>
-
-						<td><a class="btn btn-sm btn-danger" href="">Delete</a></td>
-
-					</tr>
 			
-
-		
-			</table>
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">Personal Information</h1>
+                <h3></h3>
+                <h3></h3>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>TOTAL NUMBER OF STUDENTS :</strong>{{enrolled_students}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Email :</strong> {{institute.email}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Phone No :</strong> {{institute.phone}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                
+                <hr />
+                {% for label in labels %}
+                 <h6 style="font-family:monospace; font-size:14px;"><strong>Labels :</strong> {{label.name }}</h6>
+                 {% endfor %}
 		</div>
 	</div>
+</div>
+
+	<div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">Personal Information</h1>
+                <h3></h3>
+                <h3></h3>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>TOTAL NUMBER OF STUDENTS :</strong>{{enrolled_students}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Email :</strong> {{institute.email}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Phone No :</strong> {{institute.phone}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                
+                <hr />
+		</div>
+	</div>
+</div>
+
+<div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">Personal Information</h1>
+                <h3></h3>
+                <h3></h3>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>TOTAL NUMBER OF STUDENTS :</strong>{{enrolled_students}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Email :</strong> {{institute.email}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Phone No :</strong> {{institute.phone}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                
+                <hr />
+		</div>
+	</div>
+</div>
+
+    <div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">Personal Information</h1>
+                <h3></h3>
+                <h3></h3>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>TOTAL NUMBER OF STUDENTS :</strong>{{enrolled_students}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Email :</strong> {{institute.email}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Phone No :</strong> {{institute.phone}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                
+                <hr />
+		</div>
+	</div>
+</div>
 
 </div>
 </body>

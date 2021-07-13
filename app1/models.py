@@ -49,6 +49,7 @@ class Institutes(models.Model):
     name = models.CharField(max_length=200, null=True)
     location = models.CharField(max_length=200, null=True)
     phone = models.CharField(max_length=100, null=True)
+    email = models.CharField(max_length=200,null=True)
     fees = models.FloatField(null=True)
     category = models.CharField(max_length=200, null=True, choices=CATEGORY)
     label = models.ManyToManyField(Label)
