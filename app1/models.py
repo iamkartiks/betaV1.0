@@ -54,6 +54,9 @@ class Institutes(models.Model):
     category = models.CharField(max_length=200, null=True, choices=CATEGORY)
     label = models.ManyToManyField(Label)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
+    qsrank = models.IntegerField(null=True)
+    sexratio = models.CharField(max_length=100,null=True)
+    
 
     def __str__(self):
         return self.name
@@ -111,3 +114,14 @@ class PostImage(models.Model):
 
     def __str__(self):
         return self.institute.name
+    
+
+class Program(models.Model):
+    name = models.CharField(max_length=200, null=True)
+    institute = models.ManyToManyField(Institutes)
+
+    def __repr__(self):
+        return self.name
+    
+    def __str__(self):
+        return self.name
