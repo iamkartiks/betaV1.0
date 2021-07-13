@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.deletion import SET_NULL
+from django.db.models.deletion import SET, SET_NULL
 
 
 
@@ -123,5 +123,15 @@ class Program(models.Model):
     def __repr__(self):
         return self.name
     
+    def __str__(self):
+        return self.name
+
+class Event(models.Model):
+    name = models.CharField(max_length=200,null=True)
+    institute = models.ForeignKey(Institutes,null=True,on_delete=SET_NULL)
+
+    def __repr__(self):
+        return self.name
+
     def __str__(self):
         return self.name

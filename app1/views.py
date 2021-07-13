@@ -76,5 +76,7 @@ def privinstitute(request,pk):
     total_programs = Program.objects.filter(institute=institute).count()
     programs = Program.objects.filter(institute=institute)
     
-    context = {'institute':institute, 'photos':photos, 'enrolled_students':total_students, 'labels':labels, 'total_programs':total_programs, 'programs':programs}
+    events = Event.objects.filter(institute=institute)
+
+    context = {'institute':institute, 'photos':photos, 'enrolled_students':total_students, 'labels':labels, 'total_programs':total_programs, 'programs':programs, 'events':events}
     return render(request,'app1/privateins.html',context)

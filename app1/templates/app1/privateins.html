@@ -112,10 +112,8 @@
                 {% endfor %}        
                 
                 </div>
-                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
-                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
-                
                 <hr />
+                    <a class="btn btn-primary" href="">View All Programs </a>
 		</div>
 	</div>
 </div>
@@ -125,16 +123,31 @@
 		<div class="card card-body">
 			
 			<div class="personal-info-card">
-                <h1 style="font-family:monospace;">Personal Information</h1>
+                <h1 style="font-family:monospace;">Highlights & Events</h1>
+                <h3 style="font-family:monospace;">Higlights</h3>
+                <a class="btn btn-primary" href="">Expand</a>
+                <hr/>
                 <h3></h3>
-                <h3></h3>
-                <h6 style="font-family:monospace; font-size:16px;"><strong>TOTAL NUMBER OF STUDENTS :</strong>{{enrolled_students}}</h6>
-                <h6 style="font-family:monospace; font-size:16px;"><strong>Email :</strong> {{institute.email}}</h6>
-                <h6 style="font-family:monospace; font-size:16px;"><strong>Phone No :</strong> {{institute.phone}}</h6>
-                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
-                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                <ul>
+                <li><h6 style="font-family:monospace; font-size:16px;">It has been rated a top 10 regional public university in the country by Education report</h6></li>
+                <li><h6 style="font-family:monospace; font-size:16px;">It has a very respectable student to teacher ratio of 24:1 </h6></li>
                 
+                </ul>
+                <hr/>
+                
+                
+                <h3 style="font-family:monospace;">Upcoming Events</h3>
+                <a class="btn btn-primary" href="">See All Events</a>
+                
+                <hr/>
+                {% for event in events %}
+                <ul>
+                <li><h6 style="font-family:monospace; font-size:16px;">{{event.name}}</h6></li>
+                </ul>
+                <a class="btn btn-primary" href="">View Event </a>
+                {% endfor %}
                 <hr />
+                
 		</div>
 	</div>
 </div>
