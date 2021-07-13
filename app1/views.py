@@ -78,5 +78,12 @@ def privinstitute(request,pk):
     
     events = Event.objects.filter(institute=institute)
 
-    context = {'institute':institute, 'photos':photos, 'enrolled_students':total_students, 'labels':labels, 'total_programs':total_programs, 'programs':programs, 'events':events}
+    total_scholarships = Scholarship.objects.filter(institute = institute).count()
+
+    scholarship = Scholarship.objects.filter(institute = institute)
+
+    premiums = PremiumService.objects.all()
+
+    context = {'institute':institute, 'photos':photos, 'enrolled_students':total_students, 'labels':labels, 'total_programs':total_programs, 'programs':programs, 'events':events, 'scholarships':scholarship, 'totalscholarships':total_scholarships, 'premiums':premiums}
+    
     return render(request,'app1/privateins.html',context)

@@ -11,3 +11,6 @@ admin.site.register(Enrolled)
 admin.site.register(PostImage)
 admin.site.register(Program)
 admin.site.register(Event)
+admin.site.register(Scholarship)
+admin.site.register(PremiumService)
+

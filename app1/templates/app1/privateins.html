@@ -157,8 +157,41 @@
 		<div class="card card-body">
 			
 			<div class="personal-info-card">
-                <h1 style="font-family:monospace;">Personal Information</h1>
+                <h1 style="font-family:monospace;">Scholarships</h1>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Total Scholarships :</strong>{{totalscholarships}}</h6>
+                {% for scholarship in scholarships %}
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Name :</strong>{{scholarship.name}}</h6>
+                <a class="btn btn-primary" href="">View</a>
+                <a class="btn btn-primary" href="">Apply</a>
+                {% endfor %}
+                <hr />
+		    </div>
+	    </div>
+    </div>
+
+    <div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">Premium Services</h1>
                 <h3></h3>
+                {% for premium in premiums %}
+                <ul>
+                <li><a href="" style="font-family:monospace; font-size:18px;"><strong>{{premium.name}}</strong></a></li>
+                </ul>
+                {% endfor %}
+                <hr />
+		    </div>
+	    </div>
+    </div>
+
+    <div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">Extras</h1>
                 <h3></h3>
                 <h6 style="font-family:monospace; font-size:16px;"><strong>TOTAL NUMBER OF STUDENTS :</strong>{{enrolled_students}}</h6>
                 <h6 style="font-family:monospace; font-size:16px;"><strong>Email :</strong> {{institute.email}}</h6>
@@ -167,9 +200,9 @@
                 <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
                 
                 <hr />
-		</div>
-	</div>
-</div>
+		    </div>
+	    </div>
+    </div>
 
 </div>
 </body>

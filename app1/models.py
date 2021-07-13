@@ -1,3 +1,4 @@
+from types import MappingProxyType
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.deletion import SET, SET_NULL
@@ -129,6 +130,39 @@ class Program(models.Model):
 class Event(models.Model):
     name = models.CharField(max_length=200,null=True)
     institute = models.ForeignKey(Institutes,null=True,on_delete=SET_NULL)
+
+    def __repr__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name
+
+
+class Scholarship(models.Model):
+    CATEGORY = (('highschool', 'highschool'),
+                ('undergraduate', 'undergraduate'),
+                ('postgraduate', 'postgraduate'),
+                )
+
+    TYPE = (('academics', 'academics'),
+            ('competition', 'competition'),
+            ('sports', 'sports'),
+            ('CCA', 'CCA'),
+            )
+    name = models.CharField(max_length=200,null=True)
+    student = models.ForeignKey(Student, null=True, blank=True, on_delete=SET_NULL)
+    institute =  models.ManyToManyField(Institutes)
+    applicable = models.CharField(max_length=100, null=True, choices=CATEGORY)
+    scholarship_type = models.CharField(max_length=100, null=True, choices=TYPE)
+
+    def __repr__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name
+
+class PremiumService(models.Model):
+    name = models.CharField(max_length=200, null=True)
 
     def __repr__(self):
         return self.name
