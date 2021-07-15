@@ -1,7 +1,7 @@
 from types import MappingProxyType
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.deletion import SET, SET_NULL
+from django.db.models.deletion import  SET_NULL
 
 
 
