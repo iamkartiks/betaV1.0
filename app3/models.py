@@ -107,15 +107,6 @@ class Payment(models.Model):
         return self.amount
 
 
-class InstituteEvent(models.Model):
-    event = models.OneToOneField(Event, on_delete=models.CASCADE)
-
-    def __repr__(self):
-        return self.event.name
-
-    def __str__(self):
-        return self.event.name
-
 class Institute(models.Model):
     institute = models.OneToOneField(Institutes, on_delete=models.CASCADE)
 

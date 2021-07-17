@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('instituteportal/',views.managementsys, name='managementsystem'),
+    path('portal/<str:pk>',views.dashboard, name='portaldashboard'),
 
 ]
