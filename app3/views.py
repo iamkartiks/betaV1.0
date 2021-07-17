@@ -9,5 +9,7 @@ def managementsys(request):
 def dashboard(request, pk):
     institute = Institutes.objects.get(id=pk)
     events = Event.objects.filter(institute=institute)
-    context = {'institute':institute, 'events':events}
+    registered_students = Registered.objects.filter(institute=institute)
+    faculty = Teacher.objects.filter(employed=institute)
+    context = {'institute':institute, 'events':events, 'students':registered_students, 'faculties':faculty}
     return render(request, 'app3/college_dashboard.html', context)

@@ -1,3 +1,4 @@
+from django.db.models.deletion import CASCADE
 from app1.views import institutes
 from django.db import models
 from django.db.models.fields.related import ManyToManyField
@@ -17,7 +18,7 @@ class Address(models.Model):
     def __repr__(self):
         return self.Address1
 
-    def __repr__(self):
+    def __str__(self):
         return self.Address1
 
 
@@ -41,6 +42,7 @@ class Teacher(models.Model):
     name = models.CharField(max_length=200,null=True)
     qualification = models.CharField(max_length=200, null=True)
     phone = models.CharField(max_length=100, null=True)
+    employed = models.OneToOneField(Institutes,null=True, on_delete=CASCADE)
     email = models.CharField(max_length=100, null=True)
     address = models.ManyToManyField(Address)
     specialised = models.ManyToManyField(Department)
@@ -69,8 +71,20 @@ class RegisteredStudent(models.Model):
 
     def __repr__(self):
         return self.name
-    def __repr__(self):
+
+    def __str__(self):
         return self.name
+
+
+class Registered(models.Model):
+    institute = models.ForeignKey(Institutes, null=True, on_delete=models.SET_NULL)
+    students = models.OneToOneField(RegisteredStudent, null=True, on_delete=models.CASCADE)
+
+    def __repr__(self):
+        return self.institute.name
+    
+    def __str__(self):
+        return self.institute.name
 
 
 class Class(models.Model):
@@ -82,7 +96,7 @@ class Class(models.Model):
     def __repr__(self):
         return self.name
 
-    def __repr__(self):
+    def __str__(self):
         return self.name
 
 
@@ -103,7 +117,7 @@ class Payment(models.Model):
     def __repr__(self):
         return self.amount
 
-    def __repr__(self):
+    def __str__(self):
         return self.amount
 
 
