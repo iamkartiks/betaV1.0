@@ -42,7 +42,7 @@ class Teacher(models.Model):
     name = models.CharField(max_length=200,null=True)
     qualification = models.CharField(max_length=200, null=True)
     phone = models.CharField(max_length=100, null=True)
-    employed = models.OneToOneField(Institutes,null=True, on_delete=CASCADE)
+    employed = models.ForeignKey(Institutes,null=True, on_delete=CASCADE)
     email = models.CharField(max_length=100, null=True)
     address = models.ManyToManyField(Address)
     specialised = models.ManyToManyField(Department)
@@ -91,6 +91,7 @@ class Class(models.Model):
     name = models.CharField(max_length=200, null=True)
     start_time = models.TimeField(auto_now=False, auto_now_add=False)
     students = models.ManyToManyField(RegisteredStudent)
+    institute = models.ForeignKey(Institutes, null=True, on_delete=models.SET_NULL)
     teacher = models.OneToOneField(Teacher, on_delete=models.CASCADE)
 
     def __repr__(self):
