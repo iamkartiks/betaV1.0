@@ -22,3 +22,4 @@ def dashboard(request, pk):
     context = {'institute':institute, 'events':events, 'students':registered_students, 'faculties':faculty, 'classes':classes}
     
     return render(request, 'app3/college_dashboard.html', context)
+    
