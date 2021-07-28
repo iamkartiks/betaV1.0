@@ -21,6 +21,7 @@ html {
 
 /* header navbar start */
 .header-container {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,6 +133,10 @@ html {
 .child-drop div:last-child {
   border: none !important;
 }
+.scroll-header{
+  background-color: rgba(0, 0, 0, 0.616);
+  z-index: 100;
+}
 .col-3 {
   display: flex;
   width: 18%;
@@ -187,6 +192,7 @@ html {
 .main-container {
   display: flex;
   width: 100%;
+  padding-top: 100px;
 }
 .main-col-1 {
   width: 50%;

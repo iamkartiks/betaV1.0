@@ -28,7 +28,7 @@
     <!--! Hero Start -->
     <div class="hero" style="background-image: url('{% static 'images/Assets/img/bg-2.png' %}');" id="home">
       <!--todo Header Start NAVBAR -->
-      <header class="header-container">
+      <header class="header-container" id="scroll-head">
         <nav class="navbar">
           <div class="col-1">
             <h1 class="heading"><a href="#home">edu-Slogg</a></h1>
@@ -308,7 +308,7 @@
       </div>
       <img
         class="plan-illus"
-        src="./Assets/illustrations/undraw_Business_plan_re_0v81.svg"
+        src=" {% static 'images/Assets/illustrations/undraw_Business_plan_re_0v81.svg' %}"
         alt=""
       />
     </div>
@@ -397,7 +397,7 @@
         <div class="row_1-col-2">
           <h1>Contact Us</h1>
           <a href="#">abc@gmail.com</a>
-          <a href="#">+91 9854XXX588</a>
+          <a href="tel:+916394915220">+91 9854XXX588</a>
           <div class="social-icons">
             <a href="#"><img src="{% static 'images/Assets/icons/linkedin.svg' %}" alt="" /></a>
             <a href="#"><img src="{% static 'images/Assets/icons/twitter.svg' %}" alt="" /></a>
@@ -432,7 +432,7 @@
 
     <!-- JS -->
     <script defer src="{% static 'js/JS/app.js' %}" type="text/javascript"></script>
-    <script defer src="{% static '/JS/date.js' %}" type="text/javascript"></script>
+    <script defer src="{% static 'js/JS/date.js' %}" type="text/javascript"></script>
     <!-- Slide -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script>
