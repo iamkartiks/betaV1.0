@@ -1,5 +1,119 @@
 {% load static %}
-<h3>This is {{institute}}'s dashboard</h3>
+<html>
+<head>
+
+	<title>Institute</title>
+	{% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> {% endcomment %}
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static '/styles/dash2.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id='container'>
+    <div id='button-div'>
+        <a class="btn btn-primary" href="{% url 'home' %}">HOME</a>
+    </div> 
+
+    <div id='button-div' style="margin-left:5px;">
+        <a class="btn btn-secondary" href="{{request.META.HTTP_REFERER}}">BACK</a>
+    </div> 
+
+    <div id="header">
+        <h3 style="font-family:monospace; color:#68759c;">{{institute.name}}</h3>
+    </div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">College At A Glance</h1>
+                <h3></h3>
+                <h3></h3>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>TOTAL NUMBER OF STUDENTS :</strong>{{enrolled_students}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Email :</strong> {{institute.email}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>Phone No :</strong> {{institute.phone}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>QS Ranking :</strong>{{institute.qsrank}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong></strong></h6>
+                {% for label in labels %}
+                 <h6 style="font-family:monospace; font-size:14px;"><strong>Labels :</strong> {{label.name }}</h6>
+                 {% endfor %}
+                <hr />
+
+                 <h4 style="font-family:monospace;">Students Demographics</h4>
+                 <h6 style="font-family:monospace; font-size:16px;"><strong>Boy-Girl Ratio :</strong>  {{institute.sexratio}}</h6>
+
+		</div>
+	</div>
+</div>
+
+	<div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">Programs</h1>
+                <h3></h3>
+                <h3></h3>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>TOTAL NUMBER OF PROGRAMS :</strong>{{total_programs}}</h6>
+                <h6 style="font-family:monospace; font-size:16px;"><strong>PROGRAMS :</strong></h6>
+                {% for program in programs %}
+        
+                <h6 style="font-family:monospace; font-size:16px; color:#68759c"><strong>{{ program.name}}</strong></h6>
+                <a class="btn btn-primary" href="">View Program </a>
+                <a class="btn btn-primary" href="">Apply</a>
+                
+                {% endfor %}        
+                
+                </div>
+                <hr />
+                    <a class="btn btn-primary" href="">View All Programs </a>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			
+			<div class="personal-info-card">
+                <h1 style="font-family:monospace;">Highlights & Events</h1>
+                <h3 style="font-family:monospace;">Higlights</h3>
+                <a class="btn btn-primary" href="">Expand</a>
+                <hr/>
+                <h3></h3>
+                <ul>
+                <li><h6 style="font-family:monospace; font-size:16px;">It has been rated a top 10 regional public university in the country by Education report</h6></li>
+                <li><h6 style="font-family:monospace; font-size:16px;">It has a very respectable student to teacher ratio of 24:1 </h6></li>
+                
+                </ul>
+                <hr/>
+                
+                
+                <h3 style="font-family:monospace;">Upcoming Events</h3>
+                <a class="btn btn-primary" href="">See All Events</a>
+                
+                <hr/>
+                {% for event in events %}
+                <ul>
+                <li><h6 style="font-family:monospace; font-size:16px;">{{event.name}}</h6></li>
+                </ul>
+                <a class="btn btn-primary" href="">View Event </a>
+                {% endfor %}
+                <hr />
+                
+		</div>
+	</div>
+</div>
+
 <h4>These are following events</h4>
 {% for event in events %}
 <h4>{{event.name}}</h4>
@@ -16,4 +130,5 @@
 {% for class in classes %}
 <h4>{{class}}</h4>
 {% endfor %}
-
+</body>
+</html>
