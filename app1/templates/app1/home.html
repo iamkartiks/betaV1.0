@@ -49,9 +49,9 @@
               </div>
               <!-- link-2 -->
               <div class="drop-wrapper">
-                <div class="child-main" id="level-program">Level Program</div>
+                <div class="child-main" id="level-program">Find A Job</div>
                 <div class="child-drop" id="drop">
-                  <div>link 1</div>
+                  <div>link 1</div> 
                   <div>link 1</div>
                   <div>link 1</div>
                   <div>link 1</div>
@@ -91,8 +91,12 @@
             </div>
           </div>
           <div class="col-3">
-            <button class="btn btn-1">Sign Up</button>
-            <button class="btn btn-2">Log In</button>
+          <form action="{% url 'register' %}">
+            <button class="btn btn-1" type='submit'>Sign Up</button>
+          </form>
+          <form action='{% url 'login' %}'>
+            <button class="btn btn-2" type='submit'>Log In</button>
+          </form>
           </div>
         </nav>
       </header>
@@ -110,7 +114,9 @@
             cupiditate beatae provident adipisci, dignissimos rerum qui animi!
             Voluptatem sapiente facilis molestiae libero reprehenderit id.
           </p>
-          <button class="getStarted-btn">Get Started</button>
+          <form action="{% url 'getstart' %}">
+          <button class="getStarted-btn" type="submit">Get Started</button>
+          </form>
         </div>
       </div>
     </div>

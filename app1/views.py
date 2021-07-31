@@ -65,6 +65,10 @@ def complete(request):
     return render(request,'app1/complete.html')
 
 
+def getstarted(request):
+    return render(request, 'app1/getstart.html')
+
+
 def privinstitute(request,pk):
     institute = Institutes.objects.get(id=pk)
     photos = PostImage.objects.filter(institute=institute)
@@ -87,3 +91,5 @@ def privinstitute(request,pk):
     context = {'institute':institute, 'photos':photos, 'enrolled_students':total_students, 'labels':labels, 'total_programs':total_programs, 'programs':programs, 'events':events, 'scholarships':scholarship, 'totalscholarships':total_scholarships, 'premiums':premiums}
     
     return render(request,'app1/privateins.html',context)
+
+
