@@ -93,3 +93,6 @@ def privinstitute(request,pk):
     return render(request,'app1/privateins.html',context)
 
 
+def joblist(request):
+    context = {}
+    return render(request, 'app1/jobportal.html')

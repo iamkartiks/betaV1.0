@@ -41,7 +41,7 @@
               <div class="drop-wrapper">
                 <div class="child-main">Find A Institute</div>
                 <div class="child-drop">
-                  <div>link 1</div>
+                  <div><a href="{% url 'institutes' %}">Institute Search</a></div>
                   <div>link 1</div>
                   <div>link 1</div>
                   <div>link 1</div>
@@ -51,7 +51,7 @@
               <div class="drop-wrapper">
                 <div class="child-main" id="level-program">Find A Job</div>
                 <div class="child-drop" id="drop">
-                  <div>link 1</div> 
+                  <div><a href="{% url 'jobportal' %}">Job Search</a></div> 
                   <div>link 1</div>
                   <div>link 1</div>
                   <div>link 1</div>
@@ -61,7 +61,7 @@
               <div class="drop-wrapper">
                 <div class="child-main">Careers Portal</div>
                 <div class="child-drop">
-                  <div>link 1</div>
+                  <div><a href="{% url 'career' %}">Career</a></div>
                   <div>link 1</div>
                   <div>link 1</div>
                   <div>link 1</div>
@@ -72,7 +72,7 @@
                 <div class="child-main">Blog & News</div>
 
                 <div class="child-drop">
-                  <div>link 1</div>
+                  <div><a href="{% url 'blog' %}">Blog</a></div>
                   <div>link 1</div>
                   <div>link 1</div>
                   <div>link 1</div>
@@ -82,7 +82,7 @@
               <div class="drop-wrapper">
                 <div class="child-main">FAQ</div>
                 <div class="child-drop">
-                  <div>link 1</div>
+                  <div>FAQ</div>
                   <div>link 1</div>
                   <div>link 1</div>
                   <div>link 1</div>
@@ -114,9 +114,12 @@
             cupiditate beatae provident adipisci, dignissimos rerum qui animi!
             Voluptatem sapiente facilis molestiae libero reprehenderit id.
           </p>
+        
+          
           <form action="{% url 'getstart' %}">
           <button class="getStarted-btn" type="submit">Get Started</button>
           </form>
+    
         </div>
       </div>
     </div>
@@ -324,7 +327,7 @@
     <div class="blog-container">
       <div class="blog_child1">
         <h1>BLOG & NEWS</h1>
-        <a href="#">VIEW ALL</a>
+        <a href="{% url 'blog' %}">VIEW ALL</a>
       </div>
       <div class="blog_child2">
         <div class="blog-card">card-1</div>
