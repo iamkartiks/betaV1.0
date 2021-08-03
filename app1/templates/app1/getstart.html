@@ -8,10 +8,46 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'styles/getstart.css'%}">
     </head>
     <body>
-        <h3>Get Started Page</h3>
+    <div class="flex-container">
+<!--NAVBAR-->
+    
+    <div class="nav">
+        <div class="button-div">
+            <form action="{% url 'home'%}">
+                <button class="button button1" type="submit"><span>HOME</span></button>
+            </form>    
+        </div>
+        <div class="head-col">
+            <h1 class="heading"><a href="#home">edu-Slogg</a></h1>
+        </div>
+
+    </div>  
+
+<!-- Main CONTAINER-->
+
+    <div clasS="main-container">
+    <h4>THIS IS MAIN CONTAINER</h4>
+    </div>
+    </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <script src="" async defer></script>
     </body>
-</html>
+</html> 

@@ -220,6 +220,10 @@ html {
   padding-right: 25%;
   line-height: 35px;
 }
+
+.a{
+  display: inline-block;
+}
 .getStarted-btn {
   width: 200px;
   height: 60px;

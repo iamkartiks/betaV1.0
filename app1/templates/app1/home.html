@@ -102,11 +102,11 @@
       </header>
       <!-- todo HEader END -->
 
-      <div class="main-container">
-        <div class="main-col-1"></div>
+    <div class="main-container">
+      <div class="main-col-1"></div>
         <div class="main-col-2">
           <h1 class="main-heading">YOUR CAREER STARTS HERE</h1>
-          <p class="main-para">
+          <pre class="main-para">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quae
             voluptatum ut aliquam veniam ullam velit. Repudiandae odio numquam
             corporis aspernatur a dolores, maxime laboriosam odit nobis
@@ -114,12 +114,9 @@
             cupiditate beatae provident adipisci, dignissimos rerum qui animi!
             Voluptatem sapiente facilis molestiae libero reprehenderit id.
           </p>
-        
-          
-          <form action="{% url 'getstart' %}">
+          <form action="{% url 'getstart' %}">      
           <button class="getStarted-btn" type="submit">Get Started</button>
           </form>
-    
         </div>
       </div>
     </div>
@@ -342,7 +339,7 @@
         <h1>HAVE ANY QUERIES ?</h1>
         <a href="#">CONTACT US</a>
       </div>
-      <div class="FAQ_col-2" style="background-image: url('{% static 'images/Assets/img/query.jpg' %}');">></div>
+      <div class="FAQ_col-2" style="background-image: url('{% static 'images/Assets/img/query.jpg' %}');"></div>
     </div>
     <!-- !QUERIES SECTION ENDS---=> -->
     <!-- ! FOOTER STARTS -->
