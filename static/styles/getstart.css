@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
 :root{
   --color1:#0a5fa5;
 }
@@ -16,7 +17,7 @@ html {
 
 body{
   padding: 5px;
-  background-image: linear-gradient(to bottom left, rgba(243, 236, 236, 0.4), rgba(44, 135, 240, 0.911));
+  background-image: linear-gradient(to top, rgba(8, 77, 98, 0.0), rgba(19, 109, 211, 0.911));
 }
 
 .flex-container{
@@ -28,43 +29,120 @@ body{
 
 .nav{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   height: 100px;
-  border:1px solid black;
   background-color: inherit;
 }
 
-.button1 {
-  width: 90px;
-  height: 40px;
-  margin-top:10px;
-  margin-left: 10px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  background-color: inherit; 
-  color: white; 
-  border: 2px solid white;
-  box-shadow: 0 4px 3px 0 rgb(235, 230, 230);
+  .button1 {
+    width: 90px;
+    height: 40px;
+    margin-top:10px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: inherit; 
+    color: white; 
+    border: 2px solid white;
+    box-shadow: 0 4px 3px 0 rgb(235, 230, 230);
+  }
+
+  .button1:hover {
+    font-size: 20px;
+    font-family: monospace;
+    background-color: #4CAF50;
+    color: white;
+    background-color: inherit;
+    transition: 0.3s;
+    box-shadow: 0 9px 16px 0 rgba(0,0,0,0.0), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.heading {
+  /* background-color: red; */
+  width: max-content;
+  padding-top: 30px;
+  /* font-size: 2.5rem;
+  font-weight: 300; */
+  color: #ffffff;
 }
 
-.button1:hover {
-  font-size: 20px;
-  font-family: monospace;
-  background-color: #4CAF50;
-  color: white;
-  background-color: inherit;
-  transition: 0.3s;
-  box-shadow: 0 9px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.heading {
+  font-family: 'Georama', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-decoration:none;
+  color: #ffffff;
 }
 
+.head-col{
+  width: 65%;
+  padding-left: 40%;
+  justify-content: center;
+}
 
 .main-container{
+  padding-top: 75px;
+  display: flex;
   width: 100%;
   height: 900px;
   /* border:1px solid black; */
   background-color: inherit;
+  justify-content: center;
+}
+
+/* .main-container  div{
+  margin-left: 20px;
+  height: 650px;
+  width: 550px;
+  border: 5px solid white;
+  border-radius: 35px;
+  background-color:inherit;
+} */
+
+.card1{
+  margin-left: 20px;
+  height: 650px;
+  width: 550px;
+  border: 5px solid white;
+  border-radius: 35px;
+  background-color:inherit;
+}
+
+.card2{
+  margin-left: 20px;
+  height: 650px;
+  width: 550px;
+  border: 5px solid white;
+  border-radius: 35px;
+  background-color:inherit;
+}
+.card-header{
+  height: 100px;
+  /* border:1px solid black; */
+  
+}
+
+.card-header h4{
+  font-family: monospace;
+  /* text-decoration: underline; */
+  font-size: 2em;
+  font-weight: lighter;
+  padding:20px 0 10px 120px;
+  color: white;
+}
+
+.card-body p{
+  color: white;
+  word-break: keep-all;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.footer-container {
+  width: 100%;
+  background-color: inherit;
+  /* border: 1px solid black; */
 }
