@@ -16,9 +16,15 @@
     
     <div class="nav">
         <div class="button-div">
-            <form action="{% url 'home'%}">
-                <button class="button button1" type="submit"><span>HOME</span></button>
-            </form>    
+
+            <a href="{% url 'home' %}" class="cta">
+                    <span>Home</span>
+                    <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+            </a>
+
         </div>
         <div class="head-col">
             <h1 class="heading">edu-Slogg</h1>
@@ -33,6 +39,25 @@
         <div class="card1">
             <div class="card-header"><h4>Let's Get Started !</h4></div>
             <div class="card-body"><p>Welcome to Edu-Slogg! Please tell us how you will use the system so we can prepare your account for your preferred category. If you are unsure, we encourage you to explore each career option before you continue.</p></div>
+
+            <div class="sub-card">
+                <div class="career-name"><h5 class="cname">Education Career</h5></div>
+                <div class="career-btn" id="cbtn1"><form action="#">
+                 <button class="start-btn type1">
+                        Start
+                 </button>
+            </form></div>
+            </div>
+
+            <div class="sub-card">
+                <div class="career-name"><h5 class="cname">Professional Career</h5></div>
+                <div class="career-btn"><form action="#">
+                 <button class="start-btn type1">
+                    Start
+                 </button>
+            </form></div>
+            </div>
+        
         </div>
         <!-- CARD 1 ENDS-->
     
