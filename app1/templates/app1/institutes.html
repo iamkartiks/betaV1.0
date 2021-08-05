@@ -1,63 +1,84 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Institutes | Eduslogg</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
-    </head>
-<div style="width:100%; height:100px; margin-top:10px;"><a class="btn btn-outline-success" href="{% url 'home' %}">HOME</a></div>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Explore Institutes From Allover The World | Eduslogg</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'styles/institutes.css' %}">
+	</head>
+	<body>
 
-<br>
-{% comment %} <div class="row">
-	<div class="col-md">
-		<div class="card card-body">
-			<h5 style="font-family:monospace; color:#68759c;"><strong>Institutes</strong></h5>
+	<!-- NAVBAR STARTS-->
+	<div class="navbar">
+	</div>
+	<!--NAVBAR ENDS-->
+
+	<!--SEARCH BAR-->
+	<div class="search-bar">
+	</div>
+	<!--SEARCH BAR ENDS-->
+
+	<!--MAIN CONTAINER STARTS-->
+	<div class="main-container">
+
+	<!--sidebar-->
+	<div class="sidebar">
+	</div>
+	<!-- sidebar ends-->
+
+	<!--submain block-->
+	<div class="submain-box">
+
+	<!--college card-->
+	{% for i in institutes %}
+
+  
+	<div class="college-card">
+
+	<div class="card-image">
+	<img class="profile-photo" src="{{i.profileURL}}" alt="college photo"/>
+	</div>
+	<!-- card container-->
+	<div class="card-content">
+	<!--head container div-->
+
+	<div class="head-container">
+	<div class="name-div">
+	<h3>{{i.name}}</h3>
+	</div>
+	<div class="location-div">
+	<h4>{{i.location}}</h4>
+	</div>
+	</div>
+	<!--head container div ends-->
+
+	<!-- foot container div-->
+	<div class="foot-container">
+		<div class="view-div">
+			<a href="{% url 'privins' i.id %}" class="btn btn-secondary">View</a>
 		</div>
-		<div class="card card-body">
-			<table class="table" style="font-family:monospace; color:#68759c;">
-				<tr>
-					<th>Institute</th>
-					<th>Category</th>
-					<th>Location</th>
-                    <th>Fees</th>
-					<th></th>
-					<th></th>
-				</tr>	
-				{% for i in institutes %}
-				<tr>
-				<td>{{ i.name }}</td>
-				<td>{{ i.category }}</td>
-				<td>{{ i.location }}</td>
-				<td>{{ i.fees }} &#8377</td>
-				<td><a class="btn btn-outline-primary" href="#">View</a></td>
-				<td><a class="btn btn-outline-primary" href="#">Apply</a></td>
-				</tr>
-				{% endfor %}
-			</table>
+
+		<div class="apply-div">	
+			<a class="btn btn-outline-success" href="#">Apply</a>
 		</div>
 	</div>
-</div> {% endcomment %}
-<div style="margin-left:20%;">
- <h4 style="font-family:monospace; color:#68759c;"><strong>Institutes</strong></h4>
-  <hr style="color:white;">
-  </div>
-{% for i in institutes %}
-  <div class="col-lg-4" style="margin-left:35px;">
-			{% comment %} <img class="thumbnail" src="{% static 'images/IITR.jpeg' %}"> {% endcomment %}
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>{{ i.name }}</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>{{ i.fees }} &#8377</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong>{{ i.category }}</strong></h6>
-				<h6 style="font-family:monospace; color:#76a7d6;">{{ i.location }}</h6>
-				<hr>
-				<a href="{% url 'privins' i.id %}" class="btn btn-secondary">View</a>
-				<a class="btn btn-outline-success" href="#">Apply</a>
-			</div>
-		</div>
-{% endfor %}
+	<!--foot container div ends-->
+	</div>
+    <!-- card container ends-->
+	</div>
+
+  
+	{% endfor %}
+	<!--college card ends-->
+
+	</div>
+	<!--submain block ends-->
+	</div>
+	<!-- MAIN CONTAINER ENDS-->
+
+		<script src="" async defer></script>
+	</body>
+</html>

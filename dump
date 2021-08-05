@@ -35,3 +35,131 @@ LIVE GROUPS PAGE                        (https://dribbble.com/shots/16108047-Clu
 FORGOT PASSWORD PAGE                    (manual)
 
 LOG IN / SIGN UP PAGE                   (https://dribbble.com/shots/12228882-On-Boarding-Form-Experience-for-a-Banking-FinTech-New-Website)
+
+
+
+{% comment %} 
+			<div class="box-element product">
+				<h6 style="font-family:monospace; color:#68759c;"><strong>{{ i.name }}</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>{{ i.fees }} &#8377</strong></h6>
+                <h6 style="font-family:monospace; color:#76a7d6;"><strong>{{ i.category }}</strong></h6>
+				<h6 style="font-family:monospace; color:#76a7d6;">{{ i.location }}</h6>
+				<hr>
+				<a href="{% url 'privins' i.id %}" class="btn btn-secondary">View</a>
+				<a class="btn btn-outline-success" href="#">Apply</a>
+			</div>
+		</div>
+ {% endcomment %}
+
+	<div class="college-card">
+
+	<div class="card-image">
+	<img class="profile-photo" src="{{i.profileURL}}" alt="college photo"/>
+	</div>
+	<!-- card container-->
+	<div class="card-content">
+	<!--head container div-->
+
+	<div class="head-container">
+	<div class="name-div">
+	<h3>{{i.name}}</h3>
+	</div>
+	<div class="location-div">
+	<h4>{{i.location}}</h4>
+	</div>
+	</div>
+	<!--head container div ends-->
+
+	<!-- foot container div-->
+	<div class="foot-container">
+		<div class="view-div">
+			<a href="{% url 'privins' i.id %}" class="btn btn-secondary">View</a>
+		</div>
+
+		<div class="apply-div">	
+			<a class="btn btn-outline-success" href="#">Apply</a>
+		</div>
+	</div>
+	<!--foot container div ends-->
+	</div>
+    <!-- card container ends-->
+	</div>
+
+
+.college-card{
+    /* margin-top: 30px;
+    margin-left: 60px;
+    height: 350px;
+    width: 350px;
+    background-color: lightcoral; */
+
+    position: relative;
+    min-width: 350px;
+    height: 350px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.card-image{
+    /* border-radius: 15px 15px 0 0; */
+    height: 250px;
+    width: 100%;
+    background-color: lightcyan;
+}
+
+.card-content{
+    height: 100px;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.head-container{
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+    width: 100%;
+    background-color:cadetblue;
+}
+
+.name-div{
+    height: 100%;
+    width: 70%;
+    background-color:crimson;
+}
+
+.location-div{
+    height: 100%;
+    width: 30%;
+    background-color: cyan;
+}
+
+.foot-container{
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    width: 100%;
+    /* border-radius: 0 0 15px 15px; */
+    background-color:chocolate;
+}
+
+.view-div{
+    height: 100%;
+    width: 50%;
+    background-color: coral;
+}
+
+.apply-div{
+    height: 100%;
+    width: 50%;
+}
+
+.profile-photo{
+    height: 250px;
+    width: 350px;
+    object-fit: fill;
+}
+
+

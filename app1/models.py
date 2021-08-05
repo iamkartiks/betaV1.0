@@ -52,6 +52,7 @@ class Institutes(models.Model):
     phone = models.CharField(max_length=100, null=True)
     email = models.CharField(max_length=200,null=True)
     fees = models.FloatField(null=True)
+    photo = models.ImageField(null=True)
     category = models.CharField(max_length=200, null=True, choices=CATEGORY)
     label = models.ManyToManyField(Label)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
@@ -61,6 +62,14 @@ class Institutes(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def profileURL(self):
+        try:
+            url = self.photo.url
+        except:
+            url = ''
+        return url
 
 
 class Tag(models.Model):
