@@ -30,20 +30,28 @@
 	<!-- sidebar ends-->
 
 	<!--submain block-->
-	<div class="submain-box">  <!--THIS IS MAIN-->
+	<div class="submain-box">  <!--THIS IS DUMP BRANCH-->
 
 	<!--college card-->
 	{% for i in institutes %}
 
   
 	<div class="college-card">
+	<div class="flip-card">
 	<div class="college-card-inner">
 	<div class="card-image">
 	<img class="profile-photo" src="{{i.profileURL}}" alt="college photo"/>
 	</div>
+
+	<div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+	
+	</div>
 	</div>
 
-	
 	<!-- card container-->
 	<div class="card-content">
 	<!--head container div-->
