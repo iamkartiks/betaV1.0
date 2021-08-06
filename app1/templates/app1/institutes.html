@@ -37,10 +37,18 @@
 
   
 	<div class="college-card">
-
+	<div class="college-card-inner">
 	<div class="card-image">
 	<img class="profile-photo" src="{{i.profileURL}}" alt="college photo"/>
 	</div>
+	</div>
+
+	{% comment %} <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div> {% endcomment %}
+	
 	<!-- card container-->
 	<div class="card-content">
 	<!--head container div-->
@@ -69,8 +77,6 @@
 	</div>
     <!-- card container ends-->
 	</div>
-
-  
 	{% endfor %}
 	<!--college card ends-->
 
@@ -78,7 +84,3 @@
 	<!--submain block ends-->
 	</div>
 	<!-- MAIN CONTAINER ENDS-->
-
-		<script src="" async defer></script>
-	</body>
-</html>
