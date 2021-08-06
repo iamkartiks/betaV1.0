@@ -60,15 +60,18 @@ body{
     /* border:3px solid rebeccapurple;
     padding: 4px; */
     margin: 30px;
+    
 }
 
 .card-image{
+    
     height: 250px;
     width: 100%;
     box-sizing:border-box;
     border-radius: 15px;
     background-color: inherit;
 }
+
 
 .card-content{
     height: 100px;
