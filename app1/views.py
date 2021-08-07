@@ -94,5 +94,6 @@ def privinstitute(request,pk):
 
 
 def joblist(request):
-    context = {}
-    return render(request, 'app1/jobportal.html')
+    jobs = Job.objects.all()
+    context = {'jobs':jobs}
+    return render(request, 'app1/jobportal.html', context)

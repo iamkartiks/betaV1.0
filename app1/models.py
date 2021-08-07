@@ -178,3 +178,30 @@ class PremiumService(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Job(models.Model):
+
+    CAT = (('Internship', 'Intersnhips'),
+            ('Full Time Job', 'Full Time Job')
+            )
+    jname = models.CharField(max_length=100, null=True)
+    cname = models.CharField(max_length=100, null=True)
+    location = models.CharField(max_length=100, null=True)
+    category = models.CharField(max_length=100, null=True, choices=CAT)
+    photo = models.ImageField(null=True)
+    requirements = models.CharField(max_length=300, null=True)
+
+    def __repr__(self):
+        return self.cname
+    
+    def __str__(self):
+        return self.cname
+
+    @property
+    def imageURL(self):
+        try: 
+            url=self.photo.url
+        except:
+            url=""
+        return url

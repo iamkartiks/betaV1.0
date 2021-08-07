@@ -159,7 +159,7 @@
 	<div class="submain-box">  <!--THIS IS DUMP BRANCH-->
 
 	<!--college card-->
-	{% for i in institutes %}
+	{% for i in jobs %}
 
   
 	<div class="college-card">
@@ -168,13 +168,15 @@
 	<!-- inner card-->
 	<div class="college-card-inner">
 	<div class="card-image">
-	<img class="profile-photo" src="{{i.profileURL}}" alt="college photo"/>
+	<img class="profile-photo" src="{{i.imageURL}}" alt="college photo"/>
 	</div>
 	<!--card-back-->
 	<div class="flip-card-back">
-      <h1 style="font-size:1.8em">{{i.name}}</h1>
-      <p>placeholder</p>
-      <p>placeholder</p>
+      <h1 style="font-size:1.8em">Requirements</h1>
+      <p>{{i.requirements}}</p>
+
+      <h1 style="font-size:1.4em">Location</h1>
+      <p>{{i.location}}</p>
     </div>
 	<!--back ends-->
 	</div>
@@ -188,10 +190,10 @@
 
 	<div class="head-container">
 	<div class="name-div">
-	<h3>{{i.name}}</h3>
+	<h3>{{i.jname}}</h3>
 	</div>
 	<div class="location-div">
-	<h4>{{i.location}}</h4>
+	<h4>{{i.cname}}</h4>
 	</div>
 	</div>
 	<!--head container div ends-->

@@ -105,7 +105,7 @@ body{
     top: 1px;
   }
   .btn-2:active {
-    box-shadow: 0px 3px 0px rgb(213, 213, 213), 0px 4px 0px #b8b8b8;
+    box-shadow: 0px 3px 0px rgb(212, 198, 198), 0px 4px 0px #b8b8b8;
     top: 2px;
   }
 
@@ -273,6 +273,9 @@ input::-webkit-input-placeholder {
     padding: 3px;
   }
 
+.arrow:hover{
+    cursor: pointer;
+}
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
@@ -285,6 +288,7 @@ input::-webkit-input-placeholder {
     width: 80%;
     padding-left: 70px;
     background-color: inherit;
+
 }
 
 .college-card{
