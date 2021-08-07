@@ -17,13 +17,13 @@
 	  <div class="container-1">
 	  	<div class="row-1">
 		<div class="options"><a href="{% url 'home' %}">Home</a></div>
-		<div class="options"><a href="#">Find A College</a></div>
-		<div class="options"><a href="#">Find A Job</a></div>
-		<div class="options"><a href="#">Career Portal</a></div>
-		<div class="options"><a href="#">Blogs & News</a></div>
-		<div class="options"><a href="#">FAQ</a></div>
-	  	</div>
-	  </div>
+		<div class="options"><a href="{% url 'institutes' %}">Find A College</a></div>
+		<div class="options"><a href="{% url 'jobportal' %}">Find A Job</a></div>
+		<div class="options"><a href="{% url 'career' %}">Career Portal</a></div>
+		<div class="options"><a href="{% url 'blog' %}">Blogs & News</a></div>
+		<div class="options"><a href="#">FAQ</a></div></div>
+	  
+	</div>
 
 	  <div class="container-2">
 	  	<div class="row-2">
@@ -55,7 +55,7 @@
 	<input type="text" placeholder="Search Institutes By Name" />
 	</div>
 	<div class="search-btn">
-		<form action='{% url 'login' %}'>
+		<form action='#'>
             <button class="btn btn-2" id="search-btn" type='submit'>Search</button>
         </form>
 	</div>
@@ -68,6 +68,90 @@
 
 	<!--sidebar-->
 	<div class="sidebar">
+
+	<div id="option">
+		<div class="options">
+				<label class="container">Playschools & Highschools
+  					<input type="checkbox">
+  					<span class="checkmark"></span>
+				</label>
+		</div>	
+	<div class="options">
+		<label class="container">Colleges & Universities
+  			<input type="checkbox">
+  			<span class="checkmark"></span>
+		</label>
+	</div>
+
+	</div>
+	<div id="location">
+		<label class="container" id="loc">Location :</label>
+	
+	<div class="search-box">
+	<input type="text" id="loc-search" placeholder="Enter Your Preferred State Or Country" />
+	
+	</div>
+
+	<div class="search-btn" id="loc-btn">
+		<form action='#'>
+            <button class="btn btn-2" id="loc-btn" type='submit'>Search</button>
+        </form>
+	</div>
+	</div>
+	
+	<div id="filters">
+
+		<div id="option">
+			<div class="options" id="filter">
+				<label class="container">Field Of Study</label>
+				<i class="arrow right"></i>
+			</div>	
+		</div>
+
+				<div id="option">
+			<div class="options" id="filter">
+				<label class="container">Institute Level</label>
+				<i class="arrow right"></i>
+			</div>	
+		</div>
+
+				<div id="option">
+			<div class="options" id="filter">
+				<label class="container">Institute Type</label>
+				<i class="arrow right"></i>
+			</div>	
+		</div>
+
+				<div id="option">
+			<div class="options" id="filter">
+				<label class="container">Institute Setting</label>
+				<i class="arrow right"></i>
+			</div>	
+		</div>
+
+				<div id="option">
+			<div class="options" id="filter">
+				<label class="container">Scholarships</label>
+				<i class="arrow right"></i>
+			</div>	
+		</div>
+
+				<div id="option">
+			<div class="options" id="filter">
+				<label class="container">Speacialised Category</label>
+				<i class="arrow right"></i>
+			</div>	
+		</div>
+
+				<div id="option">
+			<div class="options" id="filter">
+				<label class="container">Field Of Interests</label>
+				<i class="arrow right"></i>
+			</div>	
+		</div>
+	
+	
+	</div>
 	</div>
 	<!-- sidebar ends-->
 
@@ -88,9 +172,9 @@
 	</div>
 	<!--card-back-->
 	<div class="flip-card-back">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
+      <h1 style="font-size:1.8em">{{i.name}}</h1>
+      <p>placeholder</p>
+      <p>placeholder</p>
     </div>
 	<!--back ends-->
 	</div>
