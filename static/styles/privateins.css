@@ -27,7 +27,8 @@ img {
 
 .navbar{
   display: flex;
-  position: absolute;
+  overflow: hidden;
+  position: fixed;
   flex-direction: row;
   flex-wrap: wrap;
   height: 100px;
