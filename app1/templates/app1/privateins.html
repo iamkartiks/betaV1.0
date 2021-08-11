@@ -47,17 +47,66 @@
 <!--navbar ends-->
 
   <div class="col-name"><h1>{{institute.name}}</h1></div>
-
-  <div class="institute-summary"><p>It is bound by the consequences of the pains of the times, so he loves the pains of the duties he be less accepted.</p></div>
-  <div class="apply-btn">
+        <div class="label-container">
+        {% for i in labels %}
+        <div class="institute-summary"><p>{{i.name}}</p></div>  
+        {% endfor %}
+        </div>
+        <div class="apply-btn">
                 <form action='{% url 'login' %}'>
-            <button class="btn btn-2" id="apply-btn" type='submit'>Apply for {{institute.name}}</button>
-          </form>
-  </div>
+                    <button class="btn btn-2" id="apply-btn" type='submit'>Apply for {{institute.name}}</button>
+                </form>
+        </div>
 
+    </div>
+<!--container starts-->    
+<div class="at-a-glance">
+    <div class="desc-1">
+        <p> Gautam Buddha University is a university established by the Uttar Pradesh Gautam Buddha University Act 2002 and came into existence in 2008. It is approved by University Grants Commission under section 12-B and accredited by National Assessment and Accreditation Council with B+ grade.</p>
+     <div class="gal-div">
+        <div class="gallery">
+            <img class="gal" src="{{institute.profileURL}}"/>
+        </div>
+
+        <div class="view-gal"><button class="btn btn-2" id="view-gal-btn" type='submit'>View Gallery</button></div>
+      </div>  
+    </div>
+    <div class="desc-2">
+        <div class="heading">{{institute.category}} At A Glance</div>
+
+    <div class="card-container">
+        <div class="rank">
+        <div class="head">QS RANK</div>
+        <div class="cont"><h2>{{institute.qsrank}}</h2></div>
+        </div>
+
+        <div class="rank">
+        <div class="head" style="margin-left:45px; margin-top:10px;">Enrolled Students</div>
+        <div class="cont"><h2>{{enrolled_students}}</h2></div>
+        </div>
+
+        <div class="rank">
+        <div class="head">Programs</div>
+        <div class="cont"><h2>{{total_programs}}</h2></div>
+        </div>
+
+        <div class="rank">
+        <div class="head">M:F Ratio</div>
+        <div class="cont"><h2>{{institute.sexratio}}</h2></div>
+        </div>
+
+   </div>
 </div>
-<!--container ends-->    
-<div style="height:1000px; width:100%; border:1px solid blue; background-color:red;"></div>
+</div>
+<!-- container ends-->
+
+<!-- second row of content starts from here-->
+    <div class="division-2"></div>
+
+
+
+
+
 
 
 

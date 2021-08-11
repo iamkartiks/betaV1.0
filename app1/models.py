@@ -43,9 +43,9 @@ class Label(models.Model):
 
 
 class Institutes(models.Model):
-    CATEGORY = (('playschool', 'playschool'),
-                ('highschool', 'highschool'),
-                ('college','college'),
+    CATEGORY = (('Playschool', 'Playschool'),
+                ('Highschool', 'Highschool'),
+                ('College','College'),
                 )
     name = models.CharField(max_length=200, null=True)
     location = models.CharField(max_length=200, null=True)
