@@ -7,7 +7,7 @@ from django.db.models import Count
 
 
 def index(request):
-    context = {}
+    context={}
     return render(request, 'app1/home.html', context)
 
 

@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -148,7 +148,7 @@ img {
 }
 .col-name h1{
   
-  font-family: "Poppins", sans-serif;
+  font-family: 'Georama', sans-serif;
   font-weight: 400;
   font-size: 2.9em;
   color: white;
@@ -437,7 +437,7 @@ a {
   left: 0;
   display: block;
   border-radius: 28px;
-  background: rgba(18, 29, 122, 0.5);
+  background-color:rgba(19, 109, 211, 0.911);
   width: 56px;
   height: 56px;
   transition: all 0.3s ease;
@@ -465,7 +465,7 @@ a {
 }
 .cta-2:hover:before {
   width: 100%;
-  background: rgba(18, 29, 122, 0.5);
+  background-color:rgba(19, 109, 211, 0.911);
 }
 .cta-2:hover svg {
   transform: translateX(0);
@@ -524,7 +524,7 @@ a {
 .card-media {
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
-  height: 125px;
+  height: 150px;
   margin-bottom: 25px;
   transition: all 300ms ease-out;
   width: 100%;
@@ -705,213 +705,44 @@ a {
 
 .premium{  
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: max-content;
   width: 100%;
   background-color: inherit;
-  border: 1px solid black;
 }
 
-a {
-  text-decoration: none !important;
-}
-.center-heading {
-text-align: center;
+#premium-head{
+  align-content: center;
+  margin: 10px auto;
 }
 
-.center-heading .section-title {
-font-weight: 400;
-font-size: 28px;
-color: #3B566E;
-letter-spacing: 1.1px;
-line-height: 38px;
-margin-bottom: 20px;
+.services{
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
 }
 
-.center-heading.colored .section-title {
-color: #ffffff;
+#service-card{
+  background-color: white;
 }
 
-.center-text {
-text-align: center;
-font-weight: 400;
-font-size: 16px;
-color: #6F8BA4;
-line-height: 28px;
-letter-spacing: 1px;
-margin-bottom: 50px;
-}
-
-.center-text.colored {
-color: #C7E5FF;
-}
-
-.center-text p {
-margin-bottom: 30px;
-}
-
-.services-small-item {
-display: block;
-background: #fff;
-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
-border-radius: 5px;
-padding: 40px 28px;
-text-align: center;
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
-position: relative;
-z-index: 2;
-margin-bottom: 30px;
-}
-
-.services-small-item:before {
-content: '';
-position: absolute;
-width: 100%;
-height: 100%;
-top: 0px;
-left: 0px;
-border-radius: 5px;
-background-image: linear-gradient(135deg, #80d0c7 0%, #13547a 100%);
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
-opacity: 0;
-}
-.services-small-item.active:before, .services-small-item:hover:before {
-opacity: 1;
-}
-
-.services-small-item.active .icon:before, .services-small-item:hover .icon:before {
-opacity: .26;
-}
-
-.services-small-item.active .icon i, .services-small-item:hover .icon i {
-background: -webkit-linear-gradient(#fff, #fff);
--ms-webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
-.services-small-item.active .services-title, .services-small-item:hover .services-title {
-color: #ffffff;
-}
-
-.services-small-item.active p, .services-small-item:hover p {
-color: #ffffff;
-}
-
-.services-small-item.active .button i, .services-small-item:hover .button i {
-background-image: linear-gradient(135deg, #fff 0%, #fff 100%) !important;
-color: #2b708b !important;
-}
-
-.services-small-item:hover {
-margin-top: -15px;
-}
-
-.services-small-item .icon {
-width: 139px;
-height: 113px;
-margin: auto;
-position: relative;
-margin-bottom: 20px;
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
-}
-
-
-.services-small-item .icon i {
-display: block;
-height: 67px;
-line-height: 67px;
-position: absolute;
-width: 100%;
-top: 22px;
-z-index: 2;
-font-size: 28px;
-background-image: linear-gradient(135deg, #80d0c7 0%, #13547a 100%);
--ms-webkit-background-clip: text;
--webkit-text-fill-color: transparent;
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
-}
-
-.services-small-item .services-title {
-font-weight: 400;
-font-size: 16px;
-color: #3B566E;
-letter-spacing: 0.7px;
-margin-bottom: 15px;
-position: relative;
-z-index: 2;
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
-}
-
-.services-small-item p {
-font-weight: 400;
-font-size: 14px;
-color: #6F8BA4;
-letter-spacing: 0.88px;
-line-height: 26px;
-position: relative;
-z-index: 2;
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
-margin-bottom: 30px;
-}
-
-.services-small-item .button {
-position: relative;
-z-index: 2;
-}
-
-.services-small-item .button i {
-width: 42px;
-height: 42px;
-background-image: linear-gradient(135deg, #80d0c7 0%, #13547a 100%);
-line-height: 42px;
-text-align: center;
--webkit-border-radius: 100px;
--moz-border-radius: 100px;
-border-radius: 100px;
-color: #fff;
-padding-left: 3px;
-}
-
-.services-small-item:hover + .item-bg {
-bottom: 30px;
-}
-
-.item-bg {
-content: '';
-position: absolute;
-width: 80%;
-height: 15px;
-bottom: 15px;
-left: 0px;
-right: 0px;
-margin: auto;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
-z-index: 1;
-background: #fff;
-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
+#service-card:hover{
+  background-image: linear-gradient(to top, rgba(19, 109, 211, 0.4), rgba(19, 109, 211, 0.911));
+  color: white;
 }
 
 /* premium and contact ends here */
+
+.ins-contact{
+  height: 400px;
+  width: 100%;
+}
+
+.column-1{
+  width: 40%;
+  background-color: blue;
+}
+
+.column-2{
+  width: 60%;
+}

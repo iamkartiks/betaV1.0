@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* ! FOOTER START --- */
+.footer-container {
+    position: relative;
+    width: 100%;
+    padding: 50px 0px 0px 0px;
+    background-color: hsla(0, 0%, 29%, 1);
+    font-family: "Poppins", sans-serif;
+  }
+  .footer_row-1 {
+    position: relative;
+    padding-right: 120px;
+    display: flex;
+    width: 100%;
+  }
+  /* row-1-col-1 */
+  .row_1-col-1 {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+  
+    /* background-color:lightyellow; */
+  }
+  .footer-menu-container {
+    display: flex;
+    gap: 8rem;
+  }
+  .footer-menu {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .footer-menu h1 {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  .footer-menu a {
+    text-decoration: none;
+    font-weight: 100;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+  .footer-menu a:hover {
+    text-decoration: underline;
+  }
+  /* row-1-col-1 ENDS*/
+  /* row-1-col-2 */
+  .row_1-col-2 {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .row_1-col-2 h1 {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  .row_1-col-2 a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #ffffff;
+  }
+  .row_1-col-2 a:hover {
+    text-decoration: underline;
+  }
+  .social-icons {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-icons img {
+    transition: 0.2s;
+  }
+  .social-icons a:nth-child(2) {
+    margin-top: 10px;
+  }
+  .social-icons img:hover {
+    transform: scale(0.9);
+  }
+  
+  /* row-1-col-2 ENDS */
+  
+  /* illus*/
+  .footer-ILLUS {
+    position: relative;
+    margin-top: 100px;
+  }
+  .footer-ILLUS img:first-child {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+  }
+  .footer-ILLUS img:nth-child(2) {
+    position: absolute;
+    bottom: 0px;
+    right: 20%;
+  }
+  .footer-ILLUS hr {
+    border: none;
+    background-color: #56c2c1;
+    height: 3px;
+  }
+  /* illus ENDS */
+  /* * Row-2 */
+  .footer_row-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 120px 20px 110px;
+  }
+  .row-2-col-1 {
+    display: flex;
+    gap: 30px;
+  }
+  .row-2-col-1 a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  .row-2-col-1 a:hover {
+    text-decoration: underline;
+  }
+  .row-2-col-2 {
+    color: #ffffff;
+    font-size: 0.8rem;
+  }
+  /* !FOOTER ENDS__---=> */
+  

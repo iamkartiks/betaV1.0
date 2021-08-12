@@ -106,7 +106,7 @@
 <!-- second row of content starts from here-->
 <div class="division-2">
 
-<div class="program-head"><h2>Available <span style="color: #9B5DE5">Programs</span></h2></div>     
+<div class="program-head"><h2>Available <span style="color:rgba(19, 109, 211, 0.911)">Programs</span></h2></div>     
 
 <div class="card-container">
 {% for program in programs %}
@@ -145,7 +145,7 @@
 
 <div class="division-2">
 
-<div class="program-head"><h2>Available <span style="color: #9B5DE5">Scholarships</span></h2></div>     
+<div class="program-head"><h2>Available <span style="color:rgba(19, 109, 211, 0.911)">Scholarships</span></h2></div>     
 
 <div class="card-container">
 {% for scholarship in scholarships %}
@@ -235,9 +235,46 @@
 
 <!-- premium and contact div startes from here-->
 <div class="premium">
+    <div class="program-head" id="premium-head"><h2>Premium <span style="color:rgba(19, 109, 211, 0.911)">Services</span></h2></div>
     
+<div class="services">
+{% for service in premiums %}    
+<div class='neomorph-card'>
+  <div class='box' id="service-card">
+    <div class='text'>
+      <h1>{{service.name}}</h1>
+      <p>Colour contrast between text and background is important on web pages. It affects some people’s ability to perceive the information (in other words to be able to receive the information visually).</p>
+    </div>
+    <div class='neo-btn'>
+      <div class='tooltip'>
+        <a href='https://accessibility.blog.gov.uk/2016/06/17/colour-contrast-why-does-it-matter/' target="_blank" class='cta'>
+          Apply
+        </a>
+      </div>
+    </div>
+  </div> 
+</div>
+{% endfor %}
+</div>
+<!-- serive tag ends -->
 </div>
 <!-- premium and contact div ends here-->
+
+<!-- institute contact starts-->
+<div class="ins-contact">
+<div class="column-1"></div>
+<div class="column-2"></div>
+</div>
+<!-- institute contact ends-->
+
+<!-- FOOTER STARTS-->
+{% include 'app1/footer.html' %}
+<div class="footer">
+    {% block content %}
+
+    {% endblock %}
+</div>
+<!-- FOOTER ENDS-->
     <script src="" async defer></script>
   </body>
 </html>
