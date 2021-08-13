@@ -734,15 +734,21 @@ a {
 /* premium and contact ends here */
 
 .ins-contact{
+  display: flex;
+  flex-direction: row;
   height: 400px;
   width: 100%;
+  margin-top:20px;
 }
 
 .column-1{
+  height: inherit;
   width: 40%;
-  background-color: blue;
+  background-color: orange;
 }
 
 .column-2{
+  height: inherit;
   width: 60%;
+  background-color: green;
 }
