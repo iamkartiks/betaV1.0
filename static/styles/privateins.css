@@ -437,7 +437,7 @@ a {
   left: 0;
   display: block;
   border-radius: 28px;
-  background-color:rgba(19, 109, 211, 0.911);
+  background-color:#9dabc0;
   width: 56px;
   height: 56px;
   transition: all 0.3s ease;
@@ -465,7 +465,7 @@ a {
 }
 .cta-2:hover:before {
   width: 100%;
-  background-color:rgba(19, 109, 211, 0.911);
+  background-color:#9dabc0;
 }
 .cta-2:hover svg {
   transform: translateX(0);
@@ -739,16 +739,91 @@ a {
   height: 400px;
   width: 100%;
   margin-top:20px;
+  background-image: linear-gradient(to top, rgba(19, 109, 211, 0.1), rgba(164, 182, 200, 0.911));
 }
 
 .column-1{
+  display: flex;
+  flex-direction: column;
   height: inherit;
   width: 40%;
-  background-color: orange;
+  font-family: "Poppins", sans-serif;
+  padding-left:20px;
+  padding-right:20px;
+  
+}
+
+.visit-head{
+  font-size: 1.4em; 
 }
 
 .column-2{
+  display: flex;
+  flex-direction: column;
   height: inherit;
   width: 60%;
-  background-color: green;
+  padding-left: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-head{
+  font-size: 1.4em;
+}
+
+.sub-con-soc{
+  height: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.contact-body{
+  width: 50%;
+}
+.social{
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.social-body{
+  padding-left: 200px;
+  padding-top:70px;
+
+}
+.social-container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+.social-btn {
+  width: 70px;
+  height: 70px;
+  margin: 20px;
+  outline: none;
+  border: none;
+  background: inherit;
+  box-shadow: 5px 5px 10px #b6a9a9, -5px -5px 10px #ffffff;
+  border-radius: 50%;
+  transition: 0.2;
+}
+
+.social-btn:hover {
+  cursor: pointer;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.21);
+  }
+  to {
+    transform: scale(1);
+  }
 }

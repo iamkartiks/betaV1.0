@@ -15,6 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'styles/privateins.css' %}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
     <div class="container">
@@ -186,7 +188,7 @@
 
 <!-- event section starts here -->
 <div class="events-section">
-<div class="program-head"><h2>Upcoming <span style="color: #9B5DE5">Events</span></h2></div> 
+<div class="program-head"><h2>Upcoming <span style="color:rgba(19, 109, 211, 0.911)">Events</span></h2></div> 
 <div class="event-cards">
 {% for event in events%}
 <!-- event card starts here -->
@@ -262,8 +264,43 @@
 
 <!-- institute contact starts-->
 <div class="ins-contact">
-<div class="column-1"></div>
-<div class="column-2"></div>
+<div class="column-1">
+<div class="visit-head"><h1>Visit Us</h1></div>
+<div class="visit-body"><p>We look forward to sharing our beautiful campus with you! Our office hours are officially Monday – Friday 8:00 – 5:00 PM (AKST). 
+Please bear in mind that depending on campus events, other requests and staff availability, certain times or dates may not be available. Upon submission your request will be reviewed. We will do our best to accommodate the preferences you list below. An admissions team member will reach out to you to confirm the final date and time of your visit. See <span style="font-family:Roboto;">{{institute.email}}</bold> to set up a tour!</p></div> 
+</div>
+<div class="column-2">
+<div class="contact-head"><h1>Admission Office</h1></div>
+<!-- sub body starts here -->
+<div class="sub-con-soc">
+<div class="contact-body">
+<h4>Email: <span style="font-size:1.3em; font-family:Roboto;">{{institute.email}}</span></h4>
+<h4>Phone No.: <span style="font-size:1.3em; font-family:Roboto;">{{institute.phone}}</span></h4>
+<h4>Address: <span style="font-size:1.3em; font-family:Roboto;">Placeholder for Address</span></h4>
+</div>
+<div class="social">
+<div style="padding-left:60px; font-size:1.2em; padding-bottom:20px; font-family:Roboto;">
+<h3>Follow {{institute.name}}</h3>
+</div>
+<div class="social-body">
+<!-- social buttons starts -->
+        <div class="social-container">
+  <button class="social-btn">
+    <i class="fa fa-facebook" style="font-size:35px;"></i>
+  </button>
+  <button class="social-btn">
+    <i class="fa fa-instagram" style="font-size:35px;"></i>
+  </button>
+  <button class="social-btn">
+    <i class="fa fa-twitter" style="font-size:35px;"></i>
+  </button>
+</div>
+<!-- social buttons ends -->
+</div>
+</div>
+</div>
+<!-- sub body ends here -->
+</div>
 </div>
 <!-- institute contact ends-->
 
