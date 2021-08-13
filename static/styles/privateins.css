@@ -739,7 +739,7 @@ a {
   height: 400px;
   width: 100%;
   margin-top:20px;
-  background-image: linear-gradient(to top, rgba(19, 109, 211, 0.1), rgba(164, 182, 200, 0.911));
+  background-image: linear-gradient(to top, rgba(19, 109, 211, 0.4), rgba(140, 172, 209, 0.911));
 }
 
 .column-1{
