@@ -11,8 +11,8 @@
   /* left container starts */
   
   .left-container{
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
     height: 600px;
     width: 70%;
     background-color:lavender;
@@ -36,26 +36,73 @@
       flex-direction: row;
       height: 100px;
       width: 100%;
-      border: 1px solid black;
   }
 
   .apply-btn{
-      height: inherit;
-      width: 20%;
-      background-color: red;
+      height: 100px;
+      width: max-content;
   }
 
-  .save-btn{
-      height: inherit;
-      width: 30%;
-      background-color: green;
+  .apply-button{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size:1.3em;
+    height: 40px;
+    width: max-content;
+
+    background: none;
+    border-radius: 0;
+    text-align: center;
+    padding-bottom: 10px;
+    margin:20px 10px 10px 40px;
+    background-color: #0067b8;
+    border: 1px solid #0067b8;
+    cursor: pointer;
   }
+
+  /* save button */
+  .save-btn{
+    height: inherit;
+    width: 20%;
+}
+  .bookmark {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  .bookmark:before {
+    position: absolute;
+    top: 0;
+    left: 9px;
+    width: 18px;
+    height: 19px;
+    border-radius: 1px;    
+  }
+  .bookmark svg {   
+    width: 36px;
+    height: 36px;
+    margin-top: -5px;      
+  }
+  .bookmark svg path {
+    fill: #555555;
+  }
+  
+  /* save button ends */
 
   .social-link{
+    margin-left: 10%;
     height: inherit;
-    width: 40%;
+    width: max-content;
     background-color: blanchedalmond;
   }
+
+
+  /* social links end */
   /* left container ends */
   
   /* right container starts */
