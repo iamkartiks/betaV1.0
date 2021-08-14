@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+.navbar{
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100%;
+    background-color: white;    
+  }
+  
+  .container-1{
+    display: flex;
+    flex-direction: rows;
+    height: inherit;
+    width: 70%;
+    background-color: inherit;
+
+  
+  }
+  
+  .row-1{
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    width: max-content;
+    padding-left: 270px;
+  }
+  .container-2{
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    width: 30%;
+  }
+  
+  .row-2{
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    width: max-content;
+    padding-left: 150px;
+  }
+  .options{
+    height: 60px;
+    width: max-content;
+    background-color: inherit;
+    margin-left: 50px;
+        
+  }
+  
+  .options a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .options a:hover{
+    padding-top: 2px;
+    border-bottom: 2px solid black;
+  }
+  
+  .btn {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  
+    width: 120px;
+    height: 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  .btn-1 {
+    background-color: #53a5f0;
+    color: #ffffff;
+    box-shadow: 0 4px 0 0 rgb(16, 102, 182), 0 4px 0px rgba(0, 0, 0, 0.767);
+  }
+  .btn-1:hover {
+    top: 1px;
+    box-shadow: 0 4px 0 0 rgb(16, 102, 182), 0 4px 0px rgba(0, 0, 0, 0.767);
+  }
+  .btn-1:active {
+    top: 2px;
+    box-shadow: 0 4px 0 0 rgb(16, 102, 182), 0 4px 0px rgba(0, 0, 0, 0.767);
+  }
+  .btn-2 {
+    color: #222222;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 0px rgb(213, 213, 213), 0px 6px 0px #b8b8b8;
+  }
+  .btn-2:hover {
+    box-shadow: 0px 4px 0px rgb(213, 213, 213), 0px 5px 0px #b8b8b8;
+    top: 1px;
+  }
+  .btn-2:active {
+    box-shadow: 0px 3px 0px rgb(213, 213, 213), 0px 4px 0px #b8b8b8;
+    top: 2px;
+  }
+
+  /* NAVBAR ENDS */

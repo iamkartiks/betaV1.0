@@ -1,2 +1,55 @@
+{% include 'app1/navbar.html' %}
 {% load static %}
-<h1>{{job.jname}}</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'styles/jobapplication.css' %}">
+    </head>
+    <body>
+        
+        <!-- navbar starts -->
+                {% block content %}
+
+                {% endblock %}
+        
+        <!--navbar ends-->
+
+        <!-- main container starts -->
+        <div class="main-container">
+            <div class="left-container">
+            <!--job head-->
+            <div class="job-head">{{job.jname}}</div>
+            <!-- job head ends -->
+
+            <!-- job loc-->
+            <div class="job-loc">{{job.location}}</div>
+            <!-- job loc ends -->
+
+            <!-- some buttons and links-->
+            <div class="btns-links">
+                <!-- apply-->
+                <div class="apply-btn"></div>
+                <!-- apply ends-->
+
+                <!-- save -->
+                <div class="save-btn"></div>
+                <!-- save ends -->
+
+                <!-- social links -->
+                <div class="social-link"></div> 
+                <!-- social link ends -->
+            </div>
+            <!-- btn and links ends here -->               
+            
+            </div>
+            <div class="right-container"></div>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* main container starts */
+
+  .main-container{
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+  }
+  
+  /* left container starts */
+  
+  .left-container{
+      display: flex;
+      flex-direction: column;
+    height: 600px;
+    width: 70%;
+    background-color:lavender;
+  }
+  
+  .job-head{
+      font-family: "Poppins", sans-serif;
+      font-size: 2.6em;
+      padding-left: 30px;
+  }
+
+  .job-loc{
+      font-family: "Poppins", sans-serif;
+      font-size: 1.1em;
+      padding-left: 30px;
+  }
+
+  /* btns and links starts here */
+  .btns-links{
+      display: flex;
+      flex-direction: row;
+      height: 100px;
+      width: 100%;
+      border: 1px solid black;
+  }
+
+  .apply-btn{
+      height: inherit;
+      width: 20%;
+      background-color: red;
+  }
+
+  .save-btn{
+      height: inherit;
+      width: 30%;
+      background-color: green;
+  }
+
+  .social-link{
+    height: inherit;
+    width: 40%;
+    background-color: blanchedalmond;
+  }
+  /* left container ends */
+  
+  /* right container starts */
+  
+  .right-container{
+    height: 600px;
+    width: 30%;
+    background-color: coral;
+  }
+
+  /* right container ends */

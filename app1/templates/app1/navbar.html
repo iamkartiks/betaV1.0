@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+    </head>
+    <body>
+                <div class="navbar">
+	  <div class="container-1">
+	  	<div class="row-1">
+		<div class="options"><a href="{% url 'home' %}">Home</a></div>
+		<div class="options"><a href="{% url 'institutes' %}">Find A College</a></div>
+		<div class="options"><a href="{% url 'jobportal' %}">Find A Job</a></div>
+		<div class="options"><a href="{% url 'career' %}">Career Portal</a></div>
+		<div class="options"><a href="{% url 'blog' %}">Blogs & News</a></div>
+		<div class="options"><a href="#">FAQ</a></div>
+	  
+	</div>
+
+	  <div class="container-2">
+	  	<div class="row-2">
+	   	<form action="{% url 'register' %}">
+            <button class="btn btn-1" type='submit'>Sign Up</button>
+          </form>
+          <form action='{% url 'login' %}'>
+            <button class="btn btn-2" type='submit'>Log In</button>
+          </form>
+		</div>
+	 </div>
+	</div>
+        
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
