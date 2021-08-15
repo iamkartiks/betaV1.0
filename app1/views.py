@@ -100,6 +100,7 @@ def joblist(request):
 
 
 def jobapplication(request,pk):
+    jobs = Job.objects.all()
     job = Job.objects.get(id=pk)
-    context = {'job':job}
+    context = {'job':job, 'jobs':jobs}
     return render(request, 'app1/jobapplication.html', context)

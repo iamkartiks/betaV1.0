@@ -191,6 +191,8 @@ class Job(models.Model):
     category = models.CharField(max_length=100, null=True, choices=CAT)
     photo = models.ImageField(null=True)
     requirements = models.CharField(max_length=300, null=True)
+    profession = models.CharField(max_length=100, null=True)
+    job_no = models.CharField(max_length=100,null=True)
 
     def __repr__(self):
         return self.cname
