@@ -104,3 +104,8 @@ def jobapplication(request,pk):
     job = Job.objects.get(id=pk)
     context = {'job':job, 'jobs':jobs}
     return render(request, 'app1/jobapplication.html', context)
+
+
+def faq(request):
+    context = {}
+    return render(request,'app1/faq.html', context)

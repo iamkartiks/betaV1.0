@@ -16,4 +16,5 @@ urlpatterns = [
     path('getstarted/', views.getstarted, name="getstart"),
     path('jobportal/', views.joblist, name="jobportal"),
     path('jobapply/<str:pk>',views.jobapplication, name="jobapply"),
+    path('faq/',views.faq,name="faq"),
 ]
