@@ -163,3 +163,74 @@ LOG IN / SIGN UP PAGE                   (https://dribbble.com/shots/12228882-On-
 }
 
 
+
+
+
+<div class="col-1">
+            <h1 class="heading"><a href="#home">edu-Slogg</a></h1>
+          </div>
+          <div class="col-2">
+            <div class="drop-container">
+              <div class="close-drop"></div>
+
+              <!-- link-1 -->
+              <div class="drop-wrapper">
+                <div class="child-main">Find A Institute</div>
+                <div class="child-drop">
+                  <div><a href="{% url 'institutes' %}">Institutes</a></div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                </div>
+              </div>
+              <!-- link-2 -->
+              <div class="drop-wrapper">
+                <div class="child-main" id="level-program">Find A Job</div>
+                <div class="child-drop" id="drop">
+                  <div><a href="{% url 'jobportal' %}">Jobs</a></div> 
+                  <div>link 1</div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                </div>
+              </div>
+              <!-- link-3 -->
+              <div class="drop-wrapper">
+                <div class="child-main">Careers Portal</div>
+                <div class="child-drop">
+                  <div><a href="{% url 'career' %}">Career</a></div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                </div>
+              </div>
+              <!-- link-4 -->
+              <div class="drop-wrapper">
+                <div class="child-main">Blog & Events</div>
+
+                <div class="child-drop">
+                  <div><a href="{% url 'blog' %}">Blogs</a></div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                </div>
+              </div>
+              <!-- link-5 -->
+              <div class="drop-wrapper">
+                <div class="child-main">FAQ</div>
+                <div class="child-drop">
+                  <div>FAQ</div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                  <div>link 1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+          <form action="{% url 'register' %}">
+            <button class="btn btn-1" type='submit'>Sign Up</button>
+          </form>
+          <form action='{% url 'login' %}'>
+            <button class="btn btn-2" type='submit'>Log In</button>
+          </form>
+          </div>
