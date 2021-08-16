@@ -1,29 +1,32 @@
+{% include 'app1/navbar.html' %}
 {% load static %}
-{% include 'app1/navbar.html'%}
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{student.name}} || EduSlogg</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+    </head>
+    <body>
         
-        <!--navbar -->
-        <div class="navbar">
-        {% block content %}
+        <!-- navbar starts -->
+                {% block content %}
 
-        {% endblock %}
-        </div>
-        <!-- navbar ends-->
+                {% endblock %}
+        
+        <!--navbar ends-->
 
-        <div class='main-container'>
-            <div class='major-container'>Major Container</div>
-            <div class='minor-container'>Minor Container</div>
+        <!-- main container starts -->
+        <div class="main-container">
+            
         </div>
-    <script src="" async defer></script>
-  </body>
+        <!-- main container ends here -->
+        <script src="" async defer></script>
+    </body>
 </html>

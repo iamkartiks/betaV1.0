@@ -1,21 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-.main-container{
-  display: flex;
-  flex-direction: row;
-  height: max-content;
-  width: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* main container starts */
 
-.major-container{
-  height: 600px;
-  width: 70%;
-  border: 1px solid black;
-  background-color: lightblue;
-}
-
-.minor-container{
-  height: 600;
-  width:30%;
-  border: 1px solid black;
-  background-color: lightskyblue;
-}
+  .main-container{
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: 100%;
+    background-color: red;
+  }
+  
