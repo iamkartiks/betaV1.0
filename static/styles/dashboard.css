@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 /* main container starts */
 
   .main-container{
@@ -8,5 +7,17 @@
     height: 600px;
     width: 100%;
     background-color: red;
+    margin-top: -20px;
   }
   
+  .major-container{
+    height: inherit;
+    width: 70%;
+    background-color: purple;
+  }
+
+  .minor-container{
+    height: inherit;
+    width: 30%;
+    background-color: rebeccapurple;
+  }
