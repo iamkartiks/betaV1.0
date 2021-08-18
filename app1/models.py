@@ -207,3 +207,14 @@ class Job(models.Model):
         except:
             url=""
         return url
+
+    
+class EventCategory(models.Model):
+        name = models.CharField(max_length=100, null=True)
+        event=models.ManyToManyField(Event, null=True)
+
+        def __repr__(self):
+            return self.name
+
+        def __str__(self):
+            return self.name

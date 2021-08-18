@@ -14,4 +14,4 @@ admin.site.register(Event)
 admin.site.register(Scholarship)
 admin.site.register(PremiumService)
 admin.site.register(Job)
-
+admin.site.register(EventCategory)

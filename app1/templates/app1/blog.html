@@ -1,89 +1,79 @@
-<!DOCTYPE html>
 {% load static %}
+{% include 'app1/navbar.html'%}
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>beta1.0.0</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
-    </head>
-    <body>
-        <!-- Nav_menu -->       
-    <div class="nav-container">
-      <div class="container-1">
-        {% comment %} <img src="./assets/logo.svg" alt="" /> {% endcomment %}
-      </div>
-      <div class="container-2">
-        <ul>
-          <li><a href="{% url 'home'%}">Home</a></li>
-          <li><a href="{% url 'blog'%}">Blog & News</a></li>
-          <li><a href="{% url 'managementsystem' %}">College Portal</a></li>
-          <li><a href="{% url 'career' %}">level-program</a></li>
-        </ul>
-      </div>
-      <div class="container-3">
-        <a href="{% url 'register' %}">SIGNUP</a>
-        <a href="{% url 'login' %}">LOGIN</a>
-      </div>
-    </div>
-    <!-- Nav-End --> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'styles/blog.css' %}">
+    
+  </head>
+  <body>
+        <div class="navbar">
+          {% block content %}
+          {% endblock %}
+        </div>
 
-    <!-- ROW - 1 -->
-  <div style="margin-left:20%;">
-  <h4 style="font-family:monospace; color:#68759c;"><strong>LEADING PERFORMERS</strong></h4>
-  <hr>
-  </div>
-  <div class="row" style="border:1px solid white; height:310px;">
-		<div class="col-lg-4">
-			<img class="thumbnail" src="{% static 'images/levi.jpeg' %}">
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>Levi Ackerman</strong></h6>
-        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#1 AIR</strong></h6>
-				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Connect</button>
-				<a class="btn btn-outline-success" href="#">Profile</a>
-			</div>
-		</div>
+        {% comment %} Hero starts here {% endcomment %}
 
-    	<div class="col-lg-4">
-			<img class="thumbnail" src="{% static 'images/IITR.jpeg' %}">
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>IIT Roorkie</strong></h6>
-        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#1 State Ranking</strong></h6>
-				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Slot Book</button>
-				<a class="btn btn-outline-success" href="#">View</a>
-			</div>
-		</div>
+        <div class="hero" style="height: 600px; background-image: url('{% static 'images/event-hero-2.jpg'%}');">
+          <div class="hero-text">
+            <h1 style="font-style: Georgia; color: #fff; font-size:50px;">Eduslgg Events</h1>
+            <p>The Best Experiences Of Your Life From Institutes All Over The World Are Waiting For You , And We Have All Of Them Here</p>
+            <button>EXPLORE EVENTS NOW</button>
+          </div>
+        </div>
+        {% comment %} Hero ends here {% endcomment %}
 
-    	<div class="col-lg-4">
-			<img class="thumbnail" src="{% static 'images/oikawa.jpeg' %}">
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>Oikawa Toroo</strong></h6>
-        <h6 style="font-family:monospace; color:#76a7d6;"><strong>#L69 Google Unlocked</strong></h6>
-				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Connect</button>
-				<a class="btn btn-outline-success" href="#">Profile</a>
-			</div>
-		</div>
-	</div>
-<!-- ROW - 2 -->
-  <div style="margin-left:20%;">
-  <h4 style="font-family:monospace; color:#68759c;"><strong>NEWS</strong></h4>
-  <hr>
-  <div class="square" style="height:200px; width:250px; border:2px solid #76a7d6;">
-  <div class="rectangle" style="height:200px; width:550px; border:2px solid #76a7d6; margin-left:260px;">
-  <h5 style="font-family:monospace; color:#68759c;"> STUDENT I</h5>
-  <h6 style="font-family:monospace; color:#76a7d6;"><strong>Placed at "Tesla"</strong></h6>
-  <p style="color:#76a7d6; font-size:14px;">Congratulations to 'Student 1' for getting placed at Tesla by via our career play</p>
-  </div>
- 
-  
+        {% comment %} wall starts here  {% endcomment %}
+        <div class="mini-wall">
+          <div class="wall">
+            <img class="wall-pic" src="{% static 'images/moodindigo.png'%}"/>
+          </div>
+          <div class="wall">
+          <img class="wall-pic" src="{% static 'images/cognizance.jpeg'%}"/>
+          </div>
+          <div class="wall">
+          <img class="wall-pic" src="{% static 'images/abhivyanjana.png'%}"/>
+          </div>
+          <div class="wall">
+          <img class="wall-pic" src="{% static 'images/milan.png'%}"/>
+          </div>
+        </div>
+         {% comment %} wall ends here {% endcomment %}
 
-  
+         <!-- TRENDING EVENTS -->
+          <div class="trending">
+            <div class="trend-head"><h2>Trending Events</h2></div>
+            <div class="trend-container">
+              {% for event in events%}
+              <h2>{{event.name}}</h2>
+              {% endfor %}
+            </div>
+          </div>
+          <!-- TRENDING EVENTS ENDS HERE-->
+         <div class="popular-head"><h1>Popular Categories</h1></div>
+        <div class="card-container" style="background-image: url(https://products.ls.graphics/mesh-gradients/images/01.-Royal-Heath.jpg);">
+                  {% for category in event_categories %}
+                  <div class="white">
+                    <h3>{{category.name}}</h3>
+                     <div class="button">
+                    <a href="https://codepen.io/amotor" target="blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    View Events
+                  </a>
+                    </div>
+                  </div>
+                  {% endfor %}
+        </div>
 
-
+        
+    <script src="" async defer></script>
+  </body>
+</html>
