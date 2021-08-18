@@ -257,12 +257,15 @@
   }
 
   .trend-head{
+      margin-left:20px;
       font-size: 1.4em;
       font-family: "Poppins", sans-serif;
       color: #1F305E;
       height: max-content;
       width: inherit;
-      border: 1px solid white;
   }
   
-  
+  .trend-container{
+      display: flex;
+      flex-direction: row;
+  }
