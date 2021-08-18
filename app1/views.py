@@ -110,8 +110,7 @@ def faq(request):
     context = {}
     return render(request,'app1/faq.html', context)
 
-def blog(request):
-    
+def event(request):
     event_categories = EventCategory.objects.all()
     context = {'event_categories':event_categories}
-    return render(request, 'app1/blog.html', context)
+    return render(request, 'app1/event.html', context)
