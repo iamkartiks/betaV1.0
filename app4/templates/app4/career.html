@@ -1,31 +1,52 @@
-<!DOCTYPE html>
 {% load static %}
+{% include 'app1/navbar.html'%}
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Career Dashboard | Eduslogg</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/career.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     </head>
+    <body>
+        
+        <div class="navbar">
+            {% block content %}
 
-<div style="width:100%; height:100px; margin-top:10px;"><a class="btn btn-outline-success" href="{% url 'home' %}">HOME</a></div>
-<div style="margin-left:20%;">
- <h4 style="font-family:monospace; color:#68759c;"><strong>Career Dashboard</strong></h4>
-  <hr style="color:white;">
-  </div>
-  {% for i in career %}
-  <div class="col-lg-4" style="margin-left:35px;">
-			{% comment %} <img class="thumbnail" src="{% static 'images/IITR.jpeg' %}"> {% endcomment %}
-			<div class="box-element product">
-				<h6 style="font-family:monospace; color:#68759c;"><strong>Career : {{ i.name}}</strong></h6>
-                <h6 style="font-family:monospace; color:#76a7d6;"><strong> Total Level : {{ i.total_levels }}</strong></h6>
-				<hr>
-				<button data-product="" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Start</button>
-				<a class="btn btn-outline-success" href="{% url 'levelbased' i.id %}">Expand</a>
-			</div>
-		</div>
-{% endfor %}
+            {% endblock %}
+        </div>
+
+        <!-- hero starts here-->
+        <div class="hero" style="background-image:url('{% static 'images/career-hero.jpg' %}">
+                <h1>Take Career Oriented Courses To Build Your Professional Future</h1>
+
+                <h3>Experience A New and Interesting Way of Learning With Alot Of Practical Emphasization</h3>
+
+                <div class="button-wrapper">
+                <button>EXPLORE CAREERS COURSES</button>
+                <button>KNOW ABOUT COURSES</button>
+                </div>
+        </div>
+        <!-- hero ends here -->
+        <!-- slider starts here -->  
+        <div class="slide-container">
+            <div class="slide-content"></div>  
+            <div>
+            <div class="myslider">
+             <div class="item a">h1</div>
+             <div class="item b">
+               h2</div>
+             <div class="item c">
+               h3</div>
+            </div>
+            </div>
+        </div>
+        
+        <script src="{% static 'js/career.js' %}" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    </body>
+</html>
