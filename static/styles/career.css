@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 .navbar a:hover{
     color:black
@@ -290,10 +291,639 @@
 /* OPPOTUNITY STARTS HERE */
 
 .opportunity{
-
+    display: flex;
+    flex-direction: column;
     margin-left:100px;
     margin-right:100px;
     height: 300px;
     width: 100%;
     background-color: black;
 }
+
+.opp-head{
+    height: max-content;
+    width: max-content;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+.opp-head h2{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.4em;
+}
+
+.opp-para{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.opp-button{
+    height: max-content;
+    width: max-content;
+ 
+}
+/* OPPORTUNITY BUTTON */
+
+
+.opp-btn-cont {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+  .opp-btn-cont .opp-btn {
+    position: relative;
+    padding: 20px 70px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 1.125em;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .opp-btn-cont .opp-btn:hover {
+
+    color: white;
+    border: none;
+  }
+  .opp-btn-cont .opp-btn:hover .line-1 {
+    -webkit-animation: move1 1500ms infinite ease;
+            animation: move1 1500ms infinite ease;
+  }
+  .opp-btn-cont .opp-btn:hover .line-2 {
+    -webkit-animation: move2 1500ms infinite ease;
+            animation: move2 1500ms infinite ease;
+  }
+  .opp-btn-cont .opp-btn:hover .line-3 {
+    -webkit-animation: move3 1500ms infinite ease;
+            animation: move3 1500ms infinite ease;
+  }
+  .opp-btn-cont .opp-btn:hover .line-4 {
+    -webkit-animation: move4 1500ms infinite ease;
+            animation: move4 1500ms infinite ease;
+  }
+  .opp-btn-cont .line-1 {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+  }
+  .opp-btn-cont .line-2 {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    left: 0;
+    top: 0;
+  }
+  .opp-btn-cont .line-3 {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: white;
+    right: 0;
+    top: 0;
+  }
+  .opp-btn-cont .line-4 {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    right: 0;
+    bottom: 0;
+  }
+  
+  @-webkit-keyframes move1 {
+    0% {
+      height: 100%;
+      bottom: 0;
+    }
+    54% {
+      height: 0;
+      bottom: 100%;
+    }
+    55% {
+      height: 0;
+      bottom: 0;
+    }
+    100% {
+      height: 100%;
+      bottom: 0;
+    }
+  }
+  
+  @keyframes move1 {
+    0% {
+      height: 100%;
+      bottom: 0;
+    }
+    54% {
+      height: 0;
+      bottom: 100%;
+    }
+    55% {
+      height: 0;
+      bottom: 0;
+    }
+    100% {
+      height: 100%;
+      bottom: 0;
+    }
+  }
+  @-webkit-keyframes move2 {
+    0% {
+      width: 0;
+      left: 0;
+    }
+    50% {
+      width: 100%;
+      left: 0;
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      width: 0;
+      left: 0;
+    }
+    50% {
+      width: 100%;
+      left: 0;
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  @-webkit-keyframes move3 {
+    0% {
+      height: 100%;
+      top: 0;
+    }
+    54% {
+      height: 0;
+      top: 100%;
+    }
+    55% {
+      height: 0;
+      top: 0;
+    }
+    100% {
+      height: 100%;
+      top: 0;
+    }
+  }
+  @keyframes move3 {
+    0% {
+      height: 100%;
+      top: 0;
+    }
+    54% {
+      height: 0;
+      top: 100%;
+    }
+    55% {
+      height: 0;
+      top: 0;
+    }
+    100% {
+      height: 100%;
+      top: 0;
+    }
+  }
+  @-webkit-keyframes move4 {
+    0% {
+      width: 0;
+      right: 0;
+    }
+    55% {
+      width: 100%;
+      right: 0;
+    }
+    100% {
+      width: 0;
+      right: 100%;
+    }
+  }
+  @keyframes move4 {
+    0% {
+      width: 0;
+      right: 0;
+    }
+    55% {
+      width: 100%;
+      right: 0;
+    }
+    100% {
+      width: 0;
+      right: 100%;
+    }
+  }
+
+  /* OPPOTUNITY BUTTON ENDS HERE */
+
+  /* OPPORTUNITY DIV ENDS HERE */
+
+
+
+  /* COURSES STARTS FROM HERE */
+
+  .career-container{
+      display: flex;
+      flex-direction: column;
+      height: max-content;
+      width: 100%;
+
+      margin-top: 30px;
+
+  }
+
+  .career-head h1{
+      font-size: 2.6em;
+      margin-top: 10px;
+      margin-left: 20px;
+      width: max-content;
+      padding-bottom: 10px;
+      font-weight: 800;
+      font-family: "Poppins", sans-serif;
+  }
+
+  /* SEARCH BAR  */
+
+  .career-search{
+    height: 100px;
+    width: inherit;
+
+    background-color: #f7f7f7;
+}
+
+  .search-container {
+    margin-top:30px;
+    margin-left:30px;
+    font-family: "Poppins",sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    top: 50%;
+    left: 50%;
+    width:100%;  
+}
+
+#submitsearch{
+ border: 1px solid white;
+ margin-left: -82px;
+ padding: 5px;
+ border-radius: 19px;
+ cursor: pointer;
+ padding-left: 10px;
+ padding-right: 8px; 
+ padding-top: 4px;
+
+ display: none;
+ box-shadow: 0 0 1px black;     
+ margin-right:110px;
+}
+
+.search-container a{
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-left: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+#searchInput {
+     width: 18%;
+     box-shadow: 
+     12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+     border: 1px solid white;
+     border-radius: 30px;
+     font-size: 16px;
+     background-color: white;
+     background-image:url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-24.png');
+
+     background-position: 10px 7px;
+     background-repeat: no-repeat;
+     padding: 8px 20px 8px 40px;
+     -webkit-transition: width 0.8s ease-in-out;
+     transition: width 0.8s ease-in-out;
+     outline: none;
+     opacity: 0.9;
+
+   }
+/* SEARCH BAR ENDS HERE */
+
+  /* career cards */
+
+  .career-careers{
+      display: flex;
+      flex-direction: row;
+
+      flex-wrap: wrap;
+  }
+  
+.course {
+	box-sizing: border-box;
+	font-family: 'Muli', sans-serif;
+	background-color: #fff;
+	border-radius: 10px;
+    box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.course-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.course-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.course-preview a:hover{
+  color:#fff;
+  font-size:14px;
+}
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.progress-container {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	text-align: right;
+	width: 150px;
+}
+
+.progress {
+	background-color: #ddd;
+	border-radius: 3px;
+	height: 5px;
+	width: 100%;
+}
+
+.progress-text {
+	font-size: 10px;
+	opacity: 0.6;
+	letter-spacing: 1px;
+}
+
+.con-btn {
+    box-sizing: border-box;
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+}
+
+/* career card ends */
+
+/* SEPARATOR STARTS HERE */
+
+.separator{
+  display: flex;
+  flex-direction: column;
+  height:150px;
+  width: 100%;
+  background-color: #f7f7f7;
+  margin-top:50px;
+
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+.separator h1{
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.separator-para{
+  display: flex;
+  flex-direction: row;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/* SEPARATOR ENDS HERE */
+
+
+/* COURSE CONTAINER STARTS FROM HERE */
+
+.course-container{
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 100%;
+
+  margin-top:150px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.course-head{
+  font-family: "Poppins", sans-serif;
+  margin-left: 20px;
+}
+
+.course-head h2{
+  font-weight: 600;
+  font-size: 2.4em;
+  width: max-content;
+}
+
+.course-sub-head {
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+}
+
+.course-sub-head h3{
+  font-weight: 600;
+}
+
+/* ! FOOTER START --- */
+.footer-container {
+  position: relative;
+  width: 100%;
+  padding: 50px 0px 0px 0px;
+  background-color: hsla(0, 0%, 29%, 1);
+  font-family: "Poppins", sans-serif;
+}
+.footer_row-1 {
+  position: relative;
+  padding-right: 120px;
+  display: flex;
+  width: 100%;
+}
+/* row-1-col-1 */
+.row_1-col-1 {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color:lightyellow; */
+}
+.footer-menu-container {
+  display: flex;
+  gap: 8rem;
+}
+.footer-menu {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.footer-menu h1 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.footer-menu a {
+  text-decoration: none;
+  font-weight: 100;
+  color: #ffffff;
+  font-size: 1rem;
+}
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+/* row-1-col-1 ENDS*/
+/* row-1-col-2 */
+.row_1-col-2 {
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 20px;
+}
+.row_1-col-2 h1 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.row_1-col-2 a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #ffffff;
+}
+.row_1-col-2 a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons img {
+  transition: 0.2s;
+}
+.social-icons a:nth-child(2) {
+  margin-top: 10px;
+}
+.social-icons img:hover {
+  transform: scale(0.9);
+}
+
+/* row-1-col-2 ENDS */
+
+/* illus*/
+.footer-ILLUS {
+  position: relative;
+  margin-top: 100px;
+}
+.footer-ILLUS img:first-child {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+}
+.footer-ILLUS img:nth-child(2) {
+  position: absolute;
+  bottom: 0px;
+  right: 20%;
+}
+.footer-ILLUS hr {
+  border: none;
+  background-color: #56c2c1;
+  height: 3px;
+}
+/* illus ENDS */
+/* * Row-2 */
+.footer_row-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 120px 20px 110px;
+}
+.row-2-col-1 {
+  display: flex;
+  gap: 30px;
+}
+.row-2-col-1 a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.row-2-col-1 a:hover {
+  text-decoration: underline;
+}
+.row-2-col-2 {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+/* !FOOTER ENDS__---=> */

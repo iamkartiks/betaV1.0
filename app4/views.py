@@ -1,5 +1,6 @@
 from app4.models import CareerOption, Level
 from django.shortcuts import render
+from app1.models import Course
 
 def levelplay(request,pk):
     career = CareerOption.objects.get(id=pk)
@@ -8,6 +9,7 @@ def levelplay(request,pk):
     return render(request,'app4/levelbased.html',context)
 
 def career(request):
-    career = CareerOption.objects.all()
-    context = {'career':career}
+    courses = Course.objects.all()
+    careers = CareerOption.objects.all()
+    context = {'careers':careers,'courses':courses}
     return render(request,'app4/career.html',context)
