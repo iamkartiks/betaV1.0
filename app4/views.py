@@ -13,3 +13,8 @@ def career(request):
     careers = CareerOption.objects.all()
     context = {'careers':careers,'courses':courses}
     return render(request,'app4/career.html',context)
+
+def levelpage(request,pk):
+    level = Level.objects.get(id=pk)
+    context = {'level':level}
+    return render(request,'app4/levelpage.html', context)
