@@ -1,2 +1,35 @@
 {% load static %}
-{{level.name}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'styles/levelpage.css' %}">
+    </head>
+    <body>
+    
+        <!--BREADCRUBMS-->
+        <div class="breadcrumb">
+            <a href="#">Level Portal</a>
+            <i class="arrow right"></i>
+            <a href="#">{{level.name}}</a>
+        </div>
+        <!--BREADCRUBMS ENDS -->
+
+        <!-- LEVEL & HELLO -->
+        <div class="level-bar">
+            <div class="level-topic">
+                <h1>{{level.Topic}}</h1>
+            </div>
+            <div class="hello-user">
+            <p>HELLO USER</p>
+            </div>
+        </div>
+        <!-- LEVEL & HELLO ENDS -->
+
+        <script src="" async defer></script>
+    </body>
+</html>

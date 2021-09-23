@@ -266,6 +266,7 @@ a {
     display: flex;
     flex-direction: column;
 }
+
 #levelcard{
     margin-left: 70px;
     font-family: 'Patrick Hand', cursive;
@@ -276,6 +277,7 @@ a {
     width: 400px;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
+
 
 .card-2{
     margin-left:70px;
