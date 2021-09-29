@@ -17,6 +17,7 @@ class CareerOption(models.Model):
 
 class Level(models.Model):
     name = models.CharField(max_length=100,null=True)
+    level = models.CharField(max_length=100, null=True, blank=True)
     Topic = models.CharField(max_length=100,null=True)
     career= models.ForeignKey(CareerOption, null=True, on_delete= models.SET_NULL)
     
@@ -107,3 +108,32 @@ class Academics(models.Model):
     def __str__(self):
         return self.name
         
+
+class Problems(models.Model):
+    TYPE = (
+        ('Coding','Coding'),
+        ('Quiz', 'Quiz'),
+        ('ShortAns', 'ShortAns'),
+        ('LongAns', 'LongAns'), 
+    )
+
+    DIFFICULTY = (
+        ('Easy', 'Easy'),
+        ('Medium', 'Medium'),
+        ('Hard', 'Hard'),
+        ('Very Hard', 'Very Hard')
+    )
+    name = models.CharField(max_length=100, null=True)
+    problem = models.CharField(max_length=100, null=True)
+    type = models.CharField(max_length=100, null=True, choices=TYPE)
+    difficulty = models.CharField(max_length=100, null=True, choices=DIFFICULTY)
+    score = models.IntegerField(null=True)
+    level = models.OneToOneField(Level, on_delete=models.CASCADE)
+
+    def __repr__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name
+
+

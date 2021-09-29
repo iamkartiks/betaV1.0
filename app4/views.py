@@ -1,4 +1,4 @@
-from app4.models import CareerOption, Level
+from app4.models import CareerOption, Level, Problems
 from django.shortcuts import render
 from app1.models import Course
 
@@ -15,6 +15,7 @@ def career(request):
     return render(request,'app4/career.html',context)
 
 def levelpage(request,pk):
+    problems = Problems.objects.filter(id=pk)
     level = Level.objects.get(id=pk)
-    context = {'level':level}
+    context = {'level':level, 'problems':problems}
     return render(request,'app4/levelpage.html', context)

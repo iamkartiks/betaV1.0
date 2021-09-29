@@ -50,10 +50,30 @@ body{
   .hello-user{
       height: inherit;
       width: 20%;
+      background-color: lavender;
       
   }
 
   .hello-user p{
       margin-left:30px;
       font-size: 1.4em;
+  }
+
+  .filters{
+    height: 50px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: lightcyan;
+}
+  .main-container{
+      height: 600px;
+      width: 100%;
+      margin-top: 5px;
+      background-color:lightblue;
+  }
+
+  .related-course{
+      height: 400px;
+      width: 100%;
+      background-color: rgb(56, 9, 56);
   }

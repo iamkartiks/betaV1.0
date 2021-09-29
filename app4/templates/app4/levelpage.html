@@ -30,6 +30,20 @@
         </div>
         <!-- LEVEL & HELLO ENDS -->
 
+        <!-- FILTERS -->
+            <div class="filters"></div>
+        <!-- FILTERS ENDS HERE -->
+        <!-- MAIN CONTAINER -->
+            <div class="main-container">
+                {% for problem in problems %}
+                    <p>{{problem.problem}}</p>
+                {% endfor %}
+            </div>
+        <!-- MAINE CONTAINER ENDS HERE-->
+
+        <!-- RELATED COURSE -->
+        <div class="related-course"></div>
+        <!-- RELATED COURSE ENDS HERE-->
         <script src="" async defer></script>
     </body>
 </html>
