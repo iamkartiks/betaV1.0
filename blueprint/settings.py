@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'app1',
     'app3',
     'app4',
-    'djangobower',
+    # 'djangobower',
      
 ]
 
