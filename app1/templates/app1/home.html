@@ -25,12 +25,12 @@
   </head>
 
   <body>
-    <div style="background-image: url({% static 'images/Assets/illustrations/bg-hero.svg' %});" class="h-screen hero-container">
+    <div style="background-image: url({% static 'images/Assets/illustrations/herobgg.svg' %});" class="h-screen hero-container">
       <!-- ! -------------------------------NAVBAR----------------------------------- -->
-      <div class="flex py-4 m-auto space-between mx-7">
+      <div class="flex py-4 m-auto mx-20 space-between">
         <!-- image container -->
         <div class="flex items-center w-2/12">
-          <img
+          <img 
             src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
             alt="eduSlogg-logo"
           />
@@ -59,12 +59,13 @@
         </div>
       </div>
       <!-- ! -------------------------------NAVBAR---------------END-------------------- -->
-      <div class="flex w-full hero-container">
-        <div class="w-2/4 hero__col-1">
+      <div class="flex m-auto mx-20 hero-container">
+        <!-- -----------COL-1------------- -->
+        <div class="flex flex-col justify-center w-2/4 gap-20 hero__col-1">
           <div>
-            <p>Accelerate your career</p>
-            <h1>Your Career Start here</h1>
-            <p>
+            <p class="text-lg font-semibold light-green poppins-font">Accelerate your career</p>
+            <h1 class="font-bold text-7xl dark-green cabin-font">Your Career Start <br>here</h1>
+            <p class="mt-10 text-lg font-semibold text-gray-700 opacity-50 poppins-font">
               Accelerate Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Nemo quae voluptatum ut aliquam veniam ullam velit.
               Repudiandae
@@ -72,9 +73,11 @@
               It’s easy with blaa bla bla!
             </p>
           </div>
-          <button>Get Started</button>
+          <button class="w-2/6 py-4 font-semibold text-white rounded-full poppins-font btn-gradient">Get Started</button>
         </div>
-        <div class="w-2/4 hero__col-2">
+
+        <!-- !== Col-2 -->
+        <div class="flex items-end w-2/4 hero__col-2">
           <img
             src="{% static 'images/Assets/illustrations/col2vec.png' %}"
             alt=""
