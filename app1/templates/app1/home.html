@@ -25,12 +25,16 @@
   </head>
 
   <body>
-    <div style="background-image: url({% static 'images/Assets/illustrations/herobgg.svg' %});" class="h-screen hero-container">
+    <!-- Hero  -->
+    <div
+      style="background-image: url({% static 'images/Assets/illustrations/herobgg.svg' %});"
+      class="h-screen hero-container"
+    >
       <!-- ! -------------------------------NAVBAR----------------------------------- -->
       <div class="flex py-4 m-auto mx-20 space-between">
         <!-- image container -->
         <div class="flex items-center w-2/12">
-          <img 
+          <img
             src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
             alt="eduSlogg-logo"
           />
@@ -63,9 +67,15 @@
         <!-- -----------COL-1------------- -->
         <div class="flex flex-col justify-center w-2/4 gap-20 hero__col-1">
           <div>
-            <p class="text-lg font-semibold light-green poppins-font">Accelerate your career</p>
-            <h1 class="font-bold text-7xl dark-green cabin-font">Your Career Start <br>here</h1>
-            <p class="mt-10 text-lg font-semibold text-gray-700 opacity-50 poppins-font">
+            <p class="text-lg font-semibold light-green poppins-font">
+              Accelerate your career
+            </p>
+            <h1 class="font-bold text-7xl dark-green cabin-font">
+              Your Career Start <br />here
+            </h1>
+            <p
+              class="mt-10 text-lg font-semibold text-gray-700 opacity-50 poppins-font"
+            >
               Accelerate Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Nemo quae voluptatum ut aliquam veniam ullam velit.
               Repudiandae
@@ -73,7 +83,11 @@
               It’s easy with blaa bla bla!
             </p>
           </div>
-          <button class="w-2/6 py-4 font-semibold text-white rounded-full poppins-font btn-gradient">Get Started</button>
+          <button
+            class="w-2/6 py-4 font-semibold text-white rounded-full poppins-font btn-gradient"
+          >
+            Get Started
+          </button>
         </div>
 
         <!-- !== Col-2 -->
@@ -85,8 +99,23 @@
         </div>
       </div>
     </div>
+    <!-- Card Section -->
+    <div class="flex justify-center w-full gap-10 px-20 p-auto">
+      <button class="px-10 py-4 text-lg font-semibold rounded-full tablinks focus:text-white light-green border-des poppins-font hero-card__btn">Search Institute</button>
+      <button class="px-10 py-4 text-lg font-semibold rounded-full tablinks focus:text-white light-green border-des poppins-font hero-card__btn">Explore Career</button>
+    </div>
+    <!-- tab--div -->
+    <div>
+      <div id="tab1" class="tab-1 tabcontent">
+        tab one
+      </div>
+      <div id="tab2" class="tab-2 tabcontent">
+        tab two
+      </div>
+    </div>
 
     <!-- JS -->
+  
     <script
       defer
       src="{% static 'js/JS/app.js' %}"

@@ -17,6 +17,12 @@
 .light-green {
   color: var(--green);
 }
+.light-green-bg {
+  background-color: var(--green);
+}
+.border-des {
+  border: 3.5px solid var(--green);
+}
 /*! Dark-Green */
 .dark-green {
   color: var(--darkgreen);
@@ -47,3 +53,20 @@
   width: 100%;
   height: 55vh;
 }
+.hero-card__btn:focus {
+  background-color: var(--green);
+}
+
+
+
+
+
+
+
+/* !=======================TABS STYLING================================================================== */
+.tabcontent{
+    display: none;
+    padding: 20px;
+
+}
+
