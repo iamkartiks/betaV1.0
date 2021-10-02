@@ -36,13 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'livereload'
+    'livereload',
     'django.contrib.staticfiles',
     'app1',
     'app3',
     'app4',
     # 'djangobower',
-     
 ]
 
 MIDDLEWARE = [
