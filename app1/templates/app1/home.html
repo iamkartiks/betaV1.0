@@ -9,6 +9,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
     <!-- slide -->
     <!-- Required Core Stylesheet -->
     <link
@@ -24,27 +25,60 @@
   </head>
 
   <body>
-    <div class="h-screen bg-red-300 mx-7 m-auto">
-      <!-- !NAVBAR -->
-      <div class="flex w-full space-between ">
+    <div style="background-image: url({% static 'images/Assets/illustrations/bg-hero.svg' %});" class="h-screen hero-container">
+      <!-- ! -------------------------------NAVBAR----------------------------------- -->
+      <div class="flex py-4 m-auto space-between mx-7">
         <!-- image container -->
-        <div class="col-1 w-2/12 bg-red-700 items-center flex">
-          <img src="{% static 'images/Assets/logo/edu-Slogg.svg' %}" alt="eduSlogg-logo" />
+        <div class="flex items-center w-2/12">
+          <img
+            src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
+            alt="eduSlogg-logo"
+          />
         </div>
         <!-- Nav Links -->
-        <div class="col-2 flex gap-5 w-2/3 justify-center items-center bg-yellow-300">
-          <div>Find a Institute</div>
-          <div>Find a Job</div>
-          <div>Careers Portal</div>
-          <div>Events</div>
-          <div>FAQ</div>
+        <div
+          class="flex items-center justify-center w-2/3 gap-8 font-normal text-gray-400 "
+        >
+          <div><a href="#">Find a Institute</a></div>
+          <div><a href="#">Find a Job</a></div>
+          <div><a href="#">Careers Portal</a></div>
+          <div><a href="#">Events</a></div>
+          <div><a href="#">FAQ</a></div>
         </div>
         <!-- Login & Log out btns -->
-        <div class="col-3 w-2/12 flex gap-3 items-center bg-blue-500 justify-end">
-          <div><a src="" style="color: #5AC817">Log In</a></div> 
-          <div> 
-            <button class="text-white rounded-full px-2" style="background-color: #5AC817;">Sign Up</button>
+        <div class="flex items-center justify-end w-2/12 gap-5">
+          <div><a src="" style="color: #5ac817">Log In</a></div>
+          <div>
+            <button
+              class="px-8 py-1 pb-2 text-white rounded-full"
+              style="background-color: #5ac817"
+            >
+              <span>Sign Up</span>
+            </button>
           </div>
+        </div>
+      </div>
+      <!-- ! -------------------------------NAVBAR---------------END-------------------- -->
+      <div class="flex w-full hero-container">
+        <div class="w-2/4 hero__col-1">
+          <div>
+            <p>Accelerate your career</p>
+            <h1>Your Career Start here</h1>
+            <p>
+              Accelerate Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo quae voluptatum ut aliquam veniam ullam velit.
+              Repudiandae
+              <br />
+              It’s easy with blaa bla bla!
+            </p>
+          </div>
+          <button>Get Started</button>
+        </div>
+        <div class="w-2/4 hero__col-2">
+          <img
+            src="{% static 'images/Assets/illustrations/col2vec.png' %}"
+            alt=""
+          />
         </div>
       </div>
     </div>
