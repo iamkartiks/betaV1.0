@@ -31,9 +31,7 @@ body{
 .color-bg-light-g{
   background-color: #95CEA2;
 }
-.color-bg-dark-g{
-  color: #5F9C6D;
-}
+
 /*! Poppins */
 .poppins-font {
   font-family: "Poppins", sans-serif;
