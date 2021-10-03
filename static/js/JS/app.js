@@ -30,10 +30,3 @@ function closeAllDrops(Menu) {
     CloseDiv.classList.add("show-drop");
   }
 }
-
-DropDowns.forEach((DropDown) => {
-  DropDown.addEventListener("click", toggleDrop);
-});
-CloseDiv.addEventListener("click", closeAllDrops);
-
-console.log(5+6)
