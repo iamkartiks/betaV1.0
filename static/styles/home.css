@@ -9,7 +9,7 @@
   --darkgreen: #0b5b3e;
 }
 
-.hero-container {
+body{
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -26,6 +26,13 @@
 /*! Dark-Green */
 .dark-green {
   color: var(--darkgreen);
+}
+/* lightest green */
+.color-bg-light-g{
+  background-color: #95CEA2;
+}
+.color-bg-dark-g{
+  color: #5F9C6D;
 }
 /*! Poppins */
 .poppins-font {
@@ -64,9 +71,13 @@
 
 
 /* !=======================TABS STYLING================================================================== */
-.tabcontent{
-    display: none;
-    padding: 20px;
-
+.input-bar__tab{
+  width: 65vw;
 }
-
+.icon-search{
+  top: 8px;
+  left: 15px;
+}
+.filter__tab{
+  width: 65vw;
+}
