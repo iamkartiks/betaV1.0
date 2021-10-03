@@ -12,6 +12,8 @@
 body {
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden !important;
 }
 /*! Green */
 .light-green {
@@ -91,42 +93,42 @@ body {
 }
 
 .swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
+  background-color: rgb(230, 101, 101);
 }
 
 .swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
+  background-color: rgb(125, 178, 221);
 }
 
 .swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
+  background-color: rgb(129, 230, 188);
 }
 
 .swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
+  background-color: rgb(226, 167, 90);
 }
 
 .swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
+  background-color: rgb(202, 233, 129);
 }
 
 .swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
+  background-color: rgb(233, 145, 164);
 }
 
 .swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
+  background-color: rgb(96, 126, 89);
 }
 
 .swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
+  background-color: rgb(77, 86, 110);
 }
 
 .swiper-slide:nth-child(9n) {
-  background-color: rgb(218, 12, 218);
+  background-color: rgb(124, 73, 124);
 }
 
 .swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
+  background-color: rgb(78, 160, 124);
 }
 /* !-------------------------Slider-------------ENDS----- */
