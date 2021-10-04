@@ -2,86 +2,61 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Get Started | EduSlogg</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'styles/getstart.css'%}">
-        <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    </head>
-    <body>
-    <div class="flex-container">
-<!--NAVBAR-->
-    
-    <div class="nav">
-        <div class="button-div">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Get Started | EduSlogg</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-            <a href="{% url 'home' %}" class="cta">
-                    <span>Home</span>
-                    <svg width="13px" height="10px" viewBox="0 0 13 10">
-                    <path d="M1,5 L11,5"></path>
-                    <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-            </a>
-
+    <link rel="stylesheet" href="{% static 'styles/getstart.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body
+    style="
+      background-image: url({% static 'images/Assets/illustrations/herobgmain.svg' %});
+    "
+  >
+    <div class="flex py-4 m-auto mx-20 space-between">
+        <!-- nav -->
+      <div class="flex justify-center w-full mt-2">
+        <div class="w-1/6">
+            <a href="#"><img src="{% static 'images/Assets/icons/home.svg' %}" alt=""></a>
         </div>
-        <div class="head-col">
-            <h1 class="text-2xl">edu-Slogg</h1>
-        </div> 
-
-    </div>  
-
-<!-- Main CONTAINER-->
-
-    <div class="main-container">
-        <!-- CARD 1 STARTS-->
-        <div class="card1">
-            <div class="card-header"><h4>Let's Get Started !</h4></div>
-            <div class="card-body"><p>Welcome to Edu-Slogg! Please tell us how you will use the system so we can prepare your account for your preferred category. If you are unsure, we encourage you to explore each career option before you continue.</p></div>
-
-            <div class="sub-card">
-                <div class="career-name"><h5 class="cname">Education Career</h5></div>
-                <div class="career-btn" id="cbtn1"><form action="#">
-                 <button class="start-btn type1">
-                        Start
-                 </button>
-            </form></div>
-            </div>
-
-            <div class="sub-card">
-                <div class="career-name"><h5 class="cname">Professional Career</h5></div>
-                <div class="career-btn"><form action="#">
-                 <button class="start-btn type1">
-                    Start
-                 </button>
-            </form></div>
-            </div>
-        
+        <div class="flex justify-center w-full">
+            <img
+            class="img-logo"
+              src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
+              alt="eduSlogg-logo"
+            />
         </div>
-        <!-- CARD 1 ENDS-->
-    
-    </div>
-<!--MAIN CONTAINER ENDS-->    
-    
-
-<!-- FOOTER STARTS-->
-    <footer class="footer-container">
-      <div class="footer-ILLUS">
-        <img
-          src="{% static 'images/Assets/illustrations/girl-bike-4cdb8ceabab074fbf64ca1c989fb3f78.svg' %}"
-          alt=""
-        />
-        <img src="{% static 'images/Assets/illustrations/download.svg' %}" alt="" />
-        <hr />
       </div>
-    </footer>
-<!--FOOTER ENDS-->
-</div>
+    </div>
+    <!-- nav-----end -->
+    <div class="flex flex-col items-center py-4 m-auto mx-20 mt-16">
+      <h1 class="font-bold text-7xl light-green cabin-font">
+          Let's get started!
+        </h1>
+        <p class="mt-10 text-lg font-semibold text-center text-gray-700 opacity-50 px-60 poppins-font">Welcome to Edu-Slogg! Please tell us how you will use the system so we can prepare your account for your preferred category. If you are unsure, we encourage you to explore each career option before you continue.</p>
 
-
-
-        <script src="" async defer></script>
-    </body>
-</html> 
+        <!-- cards -->
+        <div class="flex justify-center w-full gap-10 mt-16 ">
+            <a class="w-2/6" href="#">
+                <div class="flex flex-col items-center justify-center gap-2 px-8 py-2 transition duration-200 ease-in-out transform bg-white border border-gray-200 shadow-md h-72 rounded-3xl poppins-font hover:scale-95">
+                    <h1 class="text-2xl font-bold text-gray-600">Education Career</h1>
+                    <p class="text-base font-light text-justify text-gray-700 opacity-50 ">Welcome to Edu-Slogg! Please tell us how you will use the system so we can prepare your account for your preferred category. If you are unsure, we encourage you to explore each career option before you continue.</p>
+                    <img src="{% static 'images/Assets/illustrations/book.svg' %}" alt="">
+                 </div>
+            </a>
+            
+            <a class="w-2/6" href="#">
+                <div class="flex flex-col items-center justify-center gap-2 px-8 py-2 transition duration-200 ease-in-out transform bg-white border border-gray-200 shadow-md h-72 rounded-3xl poppins-font hover:scale-95">
+                    <h1 class="text-2xl font-bold text-gray-600">Professional Career</h1>
+                    <p class="text-base font-light text-justify text-gray-700 opacity-50">Welcome to Edu-Slogg! Please tell us how you will use the system so we can prepare your account for your preferred category. If you are unsure, we encourage you to explore each career option before you continue.</p>
+                    <img src="{% static 'images/Assets/illustrations/profecareer-card.svg' %}" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+  </body>
+</html>
