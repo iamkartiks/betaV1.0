@@ -99,19 +99,27 @@ body {
 }
 
 .swiper-slide:nth-child(1n) {
-  background-color: rgb(230, 101, 101);
+  background-color: rgb(230, 101, 101, 0.7);
+  backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 .swiper-slide:nth-child(2n) {
-  background-color: rgb(125, 178, 221);
+  background-color: rgb(125, 178, 221, 0.7);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 .swiper-slide:nth-child(3n) {
-  background-color: rgb(129, 230, 188);
+  background-color: rgb(129, 230, 188, 0.7);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 .swiper-slide:nth-child(4n) {
-  background-color: rgb(226, 167, 90);
+  background-color: rgb(226, 167, 90, 0.7);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 
