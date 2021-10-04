@@ -114,29 +114,7 @@ body {
   background-color: rgb(226, 167, 90);
 }
 
-.swiper-slide:nth-child(5n) {
-  background-color: rgb(202, 233, 129);
-}
 
-.swiper-slide:nth-child(6n) {
-  background-color: rgb(233, 145, 164);
-}
-
-.swiper-slide:nth-child(7n) {
-  background-color: rgb(96, 126, 89);
-}
-
-.swiper-slide:nth-child(8n) {
-  background-color: rgb(77, 86, 110);
-}
-
-.swiper-slide:nth-child(9n) {
-  background-color: rgb(124, 73, 124);
-}
-
-.swiper-slide:nth-child(10n) {
-  background-color: rgb(78, 160, 124);
-}
 /* !-------------------------Slider-------------ENDS----- */
 
 /* * FOOOTER */
