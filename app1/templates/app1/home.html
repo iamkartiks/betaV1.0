@@ -282,7 +282,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </span>
-              <textarea name="" id="" cols="30" placeholder="Your message..." rows="10" class="w-full px-4 py-3 pl-10 text-sm text-green-500 placeholder-green-500 bg-green-100 bg-opacity-50 group placeholder-opacity-70 focus:shadow-md caret-green-500 focus:outline-none rounded-2xl focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"></textarea>
+              <textarea draggable="false" name="" id="" cols="30" placeholder="Your message..." rows="10" class="w-full px-4 py-3 pl-10 text-sm text-green-500 placeholder-green-500 bg-green-100 bg-opacity-50 group placeholder-opacity-70 focus:shadow-md caret-green-500 focus:outline-none rounded-2xl focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"></textarea>
             </div>
             <!-- !INPUT FIELD END-->
   
@@ -300,6 +300,69 @@
       </div>
     </div>
     <!-- todo::: QUERIES SECTION--ENDSSSSSS -->
+    <!-- todo::: ----FOOTER========== -->
+    <div style="background-image: url({% static 'images/Assets/illustrations/footerbg.svg' %});" class="px-20 py-10 mt-16 p-auto poppins-font footer-bg-color my-footer">
+      <div class="flex w-full ">
+        <!-- ===============COL-1====================== -->
+        <div class="flex flex-col w-1/4 ">
+          <img class="w-3/4" src="{% static 'images/Assets/logo/edu-Slogg.svg' %}" alt="eduslogg">
+          <h1 class="text-lg font-light footer-text-color">Your career starts<br>here</h1>
+
+          <a class="mt-5 text-xs font-semibold footer-text-color" href="">Learn More </a>
+        </div>
+        <!-- =================COL-2=================== --> 
+        <div class="flex w-2/4 justify-evenly">
+          <div class="flex flex-col items-center gap-2">
+            <h1 class="text-base font-bold footer-text-color">About</h1>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <h1 class="text-base font-bold footer-text-color">About</h1>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color " href="#">Link</a>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <h1 class="text-base font-bold footer-text-color">About</h1>
+            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color " href="#">Link</a>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <h1 class="text-base font-bold footer-text-color">About</h1>
+            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+          </div>
+        </div>
+        <!-- ----------------col-3-------------------------- -->
+        <div class="flex flex-col items-end w-1/4 ">
+          
+            <h1 class="text-base font-bold footer-text-color">Contact Us</h1>
+            <a class="mt-5 text-sm footer-text-color" href="mailto:abc@test.com">contact@xyz.com</a>
+            <a class="mt-2 text-sm footer-text-color" href="tel:+916394915228">+91 9548544515</a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="flex px-20 pt-10 pb-5 poppins-font footer-bg-color">
+      <div class="flex w-2/4 gap-10 ">
+        <a class="text-xs footer-text-color" href="#">Terms of Use</a>
+        <a class="text-xs footer-text-color" href="#">Licence agreement</a>
+        <a class="text-xs footer-text-color" href="#">Privacy Policy</a>
+        <a class="text-xs footer-text-color" href="#">Aplication affirmations</a>
+      </div>
+      <div class="flex justify-end w-2/4 gap-10 ">
+        <p class="text-xs footer-text-color">© 2021 edu-Slog, Inc</p>
+      </div>
+    </div>
+    <!-- todo::: ----FOOTER==========END=== -->
 
     <!-- JS -->
     <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

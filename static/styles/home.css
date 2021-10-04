@@ -33,6 +33,12 @@ body {
 .color-bg-light-g {
   background-color: #95cea2;
 }
+.footer-bg-color {
+  background-color: #E9FBD3;
+}
+.footer-text-color{
+  color: #9AB47B;
+}
 
 /*! Poppins */
 .poppins-font {
@@ -132,3 +138,11 @@ body {
   background-color: rgb(78, 160, 124);
 }
 /* !-------------------------Slider-------------ENDS----- */
+
+/* * FOOOTER */
+.my-footer{
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 105px;
+
+}
