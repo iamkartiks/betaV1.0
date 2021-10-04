@@ -8,11 +8,15 @@ module.exports = {
       content: [
           '../**/templates/*.html',
           '../**/templates/**/*.html'
-      ]
-  },
-  theme: {
-      extend: {},
-  },
-  variants: {},
+        ]
+    },
+    theme: {
+        extend: {},
+    },
+    variants: {
+      extend: {
+        backgroundColor: ['group-focus'],
+      }
+    },
   plugins: [],
 }
