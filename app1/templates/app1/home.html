@@ -22,7 +22,10 @@
   </head>
 
   <body
-    style="background-image: url("/static/images/Assets/illustrations/herobgmain.svg");">
+    style="
+      background-image: url('{% static 'images/Assets/illustrations/herobgmain.svg' %}');
+    "
+  >
     <!-- Hero  -->
     <div lass="h-screen hero-container">
       <!-- ! -------------------------------NAVBAR----------------------------------- -->
@@ -526,7 +529,7 @@
     <!-- todo::: ----FOOTER========== -->
     <div
       style="
-        background-image: url("/static/images/Assets/illustrations/footerbg.svg");
+        background-image: url('{% static 'images/Assets/illustrations/footerbg.svg' %}');
       "
       class="px-20 py-10 mt-16 p-auto poppins-font footer-bg-color my-footer"
     >
