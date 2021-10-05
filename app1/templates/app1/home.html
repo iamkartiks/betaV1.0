@@ -10,7 +10,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
     <!-- Slder -->
     <link
       rel="stylesheet"
@@ -18,7 +21,11 @@
     />
   </head>
 
-  <body style="background-image: url({% static 'images/Assets/illustrations/herobgmain.svg' %});">
+  <body
+    style="
+      background-image: url("/static/images/Assets/illustrations/herobgmain.svg");
+    "
+  >
     <!-- Hero  -->
     <div lass="h-screen hero-container">
       <!-- ! -------------------------------NAVBAR----------------------------------- -->
@@ -32,13 +39,21 @@
         </div>
         <!-- Nav Links -->
         <div
-          class="flex items-center justify-center w-2/3 gap-8 font-normal text-gray-400 "
+          class="
+            flex
+            items-center
+            justify-center
+            w-2/3
+            gap-8
+            font-normal
+            text-gray-400
+          "
         >
-          <div><a href="#">Find a Institute</a></div>
-          <div><a href="#">Find a Job</a></div>
-          <div><a href="#">Careers Portal</a></div>
-          <div><a href="#">Events</a></div>
-          <div><a href="#">FAQ</a></div>
+          <div><a href="{% url 'institutes' %}">Find a Institute</a></div>
+          <div><a href="{% url 'jobportal' %}">Find a Job</a></div>
+          <div><a href="{% url 'career' %}">Careers Portal</a></div>
+          <div><a href="{% url 'event' %}">Events</a></div>
+          <div><a href="{% url 'faq' %}">FAQ</a></div>
         </div>
         <!-- Login & Log out btns -->
         <div class="flex items-center justify-end w-2/12 gap-5">
@@ -65,7 +80,14 @@
               Your Career Start <br />here
             </h1>
             <p
-              class="mt-10 text-lg font-semibold text-gray-700 opacity-50 poppins-font"
+              class="
+                mt-10
+                text-lg
+                font-semibold
+                text-gray-700
+                opacity-50
+                poppins-font
+              "
             >
               Accelerate Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Nemo quae voluptatum ut aliquam veniam ullam velit.
@@ -74,11 +96,21 @@
               It’s easy with blaa bla bla!
             </p>
           </div>
+          <form action="{% url 'getstart' %}">
           <button
-            class="w-2/6 py-4 font-semibold text-white rounded-full poppins-font btn-gradient"
+            class="
+              w-2/6
+              py-4
+              font-semibold
+              text-white
+              rounded-full
+              poppins-font
+              btn-gradient
+            "
           >
             Get Started
           </button>
+          </form>
         </div>
 
         <!-- !== Col-2 -->
@@ -91,79 +123,254 @@
       </div>
     </div>
     <!-- Card Section -->
-    <div class="flex justify-center w-full py-16 ">
+    <div class="flex justify-center w-full py-16">
       <!--actual component start-->
       <div x-data="setup()">
         <ul class="flex items-center justify-center my-4">
           <template x-for="(tab, index) in tabs" :key="index">
-            <li class="px-4 py-2 text-2xl font-medium text-gray-500 border-b-8 cursor-pointer poppins-font"
-              :class="activeTab===index ? 'text-green-800 border-green-800' : ''" @click="activeTab = index"
-              x-text="tab"></li>
+            <li
+              class="
+                px-4
+                py-2
+                text-2xl
+                font-medium
+                text-gray-500
+                border-b-8
+                cursor-pointer
+                poppins-font
+              "
+              :class="activeTab===index ? 'text-green-800 border-green-800' : ''"
+              @click="activeTab = index"
+              x-text="tab"
+            ></li>
           </template>
         </ul>
-    
-        <div class="w-full pt-5 mx-auto text-center ">
+
+        <div class="w-full pt-5 mx-auto text-center">
           <div x-show="activeTab===0" class="flex flex-col gap-5">
             <div class="w-full">
-              <h1 class="text-4xl text-gray-600 poppins-font">Explore <span class="font-bold">1000+</span> Institute on our platform</h1>
+              <h1 class="text-4xl text-gray-600 poppins-font">
+                Explore <span class="font-bold">1000+</span> Institute on our
+                platform
+              </h1>
             </div>
             <!-- input bar -->
             <div class="relative mt-5">
               <span class="absolute icon-search">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 opacity-50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
                 </svg>
               </span>
-              <input class="px-4 py-2 bg-white rounded-full outline-none pl-14 input-bar__tab" type="text" placeholder="Enter college name...">
+              <input
+                class="
+                  px-4
+                  py-2
+                  bg-white
+                  rounded-full
+                  outline-none
+                  pl-14
+                  input-bar__tab
+                "
+                type="text"
+                placeholder="Enter college name..."
+              />
             </div>
             <!-- filter -->
             <div class="flex flex-col items-start gap-2 filter__tab">
               <h1>Search by filters</h1>
               <div class="flex flex-wrap gap-1">
-                
-                <div class="inline-flex items-center justify-center px-4 py-1 text-sm rounded-full color-bg-light-g dark-green poppins-font ">Private </div>
-                <div class="inline-flex items-center justify-center px-4 py-1 text-sm rounded-full color-bg-light-g dark-green poppins-font ">Private </div>
-                <div class="inline-flex items-center justify-center px-4 py-1 text-sm rounded-full color-bg-light-g dark-green poppins-font ">Private </div>
-                
+                <div
+                  class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    px-4
+                    py-1
+                    text-sm
+                    rounded-full
+                    color-bg-light-g
+                    dark-green
+                    poppins-font
+                  "
+                >
+                  Private
+                </div>
+                <div
+                  class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    px-4
+                    py-1
+                    text-sm
+                    rounded-full
+                    color-bg-light-g
+                    dark-green
+                    poppins-font
+                  "
+                >
+                  Private
+                </div>
+                <div
+                  class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    px-4
+                    py-1
+                    text-sm
+                    rounded-full
+                    color-bg-light-g
+                    dark-green
+                    poppins-font
+                  "
+                >
+                  Private
+                </div>
               </div>
               <div class="flex items-center gap-4 mt-10">
-                <button class="px-10 py-2 text-base text-white rounded-full light-green-bg poppins-font">Start</button>
-                <a href="#" class="text-xs poppins-font opacity-80">View all Institute ></a>
+                <button
+                  class="
+                    px-10
+                    py-2
+                    text-base text-white
+                    rounded-full
+                    light-green-bg
+                    poppins-font
+                  "
+                >
+                  Start
+                </button>
+                <a href="#" class="text-xs poppins-font opacity-80"
+                  >View all Institute ></a
+                >
               </div>
             </div>
           </div>
           <!--! tab--------2 -->
           <div x-show="activeTab===1" class="flex flex-col gap-5">
             <div class="w-full">
-              <h1 class="text-4xl text-gray-600 poppins-font">Explore Various Career Oppotunities on our platform</h1>
+              <h1 class="text-4xl text-gray-600 poppins-font">
+                Explore Various Career Oppotunities on our platform
+              </h1>
             </div>
             <!-- input bar -->
             <div class="relative mt-5">
               <span class="absolute icon-search">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 opacity-50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
                 </svg>
               </span>
-              <input class="px-4 py-2 bg-white rounded-full outline-none pl-14 input-bar__tab" type="text" placeholder="Enter career you looking for...">
+              <input
+                class="
+                  px-4
+                  py-2
+                  bg-white
+                  rounded-full
+                  outline-none
+                  pl-14
+                  input-bar__tab
+                "
+                type="text"
+                placeholder="Enter career you looking for..."
+              />
             </div>
             <!-- filter -->
             <div class="flex flex-col items-start gap-2 filter__tab">
               <h1>Search by filters</h1>
               <div class="flex flex-wrap gap-1">
-                
-                <div class="inline-flex items-center justify-center px-4 py-1 text-sm rounded-full color-bg-light-g dark-green poppins-font ">Private </div>
-                <div class="inline-flex items-center justify-center px-4 py-1 text-sm rounded-full color-bg-light-g dark-green poppins-font ">Private </div>
-                <div class="inline-flex items-center justify-center px-4 py-1 text-sm rounded-full color-bg-light-g dark-green poppins-font ">Private </div>
-                
+                <div
+                  class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    px-4
+                    py-1
+                    text-sm
+                    rounded-full
+                    color-bg-light-g
+                    dark-green
+                    poppins-font
+                  "
+                >
+                  Private
+                </div>
+                <div
+                  class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    px-4
+                    py-1
+                    text-sm
+                    rounded-full
+                    color-bg-light-g
+                    dark-green
+                    poppins-font
+                  "
+                >
+                  Private
+                </div>
+                <div
+                  class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    px-4
+                    py-1
+                    text-sm
+                    rounded-full
+                    color-bg-light-g
+                    dark-green
+                    poppins-font
+                  "
+                >
+                  Private
+                </div>
               </div>
               <div class="flex items-center gap-4 mt-10">
-                <button class="px-10 py-2 text-base text-white rounded-full light-green-bg poppins-font">Search</button>
-                <a href="#" class="text-xs poppins-font opacity-80">View all Careers ></a>
+                <button
+                  class="
+                    px-10
+                    py-2
+                    text-base text-white
+                    rounded-full
+                    light-green-bg
+                    poppins-font
+                  "
+                >
+                  Search
+                </button>
+                <a href="#" class="text-xs poppins-font opacity-80"
+                  >View all Careers ></a
+                >
               </div>
             </div>
           </div>
         </div>
-    
+
         <!-- <ul class="flex items-center justify-center my-4">
           <template x-for="(tab, index) in tabs" :key="index">
             <li class="px-4 py-3 transition rounded cursor-pointer"
@@ -171,7 +378,7 @@
               x-text="tab"></li>
           </template>
         </ul> -->
-        
+
         <!-- <div class="flex justify-center gap-4 p-4 border-t">
           <button
             class="px-4 py-2 text-sm font-bold text-blue-600 uppercase border border-blue-600 rounded-md cursor-pointer hover:bg-blue-500 hover:text-white hover:shadow"
@@ -187,8 +394,10 @@
     </div>
     <!-- ! CARD SECTION ENDS -->
 
-    <!-- todo::: Trending --> 
-    <div class="py-16 text-4xl font-bold text-center text-gray-600 poppins-font">
+    <!-- todo::: Trending -->
+    <div
+      class="py-16 text-4xl font-bold text-center text-gray-600 poppins-font"
+    >
       TRENDING
     </div>
     <div class="swiper mySwiper">
@@ -197,12 +406,23 @@
           <div class="flex w-full gap-4">
             <!-- img container -->
             <div class="w-auto">
-              <img src="{% static 'images/Assets/img/college-1.png' %}" alt="">
+              <img
+                src="{% static 'images/Assets/img/college-1.png' %}"
+                alt=""
+              />
             </div>
             <div class="flex flex-col w-2/4 gap-5">
-              <h1 class="text-2xl font-normal poppins-font">Indian Institute of Technology, Delhi</h1>
-              <p class="text-base font-light poppins-font">Indian Institute of Technology, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sed in lacus, facilisi tellus posuere donec quis aliquam.  aliquam adipiscing sit.  <br>
-                Indian Institute of Technology, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sed in lacus, facilisi tellus posuere donec quis aliquam.  aliquam adipiscing sit.  </p>
+              <h1 class="text-2xl font-normal poppins-font">
+                Indian Institute of Technology, Delhi
+              </h1>
+              <p class="text-base font-light poppins-font">
+                Indian Institute of Technology, Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Amet, sed in lacus, facilisi tellus
+                posuere donec quis aliquam. aliquam adipiscing sit. <br />
+                Indian Institute of Technology, Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Amet, sed in lacus, facilisi tellus
+                posuere donec quis aliquam. aliquam adipiscing sit.
+              </p>
             </div>
           </div>
         </div>
@@ -210,123 +430,417 @@
         <div class="swiper-slide">Slide 3</div>
         <div class="swiper-slide">Slide 4</div>
       </div>
-    </div>    
-    <div class="pt-5 text-base font-normal text-center text-gray-400 poppins-font">
-       Drag to explore the treding section 
     </div>
-    <!-- todo::: Trending EndSSSS--> 
+    <div
+      class="pt-5 text-base font-normal text-center text-gray-400 poppins-font"
+    >
+      Drag to explore the treding section
+    </div>
+    <!-- todo::: Trending EndSSSS-->
     <!-- todo::: PLAN YOUR FUTURE SECTION -->
-    <div class="py-20 m-auto mx-20 mt-16 text-4xl font-bold text-gray-600 planfuture poppins-font">
+    <div
+      class="
+        py-20
+        m-auto
+        mx-20
+        mt-16
+        text-4xl
+        font-bold
+        text-gray-600
+        planfuture
+        poppins-font
+      "
+    >
       <h1 class="mb-10">Plan your future!</h1>
       <div class="flex gap-4">
-        <a class="w-2/6 h-72 " href="#">          
-          <div class="p-4 text-base transition duration-500 ease-in-out transform bg-white border border-gray-200 shadow hover:scale-95 h-72 rounded-3xl ">
-            <img src="{% static 'images/icon-wellness.png' %}" alt="">
+        <a class="w-2/6 h-72" href="#">
+          <div
+            class="
+              p-4
+              text-base
+              transition
+              duration-500
+              ease-in-out
+              transform
+              bg-white
+              border border-gray-200
+              shadow
+              hover:scale-95
+              h-72
+              rounded-3xl
+            "
+          >
+            <img src="{% static 'images/icon-wellness.png' %}" alt="" />
             <h1 class="my-2 text-lg font-bold">Health is Essential</h1>
-            <p class="text-sm font-normal opacity-70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse officiis vero aperiam magnam quasi dolorem, sapiente earum accusantium. Eos, veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor unde iste fuga debitis. </p>
+            <p class="text-sm font-normal opacity-70">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos, quos? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Esse officiis vero aperiam magnam quasi dolorem,
+              sapiente earum accusantium. Eos, veniam. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Neque dolor unde iste fuga
+              debitis.
+            </p>
           </div>
         </a>
-        <a href="#" class="w-2/6 h-72 ">
-        
-          <div class="p-4 text-base transition duration-500 ease-in-out transform bg-white border border-gray-200 shadow h-72 rounded-3xl hover:scale-95">
-            <img class="w-16" src="{% static 'images/edicon.png' %}" alt="">
+        <a href="#" class="w-2/6 h-72">
+          <div
+            class="
+              p-4
+              text-base
+              transition
+              duration-500
+              ease-in-out
+              transform
+              bg-white
+              border border-gray-200
+              shadow
+              h-72
+              rounded-3xl
+              hover:scale-95
+            "
+          >
+            <img class="w-16" src="{% static 'images/edicon.png' %}" alt="" />
             <h1 class="my-2 text-lg font-bold">Why Education Matters!</h1>
-            <p class="text-sm font-normal opacity-70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse officiis vero aperiam magnam quasi dolorem, sapiente earum accusantium. Eos, veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor unde iste fuga debitis. </p>
+            <p class="text-sm font-normal opacity-70">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos, quos? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Esse officiis vero aperiam magnam quasi dolorem,
+              sapiente earum accusantium. Eos, veniam. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Neque dolor unde iste fuga
+              debitis.
+            </p>
           </div>
         </a>
-        <a href="#" class="w-2/6 h-72 ">
-          <div class="p-4 text-base transition duration-500 ease-in-out transform bg-white border border-gray-200 shadow h-72 rounded-3xl hover:scale-95">
-            <img src="https://www.commonapp.org/static/1f5f36f4dd054c15e575f9e2055d0d81/icon-path.svg" alt="">
+        <a href="#" class="w-2/6 h-72">
+          <div
+            class="
+              p-4
+              text-base
+              transition
+              duration-500
+              ease-in-out
+              transform
+              bg-white
+              border border-gray-200
+              shadow
+              h-72
+              rounded-3xl
+              hover:scale-95
+            "
+          >
+            <img
+              src="https://www.commonapp.org/static/1f5f36f4dd054c15e575f9e2055d0d81/icon-path.svg"
+              alt=""
+            />
             <h1 class="my-2 text-lg font-bold">Career Roadmap</h1>
-            <p class="text-sm font-normal opacity-70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse officiis vero aperiam magnam quasi dolorem, sapiente earum accusantium. Eos, veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor unde iste fuga debitis. </p>
+            <p class="text-sm font-normal opacity-70">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos, quos? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Esse officiis vero aperiam magnam quasi dolorem,
+              sapiente earum accusantium. Eos, veniam. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Neque dolor unde iste fuga
+              debitis.
+            </p>
           </div>
         </a>
-
-        
-        
       </div>
     </div>
     <!-- todo::: PLAN YOUR FUTURE SECTION ----ENDS---- -->
     <!-- todo::: BLOG NEWS SECTION -- -->
-    <div class="py-20 m-auto mx-20 mt-16 text-4xl font-bold text-gray-600 poppins-font">
+    <div
+      class="
+        py-20
+        m-auto
+        mx-20
+        mt-16
+        text-4xl
+        font-bold
+        text-gray-600
+        poppins-font
+      "
+    >
       <div class="flex gap-4">
-        <div class="flex flex-col justify-center w-3/12 gap-5 text-base h-72 ">
+        <div class="flex flex-col justify-center w-3/12 gap-5 text-base h-72">
           <h1 class="text-4xl font-light dark-green">BLOG & News</h1>
         </div>
-        <div class="w-3/12 p-4 text-base bg-white border border-gray-100 shadow h-72 rounded-3xl">cards</div>
-        <div class="w-3/12 p-4 text-base bg-white border border-gray-100 shadow h-72 rounded-3xl">cards</div>
-        <div class="w-3/12 p-4 text-base bg-white border border-gray-100 shadow h-72 rounded-3xl">cards</div>
-       
+        <div
+          class="
+            w-3/12
+            p-4
+            text-base
+            bg-white
+            border border-gray-100
+            shadow
+            h-72
+            rounded-3xl
+          "
+        >
+          cards
+        </div>
+        <div
+          class="
+            w-3/12
+            p-4
+            text-base
+            bg-white
+            border border-gray-100
+            shadow
+            h-72
+            rounded-3xl
+          "
+        >
+          cards
+        </div>
+        <div
+          class="
+            w-3/12
+            p-4
+            text-base
+            bg-white
+            border border-gray-100
+            shadow
+            h-72
+            rounded-3xl
+          "
+        >
+          cards
+        </div>
       </div>
-      <div class="flex justify-center mt-16"><button class="px-10 py-2 text-base text-white rounded-full focus:ring-4 light-green-bg poppins-font focus:ring-green-800 focus:ring-offset-2 focus:ring-opacity-50 ">View All</button></div>
+      <div class="flex justify-center mt-16">
+        <button
+          class="
+            px-10
+            py-2
+            text-base text-white
+            rounded-full
+            focus:ring-4
+            light-green-bg
+            poppins-font
+            focus:ring-green-800 focus:ring-offset-2 focus:ring-opacity-50
+          "
+        >
+          View All
+        </button>
+      </div>
     </div>
     <!-- todo::: BLOG NEWS SECTION --EnDSSSss-- -->
 
     <!-- todo::: QUERIES SECTION-- -->
-    <div class="py-20 m-auto mx-20 mt-16 text-4xl font-bold text-gray-600 poppins-font">
+    <div
+      class="
+        py-20
+        m-auto
+        mx-20
+        mt-16
+        text-4xl
+        font-bold
+        text-gray-600
+        poppins-font
+      "
+    >
       <div class="flex">
-        <div class="flex flex-col justify-center w-2/6 gap-5 text-base h-72 ">
+        <div class="flex flex-col justify-center w-2/6 gap-5 text-base h-72">
           <h1 class="text-4xl font-light dark-green">Have any queries?</h1>
-          {% comment %} <a class="text-sm font-light text-gray-600" href="#">Contact us 📨</a> {% endcomment %}
+          {% comment %}
+          <a class="text-sm font-light text-gray-600" href="#">Contact us 📨</a>
+          {% endcomment %}
         </div>
         <!--* ===---------------------------=== -->
-        <form class="flex flex-col items-center w-2/6 gap-5 text-base ">          
-            <!-- !INPUT FIELD -->
-            <div class="relative w-10/12 ">
-              <span class="absolute inset-y-0 left-2 top-2.5 ">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </span>
-              <input type="text" placeholder="Your Name..." class="w-full px-4 py-3 pl-10 text-sm text-green-500 placeholder-green-500 bg-green-100 bg-opacity-50 group placeholder-opacity-70 focus:shadow-md caret-green-500 focus:outline-none rounded-2xl focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
-            </div>
-            <!-- !INPUT FIELD END-->
-            <!-- !INPUT FIELD -->
-            <div class="relative w-10/12 ">
-              <span class="absolute inset-y-0 left-2 top-2.5 ">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd" />
-                </svg>
-              </span>
-              <input type="email" placeholder="Your email..." class="w-full px-4 py-3 pl-10 text-sm text-green-500 placeholder-green-500 bg-green-100 bg-opacity-50 group placeholder-opacity-70 focus:shadow-md caret-green-500 focus:outline-none rounded-2xl focus:ring-2 focus:ring-green-600 focus:ring-opacity-50">
-            </div>
-            <!-- !INPUT FIELD END-->
-            <!-- !INPUT FIELD -->
-            <div class="relative w-10/12 ">
-              <span class="absolute inset-y-0 left-2 top-2.5 ">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </span>
-              <textarea draggable="false" name="" id="" cols="30" placeholder="Your message..." rows="10" class="w-full px-4 py-3 pl-10 text-sm text-green-500 placeholder-green-500 bg-green-100 bg-opacity-50 group placeholder-opacity-70 focus:shadow-md caret-green-500 focus:outline-none rounded-2xl focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"></textarea>
-            </div>
-            <!-- !INPUT FIELD END-->
-  
-          <button class="flex items-center justify-center w-2/4 gap-2 py-2 font-semibold text-white bg-green-800 group focus:ring-4 focus:ring-green-600 focus:ring-offset-2 focus:ring-opacity-50 poppins-font rounded-2xl">
-           
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white group-focus:text-green-300" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-              </svg> 
-           
-            Submit</button>
+        <form class="flex flex-col items-center w-2/6 gap-5 text-base">
+          <!-- !INPUT FIELD -->
+          <div class="relative w-10/12">
+            <span class="absolute inset-y-0 left-2 top-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-green-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </span>
+            <input
+              type="text"
+              placeholder="Your Name..."
+              class="
+                w-full
+                px-4
+                py-3
+                pl-10
+                text-sm text-green-500
+                placeholder-green-500
+                bg-green-100 bg-opacity-50
+                group
+                placeholder-opacity-70
+                focus:shadow-md
+                caret-green-500
+                focus:outline-none
+                rounded-2xl
+                focus:ring-2 focus:ring-green-500 focus:ring-opacity-50
+              "
+            />
+          </div>
+          <!-- !INPUT FIELD END-->
+          <!-- !INPUT FIELD -->
+          <div class="relative w-10/12">
+            <span class="absolute inset-y-0 left-2 top-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-green-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <input
+              type="email"
+              placeholder="Your email..."
+              class="
+                w-full
+                px-4
+                py-3
+                pl-10
+                text-sm text-green-500
+                placeholder-green-500
+                bg-green-100 bg-opacity-50
+                group
+                placeholder-opacity-70
+                focus:shadow-md
+                caret-green-500
+                focus:outline-none
+                rounded-2xl
+                focus:ring-2 focus:ring-green-600 focus:ring-opacity-50
+              "
+            />
+          </div>
+          <!-- !INPUT FIELD END-->
+          <!-- !INPUT FIELD -->
+          <div class="relative w-10/12">
+            <span class="absolute inset-y-0 left-2 top-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-green-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+            </span>
+            <textarea
+              draggable="false"
+              name=""
+              id=""
+              cols="30"
+              placeholder="Your message..."
+              rows="10"
+              class="
+                w-full
+                px-4
+                py-3
+                pl-10
+                text-sm text-green-500
+                placeholder-green-500
+                bg-green-100 bg-opacity-50
+                group
+                placeholder-opacity-70
+                focus:shadow-md
+                caret-green-500
+                focus:outline-none
+                rounded-2xl
+                focus:ring-2 focus:ring-green-500 focus:ring-opacity-50
+              "
+            ></textarea>
+          </div>
+          <!-- !INPUT FIELD END-->
+
+          <button
+            class="
+              flex
+              items-center
+              justify-center
+              w-2/4
+              gap-2
+              py-2
+              font-semibold
+              text-white
+              bg-green-800
+              group
+              focus:ring-4
+              focus:ring-green-600
+              focus:ring-offset-2
+              focus:ring-opacity-50
+              poppins-font
+              rounded-2xl
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-white group-focus:text-green-300"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+              />
+            </svg>
+
+            Submit
+          </button>
         </form>
-        <div class="flex items-center justify-center w-2/6 ">
-          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bGJKZd.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        <div class="flex items-center justify-center w-2/6">
+          <lottie-player
+            src="https://assets10.lottiefiles.com/packages/lf20_bGJKZd.json"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+          ></lottie-player>
         </div>
       </div>
     </div>
     <!-- todo::: QUERIES SECTION--ENDSSSSSS -->
     <!-- todo::: ----FOOTER========== -->
-    <div style="background-image: url({% static 'images/Assets/illustrations/footerbg.svg' %});" class="px-20 py-10 mt-16 p-auto poppins-font footer-bg-color my-footer">
-      <div class="flex w-full ">
+    <div
+      style="
+        background-image: url("/static/images/Assets/illustrations/footerbg.svg");
+      "
+      class="px-20 py-10 mt-16 p-auto poppins-font footer-bg-color my-footer"
+    >
+      <div class="flex w-full">
         <!-- ===============COL-1====================== -->
-        <div class="flex flex-col w-1/4 ">
-          <img class="w-3/4" src="{% static 'images/Assets/logo/edu-Slogg.svg' %}" alt="eduslogg">
-          <h1 class="text-lg font-light footer-text-color">Your career starts<br>here</h1>
+        <div class="flex flex-col w-1/4">
+          <img
+            class="w-3/4"
+            src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
+            alt="eduslogg"
+          />
+          <h1 class="text-lg font-light footer-text-color">
+            Your career starts<br />here
+          </h1>
 
-          <a class="mt-5 text-xs font-semibold footer-text-color" href="">Learn More </a>
+          <a class="mt-5 text-xs font-semibold footer-text-color" href=""
+            >Learn More
+          </a>
         </div>
-        <!-- =================COL-2=================== --> 
+        <!-- =================COL-2=================== -->
         <div class="flex w-2/4 justify-evenly">
           <div class="flex flex-col items-center gap-2">
             <h1 class="text-base font-bold footer-text-color">About</h1>
@@ -340,24 +854,25 @@
             <a class="text-sm footer-text-color" href="#">Link</a>
             <a class="text-sm footer-text-color" href="#">Link</a>
             <a class="text-sm footer-text-color" href="#">Link</a>
-            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
           </div>
           <div class="flex flex-col items-center gap-2">
             <h1 class="text-base font-bold footer-text-color">About</h1>
-            <a class="text-sm footer-text-color " href="#">Link</a>
-            <a class="text-sm footer-text-color " href="#">Link</a>
-            <a class="text-sm footer-text-color " href="#">Link</a>
-            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
           </div>
           <div class="flex flex-col items-center gap-2">
             <h1 class="text-base font-bold footer-text-color">About</h1>
-            <a class="text-sm footer-text-color " href="#">Link</a>
-            <a class="text-sm footer-text-color " href="#">Link</a>
-            <a class="text-sm footer-text-color " href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
+            <a class="text-sm footer-text-color" href="#">Link</a>
             <a class="text-sm footer-text-color" href="#">Link</a>
           </div>
         </div>
         <!-- ----------------col-3-------------------------- -->
+<<<<<<< HEAD
         <div class="flex flex-col items-end w-1/4 ">
           
             <h1 class="text-base font-bold footer-text-color">Contact Us</h1>
@@ -371,41 +886,54 @@
               <a href="#"><img class="w-8" src="{% static 'images/Assets/icons/linkedin.svg' %}" alt=""></a>
             </div>
           
+=======
+        <div class="flex flex-col items-end w-1/4">
+          <h1 class="text-base font-bold footer-text-color">Contact Us</h1>
+          <a class="mt-5 text-sm footer-text-color" href="mailto:abc@test.com"
+            >contact@xyz.com</a
+          >
+          <a class="mt-2 text-sm footer-text-color" href="tel:+916394915228"
+            >+91 9548544515</a
+          >
+>>>>>>> 4e7cf07... linking
         </div>
       </div>
     </div>
     <div class="flex px-20 pt-10 pb-5 poppins-font footer-bg-color">
-      <div class="flex w-2/4 gap-10 ">
+      <div class="flex w-2/4 gap-10">
         <a class="text-xs footer-text-color" href="#">Terms of Use</a>
         <a class="text-xs footer-text-color" href="#">Licence agreement</a>
         <a class="text-xs footer-text-color" href="#">Privacy Policy</a>
-        <a class="text-xs footer-text-color" href="#">Aplication affirmations</a>
+        <a class="text-xs footer-text-color" href="#"
+          >Aplication affirmations</a
+        >
       </div>
-      <div class="flex justify-end w-2/4 gap-10 ">
+      <div class="flex justify-end w-2/4 gap-10">
         <p class="text-xs footer-text-color">© 2021 edu-Slog, Inc</p>
       </div>
     </div>
     <!-- todo::: ----FOOTER==========END=== -->
 
     <!-- JS -->
-    <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
     <!-- Swiper JS -->
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       function setup() {
         return {
           activeTab: 0,
-          tabs: [
-              "Search Institute",
-              "Explore Career",
-          ]
+          tabs: ["Search Institute", "Explore Career"],
         };
-      };
+      }
     </script>
-    
 
-
-    <script defer src="{% static 'js/home.js' %}" type="text/javascript"></script>
-    
-    </body>
+    <script
+      defer
+      src="{% static 'js/home.js' %}"
+      type="text/javascript"
+    ></script>
+  </body>
 </html>
