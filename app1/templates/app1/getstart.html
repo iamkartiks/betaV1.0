@@ -14,49 +14,127 @@
   </head>
   <body
     style="
-      background-image: url({% static 'images/Assets/illustrations/herobgmain.svg' %});
+      background-image: url("/static/images/Assets/illustrations/herobgmain.svg");
     "
   >
     <div class="flex py-4 m-auto mx-20 space-between">
-        <!-- nav -->
+      <!-- nav -->
       <div class="flex justify-center w-full mt-2">
         <div class="w-1/6">
-            <a href="#"><img src="{% static 'images/Assets/icons/home.svg' %}" alt=""></a>
+          <a href="{% url 'home' %}"
+            ><img src="{% static 'images/Assets/icons/home.svg' %}" alt=""
+          /></a>
         </div>
         <div class="flex justify-center w-full">
-            <img
+          <img
             class="img-logo"
-              src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
-              alt="eduSlogg-logo"
-            />
+            src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
+            alt="eduSlogg-logo"
+          />
         </div>
       </div>
     </div>
     <!-- nav-----end -->
     <div class="flex flex-col items-center py-4 m-auto mx-20 mt-16">
       <h1 class="font-bold text-7xl light-green cabin-font">
-          Let's get started!
-        </h1>
-        <p class="mt-10 text-lg font-semibold text-center text-gray-700 opacity-50 px-60 poppins-font">Welcome to Edu-Slogg! Please tell us how you will use the system so we can prepare your account for your preferred category. If you are unsure, we encourage you to explore each career option before you continue.</p>
+        Let's get started!
+      </h1>
+      <p
+        class="
+          mt-10
+          text-lg
+          font-semibold
+          text-center text-gray-700
+          opacity-50
+          px-60
+          poppins-font
+        "
+      >
+        Welcome to Edu-Slogg! Please tell us how you will use the system so we
+        can prepare your account for your preferred category. If you are unsure,
+        we encourage you to explore each career option before you continue.
+      </p>
 
-        <!-- cards -->
-        <div class="flex justify-center w-full gap-10 mt-16 ">
-            <a class="w-2/6" href="#">
-                <div class="flex flex-col items-center justify-center gap-2 px-8 py-2 transition duration-200 ease-in-out transform bg-white border border-gray-200 shadow-md h-72 rounded-3xl poppins-font hover:scale-95">
-                    <h1 class="text-2xl font-bold text-gray-600">Education Career</h1>
-                    <p class="text-base font-light text-justify text-gray-700 opacity-50 ">Welcome to Edu-Slogg! Please tell us how you will use the system so we can prepare your account for your preferred category. If you are unsure, we encourage you to explore each career option before you continue.</p>
-                    <img src="{% static 'images/Assets/illustrations/book.svg' %}" alt="">
-                 </div>
-            </a>
-            
-            <a class="w-2/6" href="#">
-                <div class="flex flex-col items-center justify-center gap-2 px-8 py-2 transition duration-200 ease-in-out transform bg-white border border-gray-200 shadow-md h-72 rounded-3xl poppins-font hover:scale-95">
-                    <h1 class="text-2xl font-bold text-gray-600">Professional Career</h1>
-                    <p class="text-base font-light text-justify text-gray-700 opacity-50">Welcome to Edu-Slogg! Please tell us how you will use the system so we can prepare your account for your preferred category. If you are unsure, we encourage you to explore each career option before you continue.</p>
-                    <img src="{% static 'images/Assets/illustrations/profecareer-card.svg' %}" alt="">
-                </div>
-            </a>
-        </div>
+      <!-- cards -->
+      <div class="flex justify-center w-full gap-10 mt-16">
+        <a class="w-2/6" href="#">
+          <div
+            class="
+              flex flex-col
+              items-center
+              justify-center
+              gap-2
+              px-8
+              py-2
+              transition
+              duration-200
+              ease-in-out
+              transform
+              bg-white
+              border border-gray-200
+              shadow-md
+              h-72
+              rounded-3xl
+              poppins-font
+              hover:scale-95
+            "
+          >
+            <h1 class="text-2xl font-bold text-gray-600">Education Career</h1>
+            <p
+              class="text-base font-light text-justify text-gray-700 opacity-50"
+            >
+              Welcome to Edu-Slogg! Please tell us how you will use the system
+              so we can prepare your account for your preferred category. If you
+              are unsure, we encourage you to explore each career option before
+              you continue.
+            </p>
+            <img
+              src="{% static 'images/Assets/illustrations/book.svg' %}"
+              alt=""
+            />
+          </div>
+        </a>
+
+        <a class="w-2/6" href="#">
+          <div
+            class="
+              flex flex-col
+              items-center
+              justify-center
+              gap-2
+              px-8
+              py-2
+              transition
+              duration-200
+              ease-in-out
+              transform
+              bg-white
+              border border-gray-200
+              shadow-md
+              h-72
+              rounded-3xl
+              poppins-font
+              hover:scale-95
+            "
+          >
+            <h1 class="text-2xl font-bold text-gray-600">
+              Professional Career
+            </h1>
+            <p
+              class="text-base font-light text-justify text-gray-700 opacity-50"
+            >
+              Welcome to Edu-Slogg! Please tell us how you will use the system
+              so we can prepare your account for your preferred category. If you
+              are unsure, we encourage you to explore each career option before
+              you continue.
+            </p>
+            <img
+              src="{% static 'images/Assets/illustrations/profecareer-card.svg' %}"
+              alt=""
+            />
+          </div>
+        </a>
+      </div>
     </div>
   </body>
 </html>

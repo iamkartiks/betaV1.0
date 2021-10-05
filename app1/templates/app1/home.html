@@ -57,14 +57,16 @@
         </div>
         <!-- Login & Log out btns -->
         <div class="flex items-center justify-end w-2/12 gap-5">
-          <div><a src="" style="color: #5ac817">Log In</a></div>
+          <div><a href="{% url 'login' %}" style="color: #5ac817">Log In</a></div>
           <div>
+          <form action="{% url 'register' %}">
             <button
               class="px-8 py-1 pb-2 text-white rounded-full"
               style="background-color: #5ac817"
             >
               <span>Sign Up</span>
             </button>
+            </form>
           </div>
         </div>
       </div>
