@@ -1,5 +1,4 @@
 {% load static %}
-{% include 'app1/navbar.html'%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,267 +7,356 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
         <link rel="stylesheet" href="{% static 'styles/career.css' %}">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+       
     </head>
-    <body>
-        
-        <div class="navbar">
-            {% block content %}
-
-            {% endblock %}
+   
+  <body
+  style="
+    background-image: url('{% static 'images/Assets/illustrations/herobgmain.svg' %}');
+  "
+>
+  <!-- Hero  -->
+  <div lass="h-screen hero-container">
+    <!--  -------------------------------NAVBAR----------------------------------- -->
+    <div class="flex py-4 m-auto mx-20 space-between">
+      <!-- image container -->
+      <div class="flex items-center w-2/12">
+        <img
+          src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
+          alt="eduSlogg-logo"
+        />
+      </div>
+      <!-- Nav Links -->
+      <div
+        class="flex items-center justify-center w-2/3 gap-8 font-normal text-gray-400 "
+      >
+        <div><a href="{% url 'institutes' %}">Find a Institute</a></div>
+        <div><a href="{% url 'jobportal' %}">Find a Job</a></div>
+        <div><a href="{% url 'career' %}">Careers Portal</a></div>
+        <div><a href="{% url 'event' %}">Events</a></div>
+        <div><a href="{% url 'faq' %}">FAQ</a></div>
+      </div>
+      <!-- Login & Log out btns -->
+      <div class="flex items-center justify-end w-2/12 gap-5">
+        <div>
+          <a href="{% url 'login' %}" style="color: #5ac817">Log In</a>
         </div>
-
-        <!-- hero starts here-->
-        <div class="hero" style="background-image:url('{% static 'images/career-hero.jpg' %}">
-                <h1>Take Career Oriented Courses To Build Your Professional Future</h1>
-
-                <h3>Experience A New and Interesting Way of Learning With Alot Of Practical Emphasization</h3>
-
-                <div class="button-wrapper">
-                <button>EXPLORE CAREERS COURSES</button>
-                </div>
-        </div>
-        <!-- hero ends here -->
-        <!-- slider starts here -->  
-        <div class="slide-container">
-        <div class="slider-content">
-                <div class="slider-card">
-                <h2>DISCOVER COURSES AND COMPLETE THEM TO GAIN EXPERTISE IN SKILLS TO DEVELOP FASTER AND STAY UPADATED</h2>
-                <div class="button-wrapper">
-                <button style="margin-left:-190px;">KNOW ABOUT COURSES</button>
-                </div>
-                </div> 
-        </div>
-        <!-- slider content ends here -->
-
-        <!-- slider card starts here -->
-            <div class="slide-slider"> 
-            <div class="myslider">
-             <div class="item a">
-                <img src='https://d2o2utebsixu4k.cloudfront.net/assets/images/Advanced-Analytics.png' alt=''/>
-                <div class="slider-head"><h4>Career Oriented Programs</h4></div>
-                <div class="para"><p>Learn from our skills based programs that have curriculum based on your requirements for your desired careers. </p></div>
-             </div>
-             <div class="item b">
-               <img src='https://d2o2utebsixu4k.cloudfront.net/assets/images/Blended-Learning.png' alt=''/>
-               <div class="slider-head"><h4>Level Based Structure</h4></div>
-               <div class="para"><p>Experience new way of level based learning to gain experience and knowledge with live tests, mock intervies and mini projects etc aligned according to level of difficulty</p></div>
-               </div>
-               
-             <div class="item c">  
-                <img src='https://d2o2utebsixu4k.cloudfront.net/assets/images/Training-by-Practitioners.png' alt=''/>
-                <div class="slider-head"><h4>Work Like Experience</h4></div>     
-                <div class="para"><p>Product developement experience with real team consists of other portal users of their respective skills which will give you work like experience.</p></div>          
-               </div>
-            </div>
-            </div>
-        </div>
-        <!-- sllider ends here -->
-
-        <!-- opportunity box startes here -->
-        <div class="opportunity">
-            <div class="opp-head"><h2>JOIN TEAMS AND WORK ON REAL LIFE PROJECTS</h2></div>
-            <div class="opp-para"><p>Already completed your career journey enough to work on real life problems ? <br>
-            Book yourself an interview slot right now, join a team where you are needed and show your excellence</p></div>
-
-            <div class="opp-button">
-                <div class='opp-btn-cont'>
-                  <a class='opp-btn' href='#'>
-                    Book A Slot Now
-                    <span class='line-1'></span>
-                    <span class='line-2'></span>
-                    <span class='line-3'></span>
-                    <span class='line-4'></span>
-                  </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- oppportunity box ends here -->
-
-        <div class="career-container">
-            <div class="career-head"><h1>Discover Your Desired Careers</h1></div>
-
-            <div class="career-search">
-            <!-- searh bar -->
-                <div class='search-container'>
-                    <input type="text" id="searchInput" placeholder="Search 100+ Careers">
-                    <div id='submitsearch'
-                      style="">
-                      <span>Search</span>
-                    </div>
-                    <a href="#">View All Careers</a>
-                 </div>
-
-            </div>
-                <!-- search bar ends -->
-            <div class="career-careers">
-                {% for career in careers %}
-                <div class="course">
-	        	<div class="course-preview">
-	        		<h6>Career</h6>
-	        		<h2>{{career.name}}</h2>
-	        		<a href="#">View All Levels <i class="fas fa-chevron-right"></i></a>
-	        	</div>
-	        	<div class="course-info">
-	        		<div class="progress-container">
-	        			<div class="progress"></div>
-	        			<span class="progress-text">
-	        				0/{{career.total_levels}} levels
-	        			</span>
-	        		</div>
-	        		<h6>LEVEL 1</h6>
-	        		<h2>Prerequisite & Basics </h2>
-                    <form action="{% url 'levelbased' career.id %}">
-	        		<button class="con-btn" type="submit">Start</button>
-                    </form>
-	        	</div>
-	        </div>
-            {% endfor %}
-        </div>
-        </div>
-        <!-- career container ends here -->
-
-        <!--separator starts here -->
-        <div class="separator">
-            <div class="separator-head"><h1>Get Certified For Your Skills</h1></div>
-            <div class="separator-para">
-            <p>Increase your expertise in skills with certifications and upgrade your resume via global bodies</p>
-            </div>
-        </div>
-
-        <!--separator ends here -->
-
-        <!-- courses starts from here -->
-        <div class="course-container">
-            <div class="course-head"><h2>Our Skill Booster Courses</h2></div>
-            <div class="course-sub-head"><h3>Discover Courses for particular skills to boost your career journey</h3></div>
-            <!-- card starts here -->
-            <div class="career-careers">
-                {% for course in courses %}
-                <div class="course">
-	        	<div class="course-preview">
-	        		<h6>Course</h6>
-	        		<h2>{{course.name}}</h2>
-	        		<a href="#">View All Levels <i class="fas fa-chevron-right"></i></a>
-	        	</div>
-	        	<div class="course-info">
-	        		<div class="progress-container">
-	        			<div class="progress"></div>
-	        			<span class="progress-text">
-	        				status
-	        			</span>
-	        		</div>
-	        		<h6>{{course.category}}</h6>
-	        		<h2>{{course.price}} </h2>
-	        		<button class="con-btn">Buy</button>
-	        	</div>
-	        </div>
-            {% endfor %}
-        </div>
-
-            <!-- cards ends here -->
-        </div>
-        <!-- courses ends from here -->
-
-            <!-- separator - 2-->
-            <div class="separator">
-                <div class="separator-head" style="margin-left:70px; margin-right:70px; margin-bottom:50px;"><h2 style="margin-top: 20px; margin-left: 20px; font-weight:900;">WHAT YOU WAITING FOR , JOIN US AND MAKE YOUR PROFESSIONAL JOURNEY MORE INTERESTING AND PEREFCT YOUR SKILLS SUITABLE AS MARKET EVOLVES</h2></div>
-            
-            </div>
-            <!-- separator - 2 ends here -->
-<!-- FOOTER STARTS FROM HERE-->        
-<footer class="footer-container">
-      <!-- todo ROW-1 -->
-      <div class="footer_row-1">
-        <!-- todo ROW-1-COL-1 -->
-        <div class="row_1-col-1">
-          <div class="footer-menu-container">
-            <!-- menu-1 -->
-            <div class="footer-menu">
-              <h1>About</h1>
-              <a href="#">Link-1</a>
-              <a href="#">Link-2</a>
-              <a href="#">Link-3</a>
-              <a href="#">Link-4</a>
-              <a href="#">Link-5</a>
-              <a href="#">Link-6</a>
-            </div>
-            <!-- menu-1 END -->
-
-            <!-- menu-2 -->
-            <div class="footer-menu">
-              <h1>Blog</h1>
-              <a href="#">Link-1</a>
-              <a href="#">Link-2</a>
-              <a href="#">Link-3</a>
-              <a href="#">Link-4</a>
-              <a href="#">Link-5</a>
-              <a href="#">Link-6</a>
-            </div>
-            <!-- menu-2 END -->
-
-            <!-- menu-3 -->
-            <div class="footer-menu">
-              <h1>Services</h1>
-              <a href="#">Link-1</a>
-              <a href="#">Link-2</a>
-              <a href="#">Link-3</a>
-              <a href="#">Link-4</a>
-              <a href="#">Link-5</a>
-              <a href="#">Link-6</a>
-            </div>
-            <!-- menu-3 END -->
-
-            <!-- menu-4 -->
-            <div class="footer-menu">
-              <h1>Help</h1>
-              <a href="#">Link-1</a>
-              <a href="#">Link-2</a>
-              <a href="#">Link-3</a>
-              <a href="#">Link-4</a>
-              <a href="#">Link-5</a>
-              <a href="#">Link-6</a>
-            </div>
-            <!-- menu-4 END -->
-          </div>
-        </div>
-
-        <!-- todo ROW-1-COL-2 -->
-        <div class="row_1-col-2">
-          <h1>Contact Us</h1>
-          <a href="#">abc@gmail.com</a>
-          <a href="tel:+916394915220">+91 9854XXX588</a>
-
+        <div>
+          <form action="{% url 'register' %}">
+            <button
+              class="px-8 py-1 pb-2 text-white rounded-full"
+              style="background-color: #5ac817"
+            >
+              <span>Sign Up</span>
+            </button>
+          </form>
         </div>
       </div>
-      <!-- ILLUS -->
-      <div class="footer-ILLUS">
+    </div>
+    <!--  -------------------------------NAVBAR---------------END-------------------- -->
+    <div class="flex px-20 mt-10 p-auto">
+      <h1 class="font-bold text-7xl dark-green cabin-font">
+        Take Career Oriented Courses To Build Your Professional Future
+      </h1>
+    </div>
+    <!-- * ******************************* -->
+    <div class="flex m-auto mx-20 hero-container">
+      <!-- -----------COL-1------------- -->
+      
+      <div class="flex flex-col w-2/4 gap-20 hero__col-1">
+        <div>
+          <p
+            class="mt-10 text-lg font-semibold text-gray-700 opacity-50 poppins-font"
+          >
+          Experience A New and Interesting Way of Learning With Alot Of Practical Emphasization
+            <br />
+            It’s easy with blaa bla bla!
+          </p>
+        </div>
+        <form action="{% url 'getstart' %}">
+          <div class="flex flex-col items-center w-3/6 gap-2 ">
+            <button
+            class="w-full py-4 font-semibold text-white rounded-full poppins-font btn-gradient">
+          Explore Career Courses
+          </button>
+          
+          <a class="text-xs font-bold light-green poppins-font" href="#">Accelerate your career</a>
+          </div>
+          
+        </form>
+      </div>
+
+      <!-- !== Col-2 -->
+      <div class="flex w-2/4 hero__col-2">
         <img
-          src="{% static 'images/Assets/illustrations/girl-bike-4cdb8ceabab074fbf64ca1c989fb3f78.svg' %}"
+          src="{% static 'images/Assets/illustrations/careerillus.svg' %}"
           alt=""
         />
-        <img src="{% static 'images/Assets/illustrations/download.svg' %}" alt="" />
-        <hr />
       </div>
-      <!-- todo ROW-2 -->
-      <div class="footer_row-2">
-        <div class="row-2-col-1">
-          <a href="#">Terms of use</a>
-          <a href="#">Licence agreement</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Application affirmations</a>
-        </div>
-        <div class="row-2-col-2">
-          <p>© <span id="footer-date"></span> edu-Slog, Inc</p>
-        </div>
-      </div>
-    </footer>
-    <!-- !FOOTER ENDS---=> -->
+    </div>
+  </div>
 
-        <script src="{% static 'js/career.js' %}" async defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <!-- Section 1 -->
+  <div class="flex w-full px-20 mt-10 main-container__height p-auto theme-light-bg">
+    <div class=" image__container" >
+      <div class="flex flex-col w-4/12 h-full px-3 pr-4 ml-8 justify-evenly container__child">
+        <h1 class="text-2xl font-bold text-white poppins-font">DISCOVER <span class="dark-green">COURSES</span> AND COMPLETE THEM TO GAIN <span class="dark-green">EXPERTISE</span> IN SKILLS TO DEVELOP FASTER AND STAY UPADATED</h1>
+        <button
+        class="w-2/4 px-4 py-2 font-semibold text-white rounded-full poppins-font btn-gradient">
+        Know About Courses
+      </button>
+      </div>
+      
+    <img src="{% static 'images/Assets/illustrations/rectangle.svg' %}" alt="" class="image__bg">
+    </div>
+  </div>
+  <!-- Section 1 END-->
+
+  <!-- Section 2 -->
+  <div class="flex flex-col items-center w-full gap-16 p-20 bg-white p-auto">
+    <h1 class="text-3xl font-bold text-gray-500 poppins-font">JOIN  <span class="light-green">TEAMS</span> AND WORK ON <span class="light-green">REAL LIFE PROJECTS</span></h1>
+    <p class="text-lg font-semibold text-center text-gray-700 opacity-50 px-60 poppins-font">Already completed your career journey enough to work on real life problems ?
+      Book yourself an interview slot right now, join a team where you are needed and show your excellence</p>
+      <button
+        class="w-1/4 px-4 py-4 font-semibold text-white rounded-full poppins-font btn-gradient">
+        Book a Slot Now
+      </button>
+
+  </div>
+  
+  <!-- Section 2 END-->
+  <!-- Section 3 -->
+  <div class="flex flex-col w-full p-20 bg-white p-auto theme-light-bg">
+    <!-- Row-1 -->
+    <div class="flex items-center w-full gap-10">
+      <div class="w-2/4">
+        <h1 class="text-4xl font-bold text-gray-700 uppercase poppins-font">Our Skill Booster Courses</h1>
+      </div>
+      <div class="relative w-2/4">
+				<span class="absolute inset-y-0 left-3 top-4 ">
+				  <svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="w-6 h-6 text-black opacity-90"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				  >
+					<path
+					  stroke-linecap="round"
+					  stroke-linejoin="round"
+					  stroke-width="2"
+					  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+					/>
+				  </svg>
+				</span>
+				<input
+				  class="w-full px-4 py-4 pl-12 text-green-900 bg-white rounded-full shadow outline-none caret-green-400 poppins-font input-bar__tab"
+				  type="text"
+				  placeholder="Enter college name..."
+				/>
+			  </div>
+    </div>
+    <!-- row-2 -->
+    <div class="flex items-center justify-center w-full gap-10 my-10 text-lg text-gray-500 poppins-font ">
+      Discover Courses for particular skills to boost your career journey.
+    </div>
+    <!-- row-3 -------------CARDS--ROW -->
+    <div class="grid w-full grid-cols-2 gap-10">
+      <!-- card 1 -->
+      <div class="flex w-full ">
+        <!-- green part -->
+        <div class="flex flex-col justify-between w-2/6 p-4 dark-green-bg rounded-l-3xl">
+           <p class="text-xs text-white opacity-70 poppins-font">Course</p> 
+           <h1 class="text-xl text-white poppins-font">Machine<br>Learning</h1>
+           <a href="#" class="text-xs text-white opacity-70 poppins-font">View all levels</a>
+        </div>
+        <!-- white part -->
+        <div class="flex flex-col items-center justify-between w-full gap-16 p-4 bg-white rounded-r-3xl">
+          <!-- row-1 -->
+          <div class="flex justify-between w-full">
+            <p class="text-xs text-gray-500 opacity-70 poppins-font">Engineering</p>
+            <a class="text-xs text-gray-500 opacity-70 poppins-font">Status</a>
+          </div>
+          <!-- row-2 price-->
+          <div class="text-2xl font-medium text-gray-600 poppins-font">Price : ₹ 4999.0</div>
+          <!-- row-3 button -->
+          <button
+        class="w-full py-2 font-semibold text-white rounded-full poppins-font btn-gradient">
+        Book a Slot Now
+      </button>
+        </div>
+      </div>
+      <!-- card-1 end -->
+      <!-- card 2 -->
+      <div class="flex w-full ">
+        <!-- green part -->
+        <div class="flex flex-col justify-between w-2/6 p-4 dark-green-bg rounded-l-3xl">
+           <p class="text-xs text-white opacity-70 poppins-font">Course</p> 
+           <h1 class="text-xl text-white poppins-font">Machine<br>Learning</h1>
+           <a href="#" class="text-xs text-white opacity-70 poppins-font">View all levels</a>
+        </div>
+        <!-- white part -->
+        <div class="flex flex-col items-center justify-between w-full gap-16 p-4 bg-white rounded-r-3xl">
+          <!-- row-1 -->
+          <div class="flex justify-between w-full">
+            <p class="text-xs text-gray-500 opacity-70 poppins-font">Engineering</p>
+            <a class="text-xs text-gray-500 opacity-70 poppins-font">Status</a>
+          </div>
+          <!-- row-2 price-->
+          <div class="text-2xl font-medium text-gray-600 poppins-font">Price : ₹ 4999.0</div>
+          <!-- row-3 button -->
+          <button
+        class="w-full py-2 font-semibold text-white rounded-full poppins-font btn-gradient">
+        Book a Slot Now
+      </button>
+        </div>
+      </div>
+      <!-- card-2 end -->
+      <!-- card 2 -->
+      <div class="flex w-full ">
+        <!-- green part -->
+        <div class="flex flex-col justify-between w-2/6 p-4 dark-green-bg rounded-l-3xl">
+           <p class="text-xs text-white opacity-70 poppins-font">Course</p> 
+           <h1 class="text-xl text-white poppins-font">Machine<br>Learning</h1>
+           <a href="#" class="text-xs text-white opacity-70 poppins-font">View all levels</a>
+        </div>
+        <!-- white part -->
+        <div class="flex flex-col items-center justify-between w-full gap-16 p-4 bg-white rounded-r-3xl">
+          <!-- row-1 -->
+          <div class="flex justify-between w-full">
+            <p class="text-xs text-gray-500 opacity-70 poppins-font">Engineering</p>
+            <a class="text-xs text-gray-500 opacity-70 poppins-font">Status</a>
+          </div>
+          <!-- row-2 price-->
+          <div class="text-2xl font-medium text-gray-600 poppins-font">Price : ₹ 4999.0</div>
+          <!-- row-3 button -->
+          <button
+        class="w-full py-2 font-semibold text-white rounded-full poppins-font btn-gradient">
+        Book a Slot Now
+      </button>
+        </div>
+      </div>
+      <!-- card-2 end -->
+
+      
+    </div>
+  </div>
+  <!-- Section 3 ENDS -->
+  <!-- Last Section -->
+  <div class="flex flex-col w-full p-20 px-32 text-5xl text-center bg-white font-extralight p-auto poppins-font light-green line__height ">
+    <h1>
+      WHAT YOU WAITING FOR , <span class="font-bold dark-green">JOIN US</span> AND MAKE YOUR PROFESSIONAL JOURNEY MORE <span class="font-bold dark-green">INTERESTING</span> AND <span class="font-bold dark-green">PEREFCT</span> YOUR SKILLS SUITABLE AS MARKET EVOLVES
+    </h1>
+  </div>
+  <!-- todo::: ----FOOTER========== -->
+  <div
+  style="
+    background-image: url('{% static 'images/Assets/illustrations/footerbg.svg' %}');
+  "
+  class="px-20 py-10 p-auto poppins-font footer-bg-color my-footer"
+>
+  <div class="flex w-full">
+    <!-- ===============COL-1====================== -->
+    <div class="flex flex-col w-1/4">
+      <img
+        class="w-3/4"
+        src="{% static 'images/Assets/logo/edu-Slogg.svg' %}"
+        alt="eduslogg"
+      />
+      <h1 class="text-lg font-light footer-text-color">
+        Your career starts<br />here
+      </h1>
+
+      <a class="mt-5 text-xs font-semibold footer-text-color" href=""
+        >Learn More
+      </a>
+    </div>
+    <!-- =================COL-2=================== -->
+    <div class="flex w-2/4 justify-evenly">
+      <div class="flex flex-col items-center gap-2">
+        <h1 class="text-base font-bold footer-text-color">About</h1>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <h1 class="text-base font-bold footer-text-color">About</h1>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <h1 class="text-base font-bold footer-text-color">About</h1>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <h1 class="text-base font-bold footer-text-color">About</h1>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+        <a class="text-sm footer-text-color" href="#">Link</a>
+      </div>
+    </div>
+    <!-- ----------------col-3-------------------------- -->
+
+    <div class="flex flex-col items-end w-1/4">
+      <h1 class="text-base font-bold footer-text-color">Contact Us</h1>
+      <a class="mt-5 text-sm footer-text-color" href="mailto:abc@test.com"
+        >contact@xyz.com</a
+      >
+      <a class="mt-2 text-sm footer-text-color" href="tel:+916394915228"
+        >+91 9548544515</a
+      >
+
+      <div class="flex items-center gap-5 p-2 mt-5">
+        <a href="#"
+          ><img
+            class="w-8"
+            src="{% static 'images/Assets/icons/fb.svg' %}"
+            alt=""
+        /></a>
+        <a href="#"
+          ><img
+            class="w-8"
+            src="{% static 'images/Assets/icons/insta.svg' %}"
+            alt=""
+        /></a>
+        <a href="#"
+          ><img
+            class="w-8"
+            src="{% static 'images/Assets/icons/twitter.svg' %}"
+            alt=""
+        /></a>
+        <a href="#"
+          ><img
+            class="w-8"
+            src="{% static 'images/Assets/icons/linkedin.svg' %}"
+            alt=""
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex px-20 pt-10 pb-5 poppins-font footer-bg-color">
+  <div class="flex w-2/4 gap-10">
+    <a class="text-xs footer-text-color" href="#">Terms of Use</a>
+    <a class="text-xs footer-text-color" href="#">Licence agreement</a>
+    <a class="text-xs footer-text-color" href="#">Privacy Policy</a>
+    <a class="text-xs footer-text-color" href="#">Aplication affirmations</a>
+  </div>
+  <div class="flex justify-end w-2/4 gap-10">
+    <p class="text-xs footer-text-color">© 2021 edu-Slog, Inc</p>
+  </div>
+</div>
+<!-- todo::: ----FOOTER==========END=== -->
+
     </body>
 </html>
