@@ -86,7 +86,7 @@
           <!-- CHEECKBOX -->
           <div class="flex items-center justify-between ">
             <div class="">Playschool & Highschools</div>
-            <input class="w-4 h-4 rounded focus:ring-4 focus:ring-blue-500 ring-offset-2 form-checkbox" type="checkbox" name="" id="">
+            <input type="checkbox" class="form-checkbox">
           </div>
           <div class="flex items-center justify-between pt-3 divide">
             <div>Colleges & Universities</div>
@@ -193,11 +193,13 @@
 
         </div>
         <!-- Col-2 Dashboard -->
-        {% for i in institute %}
+        {% for institute in institutes %}
         <!-- card -->
         <div class="w-full bg-blue-500">
             <div class="w-2/4 bg-white h-72 ">
-              <div style="background-image: url("{{ i.profileURL }}");"></div>
+              <div>
+                <img src="{{ institute.profileURL }}"/>
+              </div>
               <div>
                 <h1>CSU, Chico State</h1>
                 <p></p>
