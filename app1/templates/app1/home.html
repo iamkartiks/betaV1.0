@@ -28,7 +28,7 @@
   >
     <!-- Hero  -->
     <div lass="h-screen hero-container">
-      <!-- ! -------------------------------NAVBAR----------------------------------- -->
+      <!--  -------------------------------NAVBAR----------------------------------- -->
       <div class="flex py-4 m-auto mx-20 space-between">
         <!-- image container -->
         <div class="flex items-center w-2/12">
@@ -49,20 +49,22 @@
         </div>
         <!-- Login & Log out btns -->
         <div class="flex items-center justify-end w-2/12 gap-5">
-          <div><a href="{% url 'login' %}" style="color: #5ac817">Log In</a></div>
           <div>
-          <form action="{% url 'register' %}">
-            <button
-              class="px-8 py-1 pb-2 text-white rounded-full"
-              style="background-color: #5ac817"
-            >
-              <span>Sign Up</span>
-            </button>
+            <a href="{% url 'login' %}" style="color: #5ac817">Log In</a>
+          </div>
+          <div>
+            <form action="{% url 'register' %}">
+              <button
+                class="px-8 py-1 pb-2 text-white rounded-full"
+                style="background-color: #5ac817"
+              >
+                <span>Sign Up</span>
+              </button>
             </form>
           </div>
         </div>
       </div>
-      <!-- ! -------------------------------NAVBAR---------------END-------------------- -->
+      <!--  -------------------------------NAVBAR---------------END-------------------- -->
       <div class="flex m-auto mx-20 hero-container">
         <!-- -----------COL-1------------- -->
         <div class="flex flex-col justify-center w-2/4 gap-20 hero__col-1">
@@ -84,11 +86,11 @@
             </p>
           </div>
           <form action="{% url 'getstart' %}">
-          <button
-            class="w-2/6 py-4 font-semibold text-white rounded-full poppins-font btn-gradient"
-          >
-            Get Started
-          </button>
+            <button
+              class="w-2/6 py-4 font-semibold text-white rounded-full poppins-font btn-gradient"
+            >
+              Get Started
+            </button>
           </form>
         </div>
 
@@ -582,31 +584,50 @@
         </div>
         <!-- ----------------col-3-------------------------- -->
 
-        <div class="flex flex-col items-end w-1/4 ">
-          
-            <h1 class="text-base font-bold footer-text-color">Contact Us</h1>
-            <a class="mt-5 text-sm footer-text-color" href="mailto:abc@test.com">contact@xyz.com</a>
-            <a class="mt-2 text-sm footer-text-color" href="tel:+916394915228">+91 9548544515</a>
+        <div class="flex flex-col items-end w-1/4">
+          <h1 class="text-base font-bold footer-text-color">Contact Us</h1>
+          <a class="mt-5 text-sm footer-text-color" href="mailto:abc@test.com"
+            >contact@xyz.com</a
+          >
+          <a class="mt-2 text-sm footer-text-color" href="tel:+916394915228"
+            >+91 9548544515</a
+          >
 
-            <div class="flex items-center gap-5 p-2 mt-5 ">
-              <a href="#"><img class="w-8" src="{% static 'images/Assets/icons/fb.svg' %}" alt=""></a>
-              <a href="#"><img class="w-8" src="{% static 'images/Assets/icons/insta.svg' %}" alt=""></a>
-              <a href="#"><img class="w-8" src="{% static 'images/Assets/icons/twitter.svg' %}" alt=""></a>
-              <a href="#"><img class="w-8" src="{% static 'images/Assets/icons/linkedin.svg' %}" alt=""></a>
-            </div>
-          
-
-       
+          <div class="flex items-center gap-5 p-2 mt-5">
+            <a href="#"
+              ><img
+                class="w-8"
+                src="{% static 'images/Assets/icons/fb.svg' %}"
+                alt=""
+            /></a>
+            <a href="#"
+              ><img
+                class="w-8"
+                src="{% static 'images/Assets/icons/insta.svg' %}"
+                alt=""
+            /></a>
+            <a href="#"
+              ><img
+                class="w-8"
+                src="{% static 'images/Assets/icons/twitter.svg' %}"
+                alt=""
+            /></a>
+            <a href="#"
+              ><img
+                class="w-8"
+                src="{% static 'images/Assets/icons/linkedin.svg' %}"
+                alt=""
+            /></a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="flex pt-10 poppins-font footer-bg-color">
+    <div class="flex px-20 pt-10 pb-5 poppins-font footer-bg-color">
       <div class="flex w-2/4 gap-10">
         <a class="text-xs footer-text-color" href="#">Terms of Use</a>
         <a class="text-xs footer-text-color" href="#">Licence agreement</a>
         <a class="text-xs footer-text-color" href="#">Privacy Policy</a>
-        <a class="text-xs footer-text-color" href="#"
-          >Aplication affirmations</a
-        >
+        <a class="text-xs footer-text-color" href="#">Aplication affirmations</a>
       </div>
       <div class="flex justify-end w-2/4 gap-10">
         <p class="text-xs footer-text-color">© 2021 edu-Slog, Inc</p>
