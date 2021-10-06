@@ -236,7 +236,7 @@
 		<!-- foot container div-->
 		<div class="flex items-center justify-between px-5 foot-container">
 		  <button class="text-sm font-medium poppins-font light-green focus:text-green-800">View</button>
-		  <button class="px-8 text-sm font-medium text-white rounded-full h-9 poppins-font light-green-bg focus:ring">Apply</button>
+		  <form action="{% url 'jobapply' job.id %}"><button class="px-8 text-sm font-medium text-white rounded-full h-9 poppins-font light-green-bg focus:ring">Apply</button></form>
 		</div>
 		<!--foot container div ends-->
 		</div>
