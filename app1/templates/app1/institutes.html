@@ -9,11 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'styles/institutes.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/dropdown.css' %}">
   </head>
 
   <body>
 	  <!--  -------------------------------NAVBAR----------------------------------- -->
-      <div class="flex py-4 m-auto mx-20 space-between">
+      <div class="fixed z-10 flex w-full px-20 py-4 bg-white p-auto space-between">
         <!-- image container -->
         <div class="flex items-center w-2/12">
           <img
@@ -85,11 +86,11 @@
           <!-- CHEECKBOX -->
           <div class="flex items-center justify-between ">
             <div class="">Playschool & Highschools</div>
-            <input type="checkbox" name="" id="">
+            <input class="w-4 h-4 rounded focus:ring-4 focus:ring-blue-500 ring-offset-2 form-checkbox" type="checkbox" name="" id="">
           </div>
           <div class="flex items-center justify-between pt-3 divide">
             <div>Colleges & Universities</div>
-            <input type="checkbox" name="" id="">
+            <input class="w-4 h-4 rounded focus:ring-4 focus:ring-blue-500 ring-offset-2 form-checkbox" type="checkbox" name="" id="">
           </div>
           <!-- CHEECKBOX===END -->
           <!-- SEARCHBOX -->
@@ -98,14 +99,121 @@
             <input class="w-full p-2 border border-gray-100 rounded-lg shadow outline-none" type="search" name="" id="">
           </div>
           <!-- SEARCHBOX===END -->
+          <!-- DROPDOWN-1 -->
+          <div class="flex flex-col gap-2 pt-3">
+            <div>Field of study</div>
+            <div class="container__drop">
+              <select aria-placeholder="select" multiple data-multi-select-plugin>
+                  <option value="--Select--" disabled selected>Hilux</option>
+                  <option value="Corsa">Corsa</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Ferrari">Ferrari</option>
+              </select>
+            </div>
+          </div>
+          <!-- DROPDOWN--1====ENDSSS -->
+          <!-- DROPDOWN-2 -->
+          <div class="flex flex-col gap-2 pt-3">
+            <div>Institute Level</div>
+            <div class="container__drop">
+              <select aria-placeholder="select" multiple data-multi-select-plugin>
+                  <option value="--Select--" disabled selected>Hilux</option>
+                  <option value="Corsa">Corsa</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Ferrari">Ferrari</option>
+              </select>
+            </div>
+          </div>
+          <!-- DROPDOWN--2====ENDSSS -->
+          <!-- DROPDOWN-3 -->
+          <div class="flex flex-col gap-2 pt-3">
+            <div>Institute Type</div>
+            <div class="container__drop">
+              <select aria-placeholder="select" multiple data-multi-select-plugin>
+                  <option value="--Select--" disabled selected>Hilux</option>
+                  <option value="Corsa">Corsa</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Ferrari">Ferrari</option>
+              </select>
+            </div>
+          </div>
+          <!-- DROPDOWN--3====ENDSSS -->
+          <!-- DROPDOWN-4 -->
+          <div class="flex flex-col gap-2 pt-3">
+            <div>Institue Setting</div>
+            <div class="container__drop">
+              <select aria-placeholder="select" multiple data-multi-select-plugin>
+                  <option value="--Select--" disabled selected>Hilux</option>
+                  <option value="Corsa">Corsa</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Ferrari">Ferrari</option>
+              </select>
+            </div>
+          </div>
+          <!-- DROPDOWN--4====ENDSSS -->
+          <!-- DROPDOWN-5 -->
+          <div class="flex flex-col gap-2 pt-3">
+            <div>Scholarships</div>
+            <div class="container__drop">
+              <select aria-placeholder="select" multiple data-multi-select-plugin>
+                  <option value="--Select--" disabled selected>Hilux</option>
+                  <option value="Corsa">Corsa</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Ferrari">Ferrari</option>
+              </select>
+            </div>
+          </div>
+          <!-- DROPDOWN--5====ENDSSS -->
+          <!-- DROPDOWN-6 -->
+          <div class="flex flex-col gap-2 pt-3">
+            <div>Specialised Category</div>
+            <div class="container__drop">
+              <select aria-placeholder="select" multiple data-multi-select-plugin>
+                  <option value="--Select--" disabled selected>Hilux</option>
+                  <option value="Corsa">Corsa</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Ferrari">Ferrari</option>
+              </select>
+            </div>
+          </div>
+          <!-- DROPDOWN--6====ENDSSS -->
+          <!-- DROPDOWN-7 -->
+          <div class="flex flex-col gap-2 pt-3">
+            <div>Field of Interests</div>
+            <div class="container__drop">
+              <select aria-placeholder="select" multiple data-multi-select-plugin>
+                  <option value="--Select--" disabled selected>Hilux</option>
+                  <option value="Corsa">Corsa</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Ferrari">Ferrari</option>
+              </select>
+            </div>
+          </div>
+          <!-- DROPDOWN--7====ENDSSS -->
 
         </div>
         <!-- Col-2 Dashboard -->
-        <div class="w-full bg-blue-500"> </div>
+        {% for i in institute %}
+        <!-- card -->
+        <div class="w-full bg-blue-500">
+            <div class="w-2/4 bg-white h-72 ">
+              <div style="background-image: url("{{ i.profileURL }}");"></div>
+              <div>
+                <h1>CSU, Chico State</h1>
+                <p></p>
+              </div>
+              <div>
+                <button>btn</button>
+                <button>btn</button>
+              </div>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- Card end -->
       </div>
 
 
 	  </div>
-    
+    <script defer src="{% static 'js/institute.js' %}" ></script>
   </body>
 </html>

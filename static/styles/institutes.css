@@ -9,11 +9,30 @@
   --darkgreen: #0b5b3e;
 }
 
+
 .dashboard-container {
-  height: 90vh;
+  padding-top: 80px ;
+  padding-bottom: 30px;
+
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+}
+.dashboard-container {
+  scrollbar-width: 0;
+}
+.dashboard-container::-webkit-scrollbar {
+  background-color: transparent;
+  width: 12px;
+}
+.dashboard-container::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: RGB(89, 200, 23);
+  /* border: 2px solid rgba(9, 112, 9, 0.76); */
 }
 /*! Green */
 .light-green {
