@@ -192,25 +192,57 @@
           <!-- DROPDOWN--7====ENDSSS -->
 
         </div>
-        <!-- Col-2 Dashboard -->
-        {% for institute in institutes %}
+        <!-- Col-2 Dashboard---------------------------------- -->
         <!-- card -->
-        <div class="w-full bg-blue-500">
-            <div class="w-2/4 bg-white h-72 ">
-              <div>
-                <img src="{{ institute.profileURL }}"/>
-              </div>
-              <div>
-                <h1>CSU, Chico State</h1>
-                <p></p>
-              </div>
-              <div>
-                <button>btn</button>
-                <button>btn</button>
-              </div>
+        <div class="grid w-full grid-cols-3 gap-3 auto-rows-min ">
+          {% for institute in institutes %}
+          <div class="college-card">
+            <!--flip card-->
+            <div class="flip-card">
+            <!-- inner card-->
+            <div class="college-card-inner">
+            <div class="card-image">
+            <img class="profile-photo" src="{{institute.profileURL}}" alt="college photo"/>
             </div>
+            <!--card-back-->
+            <div class="flip-card-back">
+                <h1 style="font-size:1.8em">Requirements</h1>
+                <p>placeholder</p>
+          
+                <h1 style="font-size:1.4em">Location</h1>
+                <p>placeholder</p>
+              </div>
+            <!--back ends-->
+            </div>
+            <!--inner ends-->
+            </div>
+            <!--flip card ends-->
+          
+            <!-- card container-->
+            <div class="card-content">
+            <!--head container div-->
+          
+            <div class="head-container">
+            <div class="pt-4 name-div">
+            <h3 class="text-xl font-bold">{{institute.name}}</h3>
+            </div>
+            <div class="location-div">
+            <h4 class="text-sm font-normal text-gray-500">{{institute.location}}</h4>
+            </div>
+            </div>
+            <!--head container div ends-->
+          
+            <!-- foot container div-->
+            <div class="flex items-center justify-between px-5 foot-container">
+              <button class="text-sm font-medium poppins-font light-green focus:text-green-800">View</button>
+              <button class="px-8 text-sm font-medium text-white rounded-full h-9 poppins-font light-green-bg focus:ring">Apply</button>
+            </div>
+            <!--foot container div ends-->
+            </div>
+              <!-- card container ends-->
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
         <!-- Card end -->
       </div>
 

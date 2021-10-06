@@ -75,3 +75,205 @@
     var(--darkgreen)
   );
 }
+
+
+/* !----------------------------- */
+.college-card{
+  /* margin-top: 30px;
+  margin-left: 60px;
+  height: 350px;
+  width: 350px;
+  background-color: lightcoral; */
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  /* border:3px solid rebeccapurple;
+  padding: 4px; */
+  /* margin: 20px; */
+  
+}
+.flip-card{
+  height: 250px;
+  width: 100%;
+  box-sizing:border-box;
+  border-radius: 15px;
+  perspective: 1000px;
+  
+}
+
+.college-card-inner{
+      position: relative;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+      text-align: center;
+}
+
+.flip-card:hover .college-card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-image, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 50px;
+  font-weight: 300;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* 
+.card-image{
+  
+  height: 250px;
+  width: 100%;
+  box-sizing:border-box;
+  border-radius: 15px;
+} */
+
+
+.card-content{
+  height: 150px;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  background-color: white;
+  /* border: 1px solid black; */
+}
+
+.head-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 55%;
+  width: 100%;
+}
+
+/* .name-div{
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 8px;
+  padding-top: 3px;
+  margin-bottom: 3px;
+  font-family: 'Georama', sans-serif;
+  font-size: 1.0em;
+  background-color:inherit;
+} */
+
+/* .location-div{
+  height: 100%;
+  width: 30%;
+  font-family: 'Georama', sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding-left: 5px;
+  margin-bottom: 5px;
+  color: rgba(18, 29, 122, 0.5);
+  background-color: inherit;
+  border-bottom: 1px solid black;
+} */
+
+.foot-container{
+  height: 45%;
+  width: 100%;
+  /* border: 1px solid black; */
+  /* border-radius: 0 0 15px 15px; */
+  /* background-color: inherit; */
+}
+.view-div{
+  border-radius: inherit;
+  height: 100%;
+  width: 50%;
+  /* border: 1px solid black; */
+  background-color: inherit;
+  padding-left: 50px;
+  padding-top: 8px;
+}
+
+.apply-div{
+  border-radius: inherit;
+  height: 100%;
+  width: 50%;
+  padding-top: 8px;
+  /* border: 1px solid black; */
+  background-color: inherit;
+}
+
+.profile-photo{
+  height: 250px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: fill;
+}
+/* button starts */
+.view-btn {
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding:5px;
+}
+
+.view-btn a{
+text-decoration: none;
+border: 2px solid rgba(18, 29, 122, 0.5);    
+color: rgba(18, 29, 122, 0.5);
+text-transform: uppercase;
+position: relative;
+padding: 3px;
+display: inline-block;
+}
+
+span {
+position: relative;
+/* z-index coz when we put bg to before and after this span text will not be visible */
+z-index: 3;
+}
+
+/* Button 1 styles */
+
+.view-btn a::before {
+content: "";
+position: absolute;
+top: 5px;
+left: -2px;
+width: calc(100% + 6px);
+/*100% plus double the times left values*/
+height: calc(100% - 10px);
+background-color: #ffffff;
+transition: all 0.5s ease-in-out;
+transform: scaleY(1);
+}
+
+.view-btn a:hover::before{
+transform: scaleY(0);
+}
+
+.view-btn a::after {
+content: "";
+position: absolute;
+left: 5px;
+top: -5px;
+width: calc(100% - 10px);
+
+height: calc(100% + 10px);
+background-color: #ffffff;
+transition: all 0.5s ease-in-out;
+transform: scaleX(1);
+}
+
+
+.view-btn a:hover::after {
+transform: scaleX(0);
+}
+/* button ends */
